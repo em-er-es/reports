@@ -1,0 +1,765 @@
+% % % General report document template
+% % % based upon the homework template by Ted Pavlic
+% % % http://www.tedpavlic.com/post_homework_tex_example.php
+% % % Author: Ernest Skrzypczyk
+
+% % % Document properties
+% % Document class
+\documentclass{report}
+%\documentclass{article}
+% "article" = page number on title page
+% "report" = no page number on title page
+
+% % % Naming conventions
+% % Cross references
+% Algorithms - \label{a:label} \aref{a:label}
+% Equations - \label{e:label} \eref{e:label}
+% Figures - \label{f:label} \fref{f:label}
+% Sections - \label{s:label} \sref{s:label}
+% Scripts - \label{r:label} \rref{r:label}
+% Tables - \label{t:label} \tref{t:label}
+% Subsections - \label{s:mainlabel--subsectionlabel} \ref{s:mainlabel--subsectionlabel}
+% Subsubsections - \label{s:mainlabel--subsectionlabel--subsubsectionlabel} \ref{s:mainlabel--subsectionlabel--subsubsectionlabel}
+% % Numbering
+% Sections - n * 10; n = 1, 2, ... - gives the possibility to shift other sections in between
+% Equations - Section label ["--" subsection label] "--" abbreviated name
+% Figures - Section label ["--" subsection label] "--" abbreviated name
+
+% % % User packages
+% % Languages
+\usepackage{algorithm}
+\usepackage{algorithmic}
+\usepackage{amsmath,amsfonts,amsthm,amssymb}
+\usepackage{array}
+%\usepackage[T1]{fontenc}
+%\usepackage[MeX]{polski}
+\usepackage{polski}
+%\usepackage[utf8]{inputenc}
+\usepackage[polish,german,english]{babel}
+% % General
+\usepackage[usenames,dvipsnames]{color}
+%\usepackage{cleveref}
+\usepackage{calc}
+\usepackage{caption}
+\usepackage{chngcntr}
+\usepackage{extramarks}
+\usepackage{enumitem}
+\usepackage{fancyhdr}
+\usepackage{float}
+\usepackage{fontspec}
+\usepackage{gensymb}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{chngpage}
+\usepackage{soul}
+\usepackage[retainorgcmds]{IEEEtrantools}
+\usepackage{ifthen}
+\usepackage{lastpage}
+\usepackage{listings}
+\usepackage{cancel}
+\usepackage{courier}
+\usepackage{layout}
+\usepackage{lscape}
+\usepackage{makecell}
+\usepackage{media9}
+\usepackage{multicol}
+\usepackage{multimedia}
+\usepackage{multirow}
+\usepackage[numbers]{natbib}
+\usepackage{pdflscape}
+\usepackage{pdfpages}
+\usepackage{setspace}
+%\usepackage{showframe}
+\usepackage{subcaption}
+%\usepackage{subfigure}
+\usepackage{tabularx}
+\usepackage{titlesec}
+\usepackage{varioref}
+\usepackage{wrapfig}
+%\usepackage[table]{xcolor}
+\usepackage{xfrac}
+\usepackage{xstring}
+\usepackage{tikz}
+
+
+% % % Packages configuration
+% % Tabular
+\newcolumntype{Y}{>{\centering\arraybackslash}X}
+%\newcolumntype{C}{>{\centering\arraybackslash}m{0.1\textwidth}}
+%\newcolumntype{C}{>{\centering\arraybackslash}m{\dimexpr.25\linewidth-2\tabcolsep}}
+\newcolumntype{C}{>{\centering\arraybackslash}m{\dimexpr.245\linewidth-2\tabcolsep}}
+%\counterwithin{figure}{section}
+
+
+% % % Command definitions
+% % References
+\newcommand{\aref}[1]{\autoref{#1}}
+\newcommand{\bref}[1]{(\ref{#1})}
+%\newcommand{\cref}[1]{(\afig\ref{#1})}
+%\newcommand{\eref}[1]{(E\ref{#1})}
+%\newcommand{\fref}[1]{(F\ref{#1})}
+%\newcommand{\rref}[1]{(S\ref{#1})}
+\newcommand{\eref}[1]{(\ref{#1})}
+\newcommand{\fref}[1]{(\ref{#1})}
+\newcommand{\rref}[1]{(\ref{#1})}
+%\newcommand{\sref}[1]{\emph{(\autopageref{#1}) -- \nameref{#1}}}
+\newcommand{\sref}[1]{\emph{"\nameref{#1}"}}
+\newcommand{\tref}[1]{\ref{#1}}
+% % Symbols
+\newcommand{\dlsh}{\reflectbox{\rotatebox[origin=c]{180}{$\Lsh$}}}
+\newcommand{\drsh}{\reflectbox{\rotatebox[origin=c]{180}{$\Rsh$}}}
+\newcommand \ccancel[2][black]{\renewcommand \CancelColor{\color{#1}}\cancel{#2}}
+\newcommand \ccancelto[3][black]{\renewcommand \CancelColor{\color{#1}}\cancelto{#2}{#3}}
+% % Font styles
+\newcommand \dunderline[1]{\underline{\underline{\ #1\ }}}
+\newcommand \sunderline[1]{\underline{\ #1\ }}
+% % Mathematical symbols and structures
+\renewcommand{\vec}[1]{\overrightarrow{\mathbf{#1}}}
+%\renewcommand{\vece}[1]{\overrightarrow{\mathbf{#1}}}
+\newcommand{\vecg}[1]{\underline{\mathbf{#1}}}
+%\renewcommand{\vec}[1]{\mathbf{\overline{#1}}}
+\newcommand{\ssl}[1]{\phantom{}^{#1}}
+% % Other
+\StrLeft{\figurename}{1}[\afig]
+
+
+% % % Configuration
+\graphicspath{{./}{Graphics/}}
+%\renewcommand{\figurename}{Wykres}
+%\renewcommand{\figurename}{Figure}
+%\renewcommand{\figurename}{Image}
+%\renewcommand{\tablename}{Tabela}
+%\renewcommand{\lstlistingname}{Skrypt}
+\renewcommand{\lstlistingname}{Script}
+\newcommand{\lstlistingnameexcerpt}{Script excerpt}
+
+
+% % Complex definitions
+% Links
+% Generic hyperlink -- \link[optional text]{link}
+\newcommand*{\link}[2][]{
+	\ifthenelse{\equal{#1}{}}
+	{\href{#2}{#2}}
+	{\href{#2}{#1}}}
+
+% Http hyperlink -- \httplink[optional text]{link}
+\newcommand*{\httplink}[2][]{
+	\ifthenelse{\equal{#1}{}}
+	{\href{http://#2}{#2}}
+	{\href{http://#2}{#1}}}
+
+% Email hyperlink -- \emaillink[optional text]{link}
+\newcommand*{\emaillink}[2][]{
+	\ifthenelse{\equal{#1}{}}
+	{\href{mailto:#2}{#2}}
+	{\href{mailto:#2}{#1}}}
+
+% Graphics
+% Inkscape path
+%\IfFileExists{/dev/null}{
+%	\newcommand{\Inkscape}{/usr/bin/inkscape }}{
+%	\newcommand{\Inkscape}{"C:/Program Files (x86)/Inkscape/inkscape.exe" }
+%}
+
+% Include SVG-LaTeX within scalebox
+%\includesvga[0.75]{Graphics/10-odometry--right-turn}
+%\includesvga[scalebox]{input-files-w/o-ext}
+\newcommand{\includesvgsb}[2][1]{
+%	\IfFileExists{\Inkscape}{
+%		\immediate\write18{\Inkscape -z -D --file="#2.svg" --export-pdf="#2.pdf" --export-dpi=72 --export-latex}}{}
+	\scalebox{#1}{\input{#2.pdf_tex}}
+}
+
+% Include SVG-LaTeX as figure
+%\includesvg[0.75]{a}{Automated includesvg pdf\label{f:f4b}}
+%\includesvg[scale]{input-files-w/o-ext}{caption\label{f:id}}
+\newcommand{\includesvg}[3][1]{
+%	\IfFileExists{\Inkscape}{
+%		\immediate\write18{/home/emeres/.bin/testbell}
+%		\immediate\write18{\Inkscape -z -D --file="#2.svg" --export-pdf="#2.pdf" --export-dpi=96 --export-latex}}{}
+	\begin{figure}[!ht]
+%		\centering
+		\begin{center}
+			\def\svgwidth{#1\columnwidth}
+			\input{#2.pdf_tex}
+			\caption{#3}
+		\end{center}
+	\end{figure}
+}
+
+% Scaled figure
+\newcommand{\scalefig}[3]{
+	\begin{figure}[!ht]
+%		\centering
+		\begin{center}
+			\includegraphics[width=#2\columnwidth]{#1}
+			\caption{#3}
+		\end{center}
+	\end{figure}
+}
+
+% Scaled and trimmed figure
+\newcommand{\scalefigcrop}[7]{
+	\begin{figure}[!ht]
+%		\centering
+		\begin{center}
+			\includegraphics[trim=#4 #5 #6 #7, clip, width=#2\columnwidth]{#1}
+			\caption{#3}
+		\end{center}
+	\end{figure}
+}
+
+% Function reference
+\newcommand{\func}[2]
+{\link[\texttt{#1}]{#2}}
+
+% Varaible reference
+\newcommand{\var}[2]
+{\link[\texttt{#1}]{#2}}
+
+% File reference
+\newcommand{\file}[2]
+{\link[\texttt{#1}]{file:///#2}}
+
+% Script listing
+%\newcommand{\script}[3]
+%{\lstinputlisting[caption=#2,label=#1]{#1.#3}}
+\newcommand{\script}[2]
+{\lstinputlisting[caption=#2]{#1}}
+
+\lstloadlanguages{MATLAB}
+\lstset{language=MATLAB,
+	frame=single,	% Frame type around code
+	basicstyle=\small\ttfamily,	% Basic code style
+	keywordstyle=[1]\color{Blue}\bf,	% Python functions bold and blue
+	keywordstyle=[2]\color{Purple},	% Python function arguments purple
+	keywordstyle=[3]\color{Blue}\underbar,	% User functions underlined and blue
+	identifierstyle=,	% Nothing special about identifiers
+	commentstyle=\usefont{T1}{pcr}{m}{sl}\color{DarkGreen}\small,	% Comment style
+	stringstyle=\color{Purple},	% String style
+	showstringspaces=false,	% Space string indication
+	tabsize=2,
+%	escapechar={},
+	breaklines=true,
+	breakautoindent=false,
+	prebreak=\raisebox{0ex}[0ex][0ex]{\ensuremath{\space\color{red}{\blacktriangledown}\color{blue}\thelstnumber}},
+	postbreak=\raisebox{0ex}[0ex][0ex]{\ensuremath{\color{blue}\thelstnumber\color{red}{\blacktriangle}\space}},
+	morekeywords={xlim, ylim, },	% Not default functions
+	morekeywords=[2]{on, off},	% Custom function parameters
+	morekeywords=[3]{FindESS},	% Custom functions
+	morecomment=[l][\color{Blue}]{...},	% Line continuation (...) like blue comment
+	numbers=left,
+	numberfirstline=true,
+	firstnumber=1,	% Line number offset
+	numberstyle=\tiny\color{Blue},	% Line numbers
+	stepnumber=5	% Line numbers step
+}
+
+\newcommand{\scriptexcerpt}[2]{
+	\newcommand{\lstlistingnametmp}{\lstlistingname}
+	\renewcommand{\lstlistingname}{\lstlistingnameexcerpt}
+	\lstinputlisting[caption=#2]{#1}
+	\renewcommand{\lstlistingname}{\lstlistingnametmp}
+}
+
+
+% % % Specific Information
+% % Course related
+\newcommand{\Code}{RM}
+%\newcommand{\Title}{Research Methodology}
+%\newcommand{\SubTitle}{Bibliography - UGV and UAV collaboration in an autonomous infrastructure scenario}
+\newcommand{\Title}{UGV and UAV collaboration in an autonomous infrastructure scenario}
+\newcommand{\STitle}{UGV \& UAV collaboration within autonomous infrastructure}
+\newcommand{\SubTitle}{Bibliography}
+\newcommand{\Date}{24.01.17}
+\newcommand{\Time}{Wed 23:59}
+\newcommand{\Recipient}{Prof. I. Taralova, Prof. O. Kermorgant}
+\newcommand{\Author}{Ernest Skrzypczyk, BSc}
+
+% % PDF general
+\hypersetup{
+	pdftitle = {\Title \ -- \SubTitle},
+	pdfauthor = {\Author},
+	pdfkeywords = {robotics, collaboration, slam, multislam, autonomous, infrastructure, unmanned, vehicle, uav, ugv}
+}
+
+% % % Document margins
+\topmargin = -0.45in
+\evensidemargin = 0in
+\oddsidemargin = 0in
+\textwidth = 6.5in
+\textheight = 9.0in
+\headsep = 0.25in
+
+
+% % % Setup the header and footer
+\pagestyle{fancy}
+\lhead{\Author}
+\chead{\Code: \STitle, \Recipient\\} %(\Time,\ \Date)} %
+\rhead{\firstxmark}
+\lfoot{\lastxmark}
+\cfoot{}
+\rfoot{Page\ \thepage/\protect\pageref{LastPage}}
+\renewcommand \headrulewidth{0.4pt}
+\renewcommand \footrulewidth{0.4pt}
+%\setlength{\parindent}{4ex}
+\setlength\parindent{24pt}
+
+% % % Colors
+\definecolor{DarkGreen}{rgb}{0.0,0.4,0.0}
+\IfFileExists{Graphics/color-palette.tex}{\input{Graphics/color-palette.tex}}
+
+% % % Debugging
+%\tracingall
+
+
+% % % % CLEAN UP
+% % % Style specific commands and configuration
+%\newcommand{\enterProblemHeader}[1]{\nobreak\extramarks{#1}{#1 kontynuowany na następnej stroniecontinued on next page\ldots}\nobreak%
+%\nobreak\extramarks{#1 (continued)}{#1 continued on next page\ldots}\nobreak}
+%\newcommand{\exitProblemHeader}[1]{\nobreak\extramarks{#1 (continued)}{#1 continued on next page\ldots}\nobreak%
+%\Title\ifthenelse{\equal{\SubTitle}{}}{}{\\\SubTitle}}}
+\newcommand{\enterProblemHeader}[1]{\nobreak\extramarks{#1}{#1\ldots}\nobreak%
+	\nobreak\extramarks{#1 (continued)}{#1}\nobreak}
+\newcommand{\exitProblemHeader}[1]{\nobreak\extramarks{#1 (continued)}{#1}\nobreak%
+	\nobreak\extramarks{#1}{}\nobreak}
+
+\newlength{\labelLength}
+\newcommand{\labelAnswer}[2]
+	{\settowidth{\labelLength}{#1}
+	\addtolength{\labelLength}{0.25in}
+	\changetext{}{-\labelLength}{}{}{}
+	\noindent\fbox{\begin{minipage}[c]{\columnwidth}#2\end{minipage}}
+	\marginpar{\fbox{#1}}
+
+	% We put the blank space above in order to make sure this
+	% \marginpar gets correctly placed.
+	\changetext{}{+\labelLength}{}{}{}}
+
+\setcounter{secnumdepth}{0}
+\newcommand{\ProblemName}{}
+\newcounter{ProblemCounter}
+\newenvironment{Problem}[1][Problem \arabic{ProblemCounter}]%
+	{\stepcounter{ProblemCounter}
+	\renewcommand{\ProblemName}{#1}
+%	\section{\ProblemName}
+	\enterProblemHeader{\ProblemName}}
+	{\exitProblemHeader{\ProblemName}}
+
+\newcommand{\problemAnswer}[1]
+	{\noindent\fbox{\begin{minipage}[c]{\columnwidth}#1\end{minipage}}}
+
+\newcommand{\problemLAnswer}[1]
+	{\labelAnswer{\ProblemName}{#1}}
+
+\newcommand{\SectionName}{}
+\newlength{\SectionLabelLength}{}
+\newenvironment{Section}[1]
+	{\renewcommand{\SectionName}{#1}
+	\settowidth{\SectionLabelLength}{\SectionName}
+	\addtolength{\SectionLabelLength}{0.25in}
+	\changetext{}{-\SectionLabelLength}{}{}{}
+%	\subsection{\SectionName}
+	\enterProblemHeader{\ProblemName\ [\SectionName]}}
+
+{\enterProblemHeader{\ProblemName} \changetext{}{+\SectionLabelLength}{}{}{}}
+%FIX Determine total character length, substract from it the authors string and limit problemname string accordingly, in worst case skip it or use alternative name
+\newcommand{\sectionAnswer}[1]
+{
+	\noindent\fbox{\begin{minipage}[c]{\columnwidth}#1\end{minipage}}
+	\enterProblemHeader{\ProblemName}\exitProblemHeader{\ProblemName}
+	\marginpar{\fbox{\SectionName}}
+}
+
+%% Edits the caption width
+%\newcommand{\captionwidth}[1]{%
+% \dimen0=\columnwidth	\advance\dimen0 by-#1\relax
+% \divide\dimen0 by2
+% \advance\leftskip by\dimen0
+% \advance\rightskip by\dimen0
+%}
+% % % % CLEAN UP
+
+
+% % % % CLEAN UP
+% % % Title page
+\title{\vspace{2in}\textmd{\textbf{\Code:\ 
+\Title\ifthenelse{\equal{\SubTitle}{}}{}{\\\SubTitle}}} \\\normalsize\vspace{0.1in}\small{Date:\ 
+\Time,\ \Date} \\\vspace{0.1in}\large{\textit{\Recipient}}\vspace{3in}}
+\date{}
+\author{\textbf{\Author}}
+% % % % CLEAN UP
+
+
+% % % Document
+\begin{document}
+\begin{spacing}{1.1}
+%\maketitle
+\input{Contents/00-titlepage.tex}
+%\includegraphics{Contents/00-titlepage.pdf}
+%\includepdf{Contents/00-titlepage.pdf}
+
+% % % Tables of contents, figures, tables
+\setcounter{tocdepth}{2}
+\pagenumbering{roman}
+\tableofcontents %Contents
+\thispagestyle{plain}
+\listoffigures %Figures
+\listoftables %Tables
+\newpage %Abstract
+\thispagestyle{empty}
+%\fancyhf{}
+%\thispagestyle{fancy}
+%\fancyfoot{\page}
+%\thispagestyle{myheadings}
+%\renewcommand{\headheight}{0pt}
+\phantomsection{\Huge\textbf{Abstract}}\label{s:00-abstract}
+%\phantomsection{Abstract}\label{s:00-abstract}
+\input{Contents/00-abstract.tex}
+\newpage %Abbreviations
+\thispagestyle{empty}
+%\thispagestyle{fancy}
+%\footer{}{Page \thepage of \pageref{lastpage}}
+%\cfoot{\page}
+\phantomsection{\Huge\textbf{Abbreviations}}\label{s:00-abbrreviations}
+%\phantomsection{Abbreviations}\label{s:00-abbreviations}
+\thispagestyle{empty}
+\input{Contents/00-abbreviations.tex}
+\newpage %Symbols
+\thispagestyle{empty}
+\phantomsection{\Huge\textbf{Symbols}}\label{s:00-symbols}
+%\phantomsection{Symbols}\label{s:00-symbols}
+\input{Contents/00-symbols.tex}
+\newpage %Content
+\thispagestyle{empty}
+\pagenumbering{arabic}
+\setcounter{page}{1}
+
+% % % DISABLED
+% % % Different chapter formatting
+%\titleformat
+%{\chapter} % command
+%[display] % shape
+%{\bfseries\Large\itshape} % format
+%{Story No. \ \thechapter} % label
+%{0.5ex} % sep
+%{
+%	\rule{\textwidth}{1pt}
+%	\vspace{1ex}
+%	\centering
+%} % before-code
+%[
+%\vspace{-0.5ex}%
+%\rule{\textwidth}{0.3pt}
+%] % after-code
+%
+%
+%\titleformat{\section}[wrap]
+%{\normalfont\bfseries}
+%{\thesection.}{0.5em}{}
+%
+%\titlespacing{\section}{12pc}{1.5ex plus .1ex minus .2ex}{1pc}
+% % % DISABLED
+
+% % % TODO
+
+
+
+% % % TODO
+
+% % % Content
+\chapter{Introduction}\label{c:10-introduction}
+\begin{Problem}[Introduction]
+\section{Introduction}\label{s:1010-introduction}
+\input{Contents/1010-introduction.tex}
+
+
+\section{Context of the work}\label{s:1020-context-of-the-work}
+\indent\indent
+\input{Contents/1020-context-of-the-work.tex}
+
+
+\section{Motivation}\label{s:1030-motivation}
+\indent\indent
+\input{Contents/1030-motivation.tex}
+
+
+\section{Problem formulation}\label{s:1040-problem-formulation}
+\indent\indent
+\input{Contents/1040-problem-formulation.tex}
+
+
+\section{Contribution and innovation}\label{1050-contribution-and-innovation}
+\indent\indent
+\input{Contents/1050-contribution-and-innovation.tex}
+
+\end{Problem}
+
+\begin{Problem}[Background theory]
+\chapter{Background theory}\label{c:20-background-theory}
+%\chapter{Background theory}\label{}
+\section{Definitions}\label{s:2010-definitions}
+\indent\indent
+\input{Contents/2010-definitions.tex}
+\input{Contents/2010-definitions-appendix.tex}
+
+
+\section{Simultaneous localization and mapping}\label{s:2020-simultaneous-localization-and-mapping}
+\indent\indent
+\input{Contents/2020-simultaneous-localization-and-mapping.tex}
+
+\subsection{Sensors}\label{s:202010-sensors}
+\indent\indent
+\input{Contents/202010-sensors.tex}
+
+\subsection{Architecture}\label{s:202020-architecture}
+\indent\indent
+\input{Contents/202020-architecture.tex}
+
+\subsection{Representations}\label{s:202030-representations}
+\indent\indent
+\input{Contents/202030-representations.tex}
+
+
+\section{Visual SLAM}\label{s:2030-visual-slam}
+\indent\indent
+\input{Contents/2030-visual-slam.tex}
+
+\subsection{Monocular}\label{s:203010-monocular}
+\indent\indent
+\input{Contents/203010-monocular.tex}
+
+\subsection{Stereo vision}\label{s:203020-stereo-vision}
+\indent\indent
+\input{Contents/203020-stereo-vision.tex}
+
+
+\section{Collaborative SLAM}\label{s:2040-collaborative-slam}
+\indent\indent
+\input{Contents/2040-collaborative-slam.tex}
+
+
+%DECIDE if to include or not, optionally rename
+%Basically synonymes, but collaborative refers to a broader spectrum, where multi slam can refer to multiple cameras at the same time;
+%\section{Multi SLAM}\label{s:2040-multi-slam}
+%\indent\indent
+%\input{Contents/2040-multi-slam.tex}
+
+
+\section{Data fusion}\label{s:2050-data-fusion}
+\indent\indent
+\input{Contents/2050-data-fusion.tex}
+
+
+%DECIDE if to include or not
+%Relevant rotation invariant features; Review of features with advantages and disadvantages
+%\section{Computer vision}\label{s:2055-computer-vision}
+%\indent\indent
+%\input{Contents/2055-computer-vision.tex}
+%
+%
+%Significant for SfM to a degree, worth mentioning Bogdan's camera model
+%\section{Camera models}\label{s:2065-camera-models}
+%\indent\indent
+%\input{Contents/2065-camera-models.tex}
+
+
+%\section{Structure from motion}\label{s:2060-structure-from-motion}
+%\indent\indent
+%\input{Contents/2060-structure-from-motion.tex}
+\section{Active perception}\label{s:2060-active perception}
+\indent\indent
+\input{Contents/2060-active-perception.tex}
+
+\subsection{Structure from motion}\label{s:206010-structure-from-motion}
+\indent\indent
+\input{Contents/206010-structure-from-motion.tex}
+
+
+\section{Visual servoing}\label{s:2070-visual-servoing}
+\indent\indent
+\input{Contents/2070-visual-servoing.tex}
+
+
+\section{Exploration and rendezvous tasks}\label{s:2080-exploration-and-rendezvouz-tasks}
+\indent\indent
+\input{Contents/2080-exploration-and-rendevouz-tasks.tex}
+
+\end{Problem}
+
+
+\begin{Problem}[State of the art]
+\chapter{State of the art}\label{c:30-state-of-the-art} %Related work?
+Overview of current state of the art:
+131016/Cesar Cadena, Luca Carlone, Henry Carrillo, Yasir Latif, Davide Scaramuzza, Jos´e Neira, Ian D. Reid, John J. Leonard - Past, Present, and Future of Simultaneous Localization And Mapping: Towards the Robust-Perception Age.pdf
+%ADD another two reviews found from 2015
+Add the other review
+
+
+\section{Simultaneous localization and mapping}\label{s:3010-simultaneous-localization-and-mapping}
+\indent\indent
+\input{Contents/3010-simultaneous-localization-and-mapping.tex}
+
+\subsection{Standards in SLAM architecture}\label{s:301010-standards-in-slam-architecture}
+\indent\indent
+\input{Contents/301010-standards-in-slam-architecture.tex}
+
+\subsection{Representations}\label{s:301020-representations}
+\indent\indent
+\input{Contents/301030-representations.tex}
+
+\subsection{Solutions}\label{s:301035-solutions}
+\indent\indent
+\input{Contents/301035-solutions.tex}
+
+\subsection{Collaborative SLAM}\label{s:301040-collaborative-slam}
+\indent\indent
+\input{Contents/301040-collaborative-slam.tex}
+
+\subsection{Open problems}\label{s:301099-open-problems}
+\indent\indent
+\input{Contents/301099-open-problems.tex}
+
+
+%DEACTIVATE these placeholders BELOW
+\section{Visual servoing}\label{s:3020-visual-servoing}
+\indent\indent
+\input{Contents/3020-visual-servoing.tex}
+
+\subsection{Visual communication}\label{s:301030-visual-communication}
+\indent\indent
+\input{Contents/302010-visual-communication.tex}
+
+
+%\section{Motion planning}\label{s:3030-motion-planning}
+%\indent\indent
+%\input{Contents/3030-motion-planning.tex}
+
+%\subsection{}\label{s:303010-}
+%\indent\indent
+%\input{Contents/3030-.tex}
+
+
+%\section{Control}\label{s:3040-control}
+%\indent\indent
+%\input{Contents/3040-control.tex}
+
+%\subsection{}\label{s:304010-}
+%\indent\indent
+%\input{Contents/3040-.tex}
+
+
+%\section{Optimization}\label{s:3050-optimization}
+%\indent\indent
+%\input{Contents/3050-optimization.tex}
+
+%\subsection{}\label{s:305010-}
+%\indent\indent
+%\input{Contents/3050-.tex}
+%DEACTIVATE these placeholders ABOVE
+\end{Problem}
+
+
+\begin{Problem}[Collaborative SLAM]
+\chapter{Collaborative SLAM}\label{c:40-collaborative-slam}
+Previous work of Nived and Nicole as basis
+	"Collaborative Visual SLAM Framework for a Multi-Robot System"
+	Propose a decentralized approach on that
+		Min 7 DOF (position, orientation, scale)
+			Other DOFs?
+	Introduce visual communication in aspect of rendezvous
+
+%DECIDE how much of this should be in bibliography, it would help making the workplan
+\section{Problem statement}\label{s:4010-problem-statement}
+\indent\indent
+\input{Contents/4010-problem-statement.tex}
+
+\subsection{Assumptions}\label{s:401010-assumptions}
+\indent\indent
+\input{Contents/401010-assumptions.tex}
+
+
+\section{Scenarios}\label{s:4020-scenarios}
+\indent\indent
+\input{Contents/4020-scenarios.tex}
+
+
+\section{Map characteristics}\label{s:4030-map-characteristics}
+\indent\indent
+\input{Contents/4030-map-characteristics.tex}
+
+
+\section{Algorithm}\label{s:4040-algorithm}
+\indent\indent
+\input{Contents/4040-algorithm.tex}
+
+
+\end{Problem}
+
+
+%
+%\begin{Problem}[Experimental setup]
+%\chapter{Experimental setup}\label{}
+\begin{Problem}[Proposed work]
+\chapter{Proposed work}\label{c:90-proposed-work}
+%GET information about the used hardware and describe in detail what kind of sensors are being used
+\section{Experimental setup}\label{s:9010-experimental-setup}
+\indent\indent
+\input{Contents/9010-experimental-setup.tex}
+
+%\newpage %Workplan
+\section{Workplan}\label{s:9090-workplan}
+\indent\indent
+\input{Contents/9090-workplan.tex}
+\end{Problem}
+
+
+\clearpage
+\begin{Problem}[Conclusions]
+\section{Conclusions}\label{s:999-conclusions}
+\input{Contents/999-conclusions.tex}
+\end{Problem}
+
+
+\clearpage
+\begin{Problem}[Bibliography]
+%	\section{Bibliography}\label{}
+%	\addbibresource{Library.bib}
+	\bibliography{Library.bib}
+	\bibliographystyle{plainnat}
+	\bibliographystyle{IEEEtranS}
+%	\bibliography{doc}
+	\addcontentsline{toc}{chapter}{Bibliography}
+%	\input{Contents/999-bibliography.tex}
+\end{Problem}
+
+
+\end{spacing}
+\end{document}
+
+
+% % % Licence
+
+%----------------------------------------------------------------------%
+% The following is copyright and licensing information for
+% redistribution of this LaTeX source code; it also includes a liability
+% statement. If this source code is not being redistributed to others,
+% it may be omitted. It has no effect on the function of the above code.
+%----------------------------------------------------------------------%
+% Copyright (c) 2007, 2008, 2009, 2010, 2011 by Theodore P. Pavlic
+%
+% Unless otherwise expressly stated, this work is licensed under the
+% Creative Commons Attribution-Noncommercial 3.0 United States License. To
+% view a copy of this license, visit
+% http://creativecommons.org/licenses/by-nc/3.0/us/ or send a letter to
+% Creative Commons, 171 Second Street, Suite 300, San Francisco,
+% California, 94105, USA.
+%
+% % THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS
+% % OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+% % MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
+% % IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY
+% % CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,
+% % TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
+% % SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+%----------------------------------------------------------------------%

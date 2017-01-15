@@ -1,0 +1,72 @@
+[[38;5;87mPUB1[0m][0001] -- Publisher-1 initialization
+[[38;5;87mPUB1[0m][INFO] -- PID: 30369
+[[38;5;87mPUB1[0m][INFO] -- Time period: 1000
+[[38;5;87mPUB1[0m][INFO] -- Message length: 4
+[[38;5;87mPUB1[0m][INFO] -- Pipe 1W: 4
+[[38;5;87mPUB1[0m][INFO] -- Awaiting semaphore release
+[[38;5;87mPUB1[0m][INFO] -- Semaphore released
+[[38;5;87mPUB1[0m][0001] -- Publishing message: [tufd]
+[[38;5;87mPUB1[0m][0001] -- Writing 4 bytes to pipe (FD 4)
+[[38;5;87mPUB1[0m][0001] -- 4 bytes written to pipe (FD 4)
+[[38;5;87mPUB1[0m][0002] -- Publishing message: [hlog]
+[[38;5;87mPUB1[0m][0002] -- Writing 4 bytes to pipe (FD 4)
+[[38;5;87mPUB1[0m][0002] -- 4 bytes written to pipe (FD 4)
+[[38;5;87mPUB1[0m][0003] -- Publishing message: [bpif]
+[[38;5;87mPUB1[0m][0003] -- Writing 4 bytes to pipe (FD 4)
+[[38;5;87mPUB1[0m][0003] -- 4 bytes written to pipe (FD 4)
+[[38;5;87mPUB1[0m][0004] -- Publishing message: [ezle]
+[[38;5;87mPUB1[0m][0004] -- Writing 4 bytes to pipe (FD 4)
+[[38;5;87mPUB1[0m][0004] -- 4 bytes written to pipe (FD 4)
+[[38;5;87mPUB1[0m][0005] -- Publishing message: [cyec]
+[[38;5;87mPUB1[0m][0005] -- Writing 4 bytes to pipe (FD 4)
+[[38;5;87mPUB1[0m][0005] -- 4 bytes written to pipe (FD 4)
+[[38;5;87mPUB1[0m][0006] -- Publishing message: [psht]
+[[38;5;87mPUB1[0m][0006] -- Writing 4 bytes to pipe (FD 4)
+[[38;5;87mPUB1[0m][0006] -- 4 bytes written to pipe (FD 4)
+[[38;5;87mPUB1[0m][0007] -- Publishing message: [qish]
+[[38;5;87mPUB1[0m][0007] -- Writing 4 bytes to pipe (FD 4)
+[[38;5;87mPUB1[0m][0007] -- 4 bytes written to pipe (FD 4)
+[[38;5;87mPUB1[0m][0008] -- Publishing message: [lnjq]
+[[38;5;87mPUB1[0m][0008] -- Writing 4 bytes to pipe (FD 4)
+[[38;5;87mPUB1[0m][0008] -- 4 bytes written to pipe (FD 4)
+[[38;5;87mPUB1[0m][0009] -- Publishing message: [gkll]
+[[38;5;87mPUB1[0m][0009] -- Writing 4 bytes to pipe (FD 4)
+[[38;5;87mPUB1[0m][0009] -- 4 bytes written to pipe (FD 4)
+[[38;5;87mPUB1[0m][0010] -- Publishing message: [behc]
+[[38;5;87mPUB1[0m][0010] -- Writing 4 bytes to pipe (FD 4)
+[[38;5;87mPUB1[0m][0010] -- 4 bytes written to pipe (FD 4)
+[[38;5;87mPUB1[0m][0011] -- Publishing message: [nzbr]
+[[38;5;87mPUB1[0m][0011] -- Writing 4 bytes to pipe (FD 4)
+[[38;5;87mPUB1[0m][0011] -- 4 bytes written to pipe (FD 4)
+[[38;5;87mPUB1[0m][0012] -- Publishing message: [alkc]
+[[38;5;87mPUB1[0m][0012] -- Writing 4 bytes to pipe (FD 4)
+[[38;5;87mPUB1[0m][0012] -- 4 bytes written to pipe (FD 4)
+[[38;5;87mPUB1[0m][0013] -- Publishing message: [pufa]
+[[38;5;87mPUB1[0m][0013] -- Writing 4 bytes to pipe (FD 4)
+[[38;5;87mPUB1[0m][0013] -- 4 bytes written to pipe (FD 4)
+[[38;5;87mPUB1[0m][0014] -- Publishing message: [lmgv]
+[[38;5;87mPUB1[0m][0014] -- Writing 4 bytes to pipe (FD 4)
+[[38;5;87mPUB1[0m][0014] -- 4 bytes written to pipe (FD 4)
+[[38;5;87mPUB1[0m][0015] -- Publishing message: [uaoh]
+[[38;5;87mPUB1[0m][0015] -- Writing 4 bytes to pipe (FD 4)
+[[38;5;87mPUB1[0m][0015] -- 4 bytes written to pipe (FD 4)
+[[38;5;87mPUB1[0m][0016] -- Publishing message: [nxyt]
+[[38;5;87mPUB1[0m][0016] -- Writing 4 bytes to pipe (FD 4)
+[[38;5;87mPUB1[0m][0016] -- 4 bytes written to pipe (FD 4)
+[[38;5;87mPUB1[0m][0017] -- Publishing message: [mlqp]
+[[38;5;87mPUB1[0m][0017] -- Writing 4 bytes to pipe (FD 4)
+[[38;5;87mPUB1[0m][0017] -- 4 bytes written to pipe (FD 4)
+[[38;5;87mPUB1[0m][0018] -- Publishing message: [fjih]
+[[38;5;87mPUB1[0m][0018] -- Writing 4 bytes to pipe (FD 4)
+[[38;5;87mPUB1[0m][0018] -- 4 bytes written to pipe (FD 4)
+[[38;5;87mPUB1[0m][0019] -- Publishing message: [ijyj]
+[[38;5;87mPUB1[0m][0019] -- Writing 4 bytes to pipe (FD 4)
+[[38;5;87mPUB1[0m][0019] -- 4 bytes written to pipe (FD 4)
+[[38;5;87mPUB1[0m][0020] -- Publishing message: [aqrq]
+[[38;5;87mPUB1[0m][0020] -- Writing 4 bytes to pipe (FD 4)
+[[38;5;87mPUB1[0m][0020] -- 4 bytes written to pipe (FD 4)
+[[38;5;87mPUB1[0m][0021] -- Publishing message: [ncky]
+[[38;5;87mPUB1[0m][0021] -- Writing 4 bytes to pipe (FD 4)
+[[38;5;87mPUB1[0m][0021] -- 4 bytes written to pipe (FD 4)
+[[38;5;87mPUB1[0m][0021][SIGNAL HANDLER] Process 30369 received signal: 10
+[[38;5;87mPUB1[0m][0022] PID 30369: Exiting Publisher-1

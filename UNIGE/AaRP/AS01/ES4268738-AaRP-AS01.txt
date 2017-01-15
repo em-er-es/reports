@@ -1,0 +1,19 @@
+### Ernest Skrzypczyk - 4268738 ### Advanced and Robot Programming ### Assignment 01 ###
+### Contact information ### ernest.skrzypczyk@gmail.com ###
+
+# Compile: g++ -lpthread -o aarp-as01-d ES4268738-AaRP-AS01-D.cpp
+# Run: ./aarp-as01-d
+
+# Source code
+ES4268738-AaRP-AS01-A.cpp
+ES4268738-AaRP-AS01-A--SH.cpp ## This is an expanded version with a signal handler, even though this is unnecessary
+ES4268738-AaRP-AS01-B.cpp
+ES4268738-AaRP-AS01-C.cpp
+ES4268738-AaRP-AS01-D.cpp ## Here semaphores have been used for syncing the two processes, if only the requested input is given, then there are no consistency problems
+
+# Compiled binaries (ELF 64-bit LSB format - GNU/Linux)
+aarp-as01-a
+aarp-as01-a-sh
+aarp-as01-b
+aarp-as01-c
+aarp-as01-d

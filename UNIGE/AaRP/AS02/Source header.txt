@@ -1,0 +1,5 @@
+/*
+Assignment 02 - Advanced and Robot Programming
+Publisher, subscriber and mediator scheme in POSIX environment
+Ernest Skrzypczyk -- 4268738 -- EMARO+ // ES4268738-AaRP-AS02
+*/

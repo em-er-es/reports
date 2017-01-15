@@ -1,0 +1,859 @@
+/*
+Assignment 02 - Advanced and Robot Programming
+Publisher, subscriber and mediator scheme in POSIX environment using pthread
+Ernest Skrzypczyk -- 4268738 -- EMARO // ES4268738-AaRP-AS02
+*/
+// Pthread
+// Compile with:
+//	g++ -Wall -o AS02B ES4268738-AaRP-AS02B.cpp
+#include "ES4268738-AaRP-AS02.h"
+#include <fcntl.h> //semaphore
+#include <inttypes.h> //uint64
+#include <iostream>
+#include <cmath>
+#include <pthread.h> //pthread functions
+#include <signal.h>
+#include <semaphore.h> //semaphore
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <sys/time.h>
+#include <unistd.h>
+#include <vector>
+
+/* Differences between the pipe and pthread version:
+ * Instead of fork() use pthread_create()
+ * Instead of waitpid() use pthread_join()
+ * Usage of pthread_mutex_lock() and pthread_mutex_unlock() for synchronization
+ * The code base largely stays the same
+ * Instead of pipes use shared memory
+ * Define global variables for access to all threads
+// */
+
+
+// Global variables
+// Name arrays
+char Names[][20] = {{"Init"}, {"Mediator"}, {"Publisher-1"}, {"Publisher-2"}, {"Subscriber-1"}, {"Subscriber-2"}, {"Subscriber-3"}};
+// Exchange the commenting in the next two lines to switch between GNU/Linux console color codes
+// char ShortNames[][5] = {{"INIT"}, {"MEDI"}, {"PUB1"}, {"PUB2"}, {"SUB1"}, {"SUB2"}, {"SUB3"}}; //~COLOR
+char ShortNames[][20] = {{CI"INIT"CR}, {CM"MEDI"CR}, {CP1"PUB1"CR}, {CP2"PUB2"CR}, {CS1"SUB1"CR}, {CS2"SUB2"CR}, {CS3"SUB3"CR}}; //~COLOR
+
+// Component condition variables
+int ConditionPub1 = 1, ConditionPub2 = 1, ConditionMedi = 1, ConditionSub1 = 1, ConditionSub2 = 1, ConditionSub3 = 1;
+
+//Mutexes
+pthread_mutex_t mutexMessage = PTHREAD_MUTEX_INITIALIZER;
+pthread_mutex_t mutexSubscriber1 = PTHREAD_MUTEX_INITIALIZER;
+pthread_mutex_t mutexSubscriber2 = PTHREAD_MUTEX_INITIALIZER;
+pthread_mutex_t mutexSubscriber3 = PTHREAD_MUTEX_INITIALIZER;
+
+// /* Signal handler //~SEMAPHORE
+void SignalHandler(int SignalNumber) {
+	// printf("[%s][%04d][SIGNAL HANDLER] Process %d received signal: %d\n", ShortName, loop, getpid(), SignalNumber);
+	printf("[SIGNAL HANDLER] Process %d received signal: %d\n", getpid(), SignalNumber);
+	ConditionPub1 = 0;
+	ConditionPub2 = 0;
+	ConditionMedi = 0;
+	ConditionSub1 = 0;
+	ConditionSub2 = 0;
+	ConditionSub3 = 0;
+	// Unlocking all mutexes to prevent hanging threads
+	pthread_mutex_unlock(&mutexMessage);
+	pthread_mutex_unlock(&mutexSubscriber1);
+	pthread_mutex_unlock(&mutexSubscriber2);
+	pthread_mutex_unlock(&mutexSubscriber3);
+	// exit(SignalNumber); //~
+}
+// */
+
+// Messages
+// Assume uniform message lengths, but leave the possibility for changes in the future
+int MessageLength = MSG_LENGTH;
+// int MessageLengths[] = {MEDI, PUB1, PUB2, SUB1, SUB2, SUB3};
+// int MessageLengths[ncomponents] = {MessageLength, MessageLength, MessageLength, MessageLength, MessageLength, MessageLength}; 
+// One message for input, nSubscriber messages for output
+char MessagePublisher1[MSG_LENGTH];
+char MessagePublisher2[MSG_LENGTH];
+char MessageSubscriber1[MSG_LENGTH];
+char MessageSubscriber2[MSG_LENGTH];
+char MessageSubscriber3[MSG_LENGTH];
+// Mediator relevant
+int RequestGranted = 0;
+int NewMessage = 0;
+int NewRequest = 0;
+
+// Buffers
+// int MessageBuffer = MessageLength * 8;
+// int MessageBuffer = MessageLength * tpratio;
+int MessageBuffer = 8; // In case of vector for circular buffer
+
+int nPublisher; int nSubscriber;
+// int MessageLength; int MessageBuffer; char Message;
+char AlphabetUpper; char AlphabetLower; char Digits;
+
+//Threads functions declarations
+void *mediator(void *ptr);
+void *publisher1(void *ptr);
+void *publisher2(void *ptr);
+void *subscriber1(void *ptr);
+void *subscriber2(void *ptr);
+void *subscriber3(void *ptr);
+
+// Function definitions
+/* Random character generation from given charset -- Used inside publisher
+void GenerateRandomCharacter(char *charset, int s, int l, char *message) {
+	int t; char c[l];
+
+	for (int i = 0; i < l; ++i) {
+		t = (rand() * getpid()) % s;
+		if (t < 0) t *= -1; // Make sure the pseudo random number is positive
+		c[i] = charset[t];
+	}
+	for (int i = 0; i < l; ++i) message[i] = c[i]; // Assign generated values one by one
+}
+// */
+
+// Determine pthread identificator
+uint64_t gettid() {
+	pthread_t ptid = pthread_self();
+	uint64_t threadId = 0;
+	memcpy(&threadId, &ptid, std::min(sizeof(threadId), sizeof(ptid)));
+	return threadId;
+}
+
+// Decode metadata
+int decodemetadata(int metadata, int nbits, int wbit) {
+	int cbit[nbits];
+	for (int i = 0; i < nbits; i++) {
+		if (metadata / pow(2, i)) {
+			metadata = metadata - pow(2, i);
+			cbit[i] = 1;
+		}
+		if (wbit == i) return cbit[i];
+	}
+	return 0;
+}
+
+// Main function of the init process
+int main()
+{
+
+// Register signal handler
+signal(SIGUSR1, SignalHandler);
+
+// PThread holders
+int pid; // Init process identificator
+int nPublisher = 2;
+int nSubscriber = 3;
+// int npipes = nPublisher + 2 * nSubscriber; // Number of pipes
+int npipes = nPublisher + nSubscriber * 2; // Number of pipes // Obsolete but kept for simplicity of adjusting the source code
+int ncomponents = nPublisher + nSubscriber + 1;
+int nthreads = ncomponents;
+pthread_t PThreads[nthreads]; // 6 threads
+int ExitStatus[nthreads], status;
+
+// /* Timings - Defined in the header
+int TimeParameters[ncomponents + 1] = {MEDI_DECAY, MEDI_PERIOD, PUB1_PERIOD, PUB2_PERIOD, SUB1_PERIOD, SUB2_PERIOD, SUB3_PERIOD};
+int TimePeriods[ncomponents + 1] = {MEDI_DECAY, MEDI_PERIOD, PUB1_PERIOD, PUB2_PERIOD, SUB1_PERIOD, SUB2_PERIOD, SUB3_PERIOD};
+int tpmin = (-1) * TimeParameters[0]; int tpmax = 0;
+for (int i = 2; i < ncomponents + 1; i++) {
+	if (tpmax < TimeParameters[i]) tpmax = TimeParameters[i];
+	if (tpmin < (-1) * TimeParameters[i]) tpmin = (-1) * TimeParameters[i];
+}
+int tpratio = tpmax / ((-1) * tpmin); // Should be the actual ratio of slowest subscriber to fastest publisher
+// */
+
+pid = getpid(); // Init PID
+printf("[%s][INFO] PID %d: Start %s\n", ShortNames[0], pid, Names[0]);
+
+//Publishers character sets -- access to all publishers
+// Alphabet definition - Upper characters // String literal, could be also char *AlphabetUpper = "..."
+char AlphabetUpper[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+
+// Alphabet definition - Lower characters
+char AlphabetLower[] = "abcdefghijklmnopqrstuvwxyz";
+
+// Digits definition
+char Digits[] = "0123456789";
+
+// Init
+printf("[%s][INFO] -- Message length: %d\n", ShortNames[0], MessageLength);
+
+// Creating pthreads
+// PThreads[1] -- Mediator
+// PThreads[2] -- Publisher 1
+// PThreads[3] -- Publisher 2
+// PThreads[4] -- Subscriber 1
+// PThreads[5] -- Subscriber 2
+// PThreads[6] -- Subscriber 3
+
+for (int i = 1; i <= nthreads; i++) { // Loop for error checking and calling all of the components
+	printf("[%s][%s] Creating thread: %s @PID %d\n", ShortNames[0], ShortNames[i], Names[i], getpid());
+
+	switch (i) {
+		case 1:
+			ExitStatus[i] = pthread_create(&PThreads[i], NULL, mediator, NULL);
+			if (ExitStatus[i]) {
+				perror("pthread_create()");
+				printf("[%s][ERROR] PID %d pthread_create() error: %d\n", ShortNames[i], gettid(), PThreads[i]);
+			}
+			break;
+		case 2:
+			ExitStatus[i] = pthread_create(&PThreads[i], NULL, publisher1, NULL);
+			if (ExitStatus[i]) {
+				perror("pthread_create()");
+				printf("[%s][ERROR] PID %d pthread_create() error: %d\n", ShortNames[i], gettid(), PThreads[i]);
+			}
+			break;
+		case 3:
+			ExitStatus[i] = pthread_create(&PThreads[i], NULL, publisher2, NULL);
+			if (ExitStatus[i]) {
+				perror("pthread_create()");
+				printf("[%s][ERROR] PID %d pthread_create() error: %d\n", ShortNames[i], gettid(), PThreads[i]);
+			}
+			break;
+		case 4:
+			ExitStatus[i] = pthread_create(&PThreads[i], NULL, subscriber1, NULL);
+			if (ExitStatus[i]) {
+				perror("pthread_create()");
+				printf("[%s][ERROR] PID %d pthread_create() error: %d\n", ShortNames[i], gettid(), PThreads[i]);
+			}
+			break;
+		case 5:
+			ExitStatus[i] = pthread_create(&PThreads[i], NULL, subscriber2, NULL);
+			if (ExitStatus[i]) {
+				perror("pthread_create()");
+				printf("[%s][ERROR] PID %d pthread_create() error: %d\n", ShortNames[i], gettid(), PThreads[i]);
+			}
+			break;
+		case 6:
+			ExitStatus[i] = pthread_create(&PThreads[i], NULL, subscriber3, NULL);
+			if (ExitStatus[i]) {
+				perror("pthread_create()");
+				printf("[%s][ERROR] PID %d pthread_create() error: %d\n", ShortNames[i], gettid(), PThreads[i]);
+			}
+			break;
+	}
+	// exit(ExitStatus[i - 1]);
+}
+
+// /* Exit codes handling
+	// sleep(1); // Delay for exit monitoring
+
+	// Init
+	for (int i = 1; i <= nthreads; i++) { // Loop for waiting for all of the threads to end
+		ExitStatus[i] = pthread_join(PThreads[i], NULL); // Pid could be also -1 or 0 in this case
+		if (ExitStatus[i] < 0) {
+			perror("pthread_join()");
+			printf("[%s][ERROR] PID %d pthread_join() error: %d\n", ShortNames[i], PThreads[i - 1], ExitStatus[i]); // WEXITSTATUS macro should usually be only called if WIFEXITED(status) returns 1, so not in an error case; Debug purpose only
+			// return(1); // Exit the process with an error
+		}
+	// printf("Iteration: %d\n", i); //~DEBUG
+	}
+
+	for (int i = 1; i <= nthreads; i++) { // Show exit status for each component
+		// printf("[%s][%s] Thread %d exit status: %d\n", ShortNames[0], ShortNames[i + 1], (int*) PThreads[i], ExitStatus[i]);
+		printf("[%s][%s] Thread %d exit status: %d\n", ShortNames[0], ShortNames[i], i, ExitStatus[i]);
+	}
+
+	// printf("[%s][INFO] Thread %d: Exiting %s\n", ShortNames[0], (int*) PThreads[0], Names[0]);
+	printf("[%s][INFO] PID %d: Exiting %s\n", ShortNames[0], pid, Names[0]);
+// */
+
+// return 0;
+exit(EXIT_SUCCESS);
+}
+
+// Pthreads start routine definitions
+// Mediator
+void *mediator(void *ptr) {
+// Determine pthread identificator
+uint64_t ptid = gettid();
+
+// Default values
+// char ShortName[20] = "MEDI"; // The size is necessary for the GNU/Linux console codes //~COLOR
+char ShortName[20] = CM"MEDI"CR; // The size is necessary for the GNU/Linux console codes //~COLOR
+int TimePeriod = MEDI_PERIOD;
+
+// Component specific parameters
+int loop = 1;
+
+// sem_t *semaphore0 = sem_open("semaphoremediator", O_CREAT|O_EXCL, 0, 1);
+// sem_unlink("semaphoremediator"); // Prevent a stray semaphore
+
+printf("[%s][%04d] -- %s initialization\n", ShortName, loop, Names[1]);
+printf("[%s][INFO] -- Pthread ID: %d\n", ShortName, ptid);
+printf("[%s][INFO] -- Time period: %d\n", ShortName, TimePeriod);
+
+// Clear mediator circular buffer
+// std::vector<char> CircularBuffer;
+// std::vector<std::string> CircularBuffer;
+// std::vector<char*> CircularBuffer;
+// std::vector<int> MetadataBuffer;
+char CircularBuffer[MessageBuffer * MessageLength];
+// memset(CircularBuffer, 0, MessageBuffer);
+// CircularBuffer.reserve(MessageBuffer);
+// CircularBuffer.clear();
+// MetadataBuffer.reserve(MessageBuffer);
+// MetadataBuffer.clear();
+// int MetadataBuffer[MessageBuffer * nSubscriber];
+int MetadataBuffer[MessageBuffer];
+
+int MessageCounter = 0;
+int mt = 0;
+
+// Initial delay
+usleep(TimePeriod * 1000); // usleep used for emulating msleep
+// usleep(TimePeriod * ptid); // usleep used for emulating msleep
+// usleep(TimePeriod * ptid); // usleep used for emulating msleep
+
+char msg[MessageLength]; // Local copy of message
+char smsg[MessageLength]; // Local copy of message
+// std::string msg[MessageLength]; // Local copy of message
+
+// Main loop
+do {
+
+if (NewMessage) {
+// while (NewMessage) {
+
+// for (unsigned int i = 0; i < CircularBuffer.size(); i++) printf("[%s][%04d] -- [ %s ]\n", ShortName, loop, CircularBuffer[i]);
+
+	// /* Check if the circular buffer is full
+	// if (MessageCounter >= MessageBuffer) {
+	if (MessageCounter >= 2) {
+		printf("[%s][%04d] -- Circular buffer full, capacity %d\n", ShortName, loop, MessageBuffer);
+		printf("[%s][%04d] -- Circular and metadata buffers content\n", ShortName, loop);
+		// for (int i = 0; i < MessageBuffer; i++) printf("[%s][%04d] -- [ %s ][ %d ]\n", ShortName, loop, CircularBuffer[i], MetadataBuffer[i]);
+		// memset(CircularBuffer, 0, MessageLength); // Delete message from shared memory
+		// memset(MetadataBuffer, 0, 1); // Delete message from shared memory
+		// CircularBuffer.clear(); // Clear whole buffer
+		// MetadataBuffer.clear(); // Clear whole buffer
+		// MessageCounter = 0;
+		// CircularBuffer.erase(CircularBuffer.begin()); // Delete first element
+		// CircularBuffer.pop_back(); // Delete first element
+		// MetadataBuffer.pop_back(); // Delete first element
+		MessageCounter--;
+		printf("[%s][%04d] -- Circular and metadata buffers content\n", ShortName, loop);
+		// for (int i = 0; i < MessageLength; i++) sprintf(smsg, "%c", *(CircularBuffer + i));
+		// for (int i = 0; i < MessageLength; i++) sprintf(smsg, "%c", CircularBuffer[i]);
+		// for (int i = 0; i < MessageLength; i++) sprintf(smsg, "%c", msg[i]);
+		int offset = 0;
+		for (int i = 0; i < MessageLength; i++) { *(CircularBuffer + i + offset) = *(msg + i);}
+		// for (int i = 0; i < MessageLength; i++) msg[i] = *(Message + i); // Reconstructing the message
+		// for (int i = 0; i < MessageBuffer; i++) printf("[%s][%04d] -- [ %s ][ %d ]\n", ShortName, loop, *(CircularBuffer + i * MessageLength), *(MetadataBuffer + i));
+		for (int i = 0; i < MessageBuffer; i++) printf("[%s][%04d] -- [ %s ][ %d ]\n", ShortName, loop, smsg, *(MetadataBuffer + i));
+	}
+	// */
+
+	printf("[%s][%04d] -- Publisher messages %d before processing\n", ShortName, loop, NewMessage);
+	if (NewMessage == 1) {
+	// if (!(NewMessage % 1)) {
+		printf("[%s][%04d] -- Locking mutex\n", ShortName, loop);
+		pthread_mutex_lock(&mutexMessage); // Lock mutex on Message
+		printf("[%s][%04d] -- Reading %d bytes from shared memory\n", ShortName, loop, MessageLength);
+
+		memcpy(msg, MessagePublisher1, MessageLength); // Read from shared memory
+		memset(MessagePublisher1, 0, MessageLength); // Delete message from shared memory
+		NewMessage = 0; // Clear new message indicator
+		// NewMessage = NewMessage - 1; // Clear new message indicator for publisher 1
+
+		printf("[%s][%04d] -- %d bytes read from shared memory\n", ShortName, loop, sizeof(msg));
+		pthread_mutex_unlock(&mutexMessage); // Unlock mutex on Message
+		printf("[%s][%04d] -- Unlocking mutex\n", ShortName, loop);
+		printf("[%s][%04d] -- Reading message from publisher: [%s]\n", ShortName, loop, msg);
+		// msg[MessageLength] = '\0'; //DB
+		// printf("[%s][%04d] -- Reading message from publisher: [%s]\n", ShortName, loop, msg); //DB
+	}
+
+	if (NewMessage == 2) {
+	// if (!(NewMessage % 2)) {
+		printf("[%s][%04d] -- Locking mutex\n", ShortName, loop);
+		pthread_mutex_lock(&mutexMessage); // Lock mutex on Message
+		printf("[%s][%04d] -- Reading %d bytes from shared memory\n", ShortName, loop, MessageLength);
+
+		memcpy(msg, MessagePublisher2, MessageLength); // Read from shared memory
+		memset(MessagePublisher2, 0, MessageLength); // Delete message from shared memory
+		NewMessage = 0; // Clear new message indicator
+		// NewMessage = NewMessage - 2; // Clear new message indicator for publisher 1
+
+		printf("[%s][%04d] -- %d bytes read from shared memory\n", ShortName, loop, sizeof(msg));
+		pthread_mutex_unlock(&mutexMessage); // Unlock mutex on Message
+		printf("[%s][%04d] -- Unlocking mutex\n", ShortName, loop);
+		printf("[%s][%04d] -- Reading message from publisher: [%s]\n", ShortName, loop, msg);
+		// msg[MessageLength] = '\0'; //DB
+		// printf("[%s][%04d] -- Reading message from publisher: [%s]\n", ShortName, loop, msg); //DB
+	}
+
+	// if (strcmp(msg, "\0")) {
+	if (*(msg) != '\0') {
+	// if (strcmp(msg, '\0')) {
+		// Processing message
+		printf("[%s][%04d] -- Sending message [%s] to buffer\n", ShortName, loop, msg);
+		
+		// Send message to buffer
+		///TODO
+		// CircularBuffer.push_back(msg.c_cstr());
+		// smsg = *(msg);
+		// CircularBuffer.push_back(msg);
+		// sprintf(smsg, "%d", MessageCounter); // Contruct a message with metadata
+		// CircularBuffer.push_back(smsg);
+		// CircularBuffer.push_back("ASDC");
+		// MetadataBuffer.push_back(7); // 2^0 + 2^1 + 2^2 = 1 + 2 + 4 = 7
+		// MetadataBuffer.push_back(MessageCounter); // 2^0 + 2^1 + 2^2 = 1 + 2 + 4 = 7
+		*(CircularBuffer + MessageCounter * MessageLength) = *(msg);
+		*(MetadataBuffer + MessageCounter) = 7;
+		// printf("[%s][%04d] -- Message [%s] stored in circular buffer\n", ShortName, loop, CircularBuffer(CircularBuffer.end()));
+		MessageCounter++;
+	}
+	printf("[%s][%04d] -- Publisher messages %d after processing\n", ShortName, loop, NewMessage);
+	// memset(msg, 0, MessageLength); // Delete message from shared memory
+}
+
+if (NewRequest) {
+// while (NewRequest) {
+	printf("[%s][%04d] -- Subscriber requests %d before processing\n", ShortName, loop, NewRequest);
+	// if (!strcmp(msg, "REQ1")) {
+	if (NewRequest == 1) {
+	// if (!(NewRequest % 1)) {
+		// Subscriber 1
+		printf("[%s][%04d] -- Serving subscriber 1\n", ShortName, loop);
+
+		// Get message from buffer
+		///TODO
+		memset(msg, 0, MessageLength + 1); // Delete message copied from shared memory
+		memcpy(msg, "SER1", MessageLength);
+
+		// Sending message to subscriber
+		// printf("[%s][%04d] -- Locking mutex for subscriber 1\n", ShortName, loop);
+		// pthread_mutex_lock(&mutexSubscriber1); // Lock mutex on Message
+		printf("[%s][%04d] -- Writing %d bytes to shared memory\n", ShortName, loop, MessageLength);
+
+		memcpy(MessageSubscriber1, msg, MessageLength); // Write to shared memory
+
+		printf("[%s][%04d] -- %d bytes written to shared memory\n", ShortName, loop, sizeof(msg));
+		RequestGranted = 1;
+		printf("[%s][%04d] -- Granting request %d\n", ShortName, loop, RequestGranted);
+		// Update request indicator
+		NewRequest = 0;
+		// NewRequest = NewRequest - 1;
+
+		pthread_mutex_unlock(&mutexSubscriber1); // Unlock mutex on Message
+		printf("[%s][%04d] -- Unlocking mutex for subscriber 1\n", ShortName, loop);
+		// Another mutex could help make sure the transaction was conducted
+
+		// Update tags on message
+		///TODO
+
+	// } else if (!strcmp(msg, "REQ2")) {
+	}
+	if (NewRequest == 2) {
+	// if (!NewRequest % 2) {
+		// Subscriber 2
+		printf("[%s][%04d] -- Serving subscriber 2\n", ShortName, loop);
+
+		// Get message from buffer
+		///TODO
+		memset(msg, 0, MessageLength + 1); // Delete message copied from shared memory
+		memcpy(msg, "SER2", MessageLength);
+
+		// Sending message to subscriber
+		// printf("[%s][%04d] -- Locking mutex for subscriber 1\n", ShortName, loop);
+		// pthread_mutex_lock(&mutexSubscriber1); // Lock mutex on Message
+		printf("[%s][%04d] -- Writing %d bytes to shared memory\n", ShortName, loop, MessageLength);
+
+		memcpy(MessageSubscriber2, msg, MessageLength); // Write to shared memory
+
+		printf("[%s][%04d] -- %d bytes written to shared memory\n", ShortName, loop, sizeof(msg));
+		RequestGranted = 2;
+		printf("[%s][%04d] -- Granting request %d\n", ShortName, loop, RequestGranted);
+		// Update request indicator
+		NewRequest = 0;
+		// NewRequest = NewRequest - 2;
+
+		pthread_mutex_unlock(&mutexSubscriber2); // Unlock mutex on Message
+		printf("[%s][%04d] -- Unlocking mutex for subscriber 2\n", ShortName, loop);
+		// Another mutex could help make sure the transaction was conducted
+
+		// Update tags on message
+		///TODO
+		
+	// } else if (!strcmp(msg, "REQ3")) {
+	}
+	if (NewRequest == 3) {
+	// if (!NewRequest % 4) {
+		// Subscriber 3
+		printf("[%s][%04d] -- Serving subscriber 3\n", ShortName, loop);
+
+		// Get message from buffer
+		///TODO
+		memset(msg, 0, MessageLength + 1); // Delete message copied from shared memory
+		memcpy(msg, "SER3", MessageLength);
+
+		// Sending message to subscriber
+		// printf("[%s][%04d] -- Locking mutex for subscriber 3\n", ShortName, loop);
+		// pthread_mutex_lock(&mutexSubscriber1); // Lock mutex on Message
+		printf("[%s][%04d] -- Writing %d bytes to shared memory\n", ShortName, loop, MessageLength);
+
+		memcpy(MessageSubscriber3, msg, MessageLength); // Write to shared memory
+
+		printf("[%s][%04d] -- %d bytes written to shared memory\n", ShortName, loop, sizeof(msg));
+		RequestGranted = 3;
+		printf("[%s][%04d] -- Granting request %d\n", ShortName, loop, RequestGranted);
+		// Update request indicator
+		NewRequest = 0;
+		// NewRequest = NewRequest - 1;
+
+		pthread_mutex_unlock(&mutexSubscriber3); // Unlock mutex on Message
+		printf("[%s][%04d] -- Unlocking mutex for subscriber 3\n", ShortName, loop);
+		// Another mutex could help make sure the transaction was conducted
+
+		// Update tags on message
+		///TODO
+		// mt = MetadataBuffer(MetadataBuffer.begin());
+		// decodemetadata(, )
+	}
+	memset(msg, 0, MessageLength); // Delete message from shared memory
+	printf("[%s][%04d] -- Subscriber requests %d after processing\n", ShortName, loop, NewRequest);
+}
+
+// printf("[%s][%04d] -- Suspending mediator\n", ShortName, loop);
+// printf("[%s][%04d] -- Suspending mediator for %d ms\n", ShortName, loop, TimePeriod); //VB
+// Assume zero delay in producing and transmitting data
+// TimePeriod pseudo corresponds to the period of the component
+usleep(TimePeriod * 1000); // usleep used for emulating msleep
+
+loop++; // Increase loop counter each cycle
+} while (ConditionMedi);
+
+// sem_post(semaphore0); //~SEMAPHORE // Releasing semaphore for stuck zombie clients
+
+// Exit message after receiving signal from signal handler
+printf("[%s][%04d] Thread id %d: Exiting %s\n", ShortName, loop, ptid, Names[1]);
+
+}
+
+// Publisher 1
+void *publisher1(void *ptr) {
+// Determine pthread identificator
+uint64_t ptid = gettid();
+
+// Default values
+// char ShortName[20] = "PUB1"; // The size is necessary for the GNU/Linux console codes //~COLOR
+char ShortName[20] = CP1"PUB1"CR; // The size is necessary for the GNU/Linux console codes //~COLOR
+int TimePeriod = PUB1_PERIOD;
+
+// Component specific parameters
+int loop = 1;
+
+// Character set
+// Alphabet definition - Upper characters
+char AlphabetUpper[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+
+printf("[%s][%04d] -- %s initialization\n", ShortName, loop, Names[2]);
+printf("[%s][INFO] -- Pthread ID: %d\n", ShortName, ptid);
+printf("[%s][INFO] -- Time period: %d\n", ShortName, TimePeriod);
+
+// Initial delay
+usleep(TimePeriod * 1000); // usleep used for emulating msleep
+// usleep(TimePeriod * ptid); // usleep used for emulating msleep
+
+char msg[MessageLength]; // Local copy of message
+
+// Main loop
+do {
+// Generate random character string and write the generated message to the shared memory
+for (int i = 0; i < MessageLength;) {
+	int t;
+	t = (rand() * getpid()) % sizeof(AlphabetUpper);
+	if (t < 0) t *= -1; // Make sure the pseudo random number is positive
+	msg[i] = AlphabetUpper[t];
+	if (msg[i] != '\0') i++;
+}
+printf("[%s][%04d] -- Publishing message: [%s]\n", ShortName, loop, msg);
+
+// if (NewMessage) usleep(MEDI_PERIOD * 1000);
+
+printf("[%s][%04d] -- Locking mutex\n", ShortName, loop);
+pthread_mutex_lock(&mutexMessage); // Lock mutex on Message
+printf("[%s][%04d] -- Writing %d bytes to shared memory\n", ShortName, loop, MessageLength);
+
+	memcpy(MessagePublisher1, msg, MessageLength); // Write to shared memory
+	NewMessage = 1;
+
+printf("[%s][%04d] -- %d bytes written to shared memory\n", ShortName, loop, sizeof(MessagePublisher1));
+// printf("[%s][%04d] -- %d bytes written to shared memory\n", ShortName, loop, MessageLength);
+pthread_mutex_unlock(&mutexMessage); // Unlock mutex on Message
+printf("[%s][%04d] -- Unlocking mutex\n", ShortName, loop);
+
+// Assume zero delay in producing and transmitting data
+// TimePeriod pseudo corresponds to the period of the component
+printf("[%s][%04d] -- Suspending publisher 1 for %d ms\n", ShortName, loop, TimePeriod);
+usleep(TimePeriod * 1000); // usleep used for emulating msleep
+
+loop++; // Increase loop counter each cycle
+} while (ConditionPub1);
+
+// Exit message after receiving signal from signal handler
+printf("[%s][%04d] Thread id %d: Exiting %s\n", ShortName, loop, ptid, Names[2]);
+
+	pthread_exit(0);
+}
+
+// Publisher 2
+void *publisher2(void *ptr) {
+// Determine pthread identificator
+uint64_t ptid = gettid();
+
+// Default values
+// char ShortName[20] = "PUB2"; // The size is necessary for the GNU/Linux console codes //~COLOR
+char ShortName[20] = CP2"PUB2"CR; // The size is necessary for the GNU/Linux console codes //~COLOR
+int TimePeriod = PUB2_PERIOD;
+
+// Component specific parameters
+int loop = 1;
+
+// Character set
+// Alphabet definition - Lower characters
+char AlphabetLower[] = "abcdefghijklmnopqrstuvwxyz";
+
+printf("[%s][%04d] -- %s initialization\n", ShortName, loop, Names[2]);
+printf("[%s][INFO] -- Pthread ID: %d\n", ShortName, ptid);
+printf("[%s][INFO] -- Time period: %d\n", ShortName, TimePeriod);
+
+// Initial delay
+usleep(TimePeriod * 1000); // usleep used for emulating msleep
+// usleep(TimePeriod * ptid); // usleep used for emulating msleep
+
+char msg[MessageLength]; // Local copy of message
+
+// Main loop
+do {
+// Generate random character string and write the generated message to the shared memory
+for (int i = 0; i < MessageLength;) {
+	int t;
+	t = (rand() * getpid()) % sizeof(AlphabetLower);
+	if (t < 0) t *= -1; // Make sure the pseudo random number is positive
+	msg[i] = AlphabetLower[t];
+	if (msg[i] != '\0') i++;
+}
+
+printf("[%s][%04d] -- Publishing message: [%s]\n", ShortName, loop, msg);
+
+printf("[%s][%04d] -- Locking mutex\n", ShortName, loop);
+pthread_mutex_lock(&mutexMessage); // Lock mutex on Message
+printf("[%s][%04d] -- Writing %d bytes to shared memory\n", ShortName, loop, MessageLength);
+
+	memcpy(MessagePublisher2, msg, MessageLength); // Write to shared memory
+	NewMessage = 1;
+
+printf("[%s][%04d] -- %d bytes written to shared memory\n", ShortName, loop, sizeof(MessagePublisher2));
+// printf("[%s][%04d] -- %d bytes written to shared memory\n", ShortName, loop, MessageLength);
+pthread_mutex_unlock(&mutexMessage); // Unlock mutex on Message
+printf("[%s][%04d] -- Unlocking mutex\n", ShortName, loop);
+
+// Assume zero delay in producing and transmitting data
+// TimePeriod pseudo corresponds to the period of the component
+printf("[%s][%04d] -- Suspending publisher 2 for %d ms\n", ShortName, loop, TimePeriod);
+usleep(TimePeriod * 1000); // usleep used for emulating msleep
+
+loop++; // Increase loop counter each cycle
+} while (ConditionPub2);
+
+// Exit message after receiving signal from signal handler
+printf("[%s][%04d] Thread id %d: Exiting %s\n", ShortName, loop, ptid, Names[3]);
+
+	pthread_exit(0);
+}
+
+// Subscriber 1
+void *subscriber1(void *ptr) {
+// Determine pthread identificator
+uint64_t ptid = gettid();
+
+// Default values
+// char ShortName[20] = "SUB1"; // The size is necessary for the GNU/Linux console codes //~COLOR
+char ShortName[20] = CS1"SUB1"CR; // The size is necessary for the GNU/Linux console codes //~COLOR
+int TimePeriod = SUB1_PERIOD;
+
+// Component specific parameters
+int loop = 1;
+
+printf("[%s][%04d] -- %s initialization\n", ShortName, loop, Names[4]);
+printf("[%s][INFO] -- Pthread ID: %d\n", ShortName, ptid);
+printf("[%s][INFO] -- Time period: %d\n", ShortName, TimePeriod);
+printf("[%s][INFO] -- Message length: %d\n", ShortName, MessageLength);
+
+// Declare local copy of message
+char msg[MessageLength]; // Local copy of message
+// RequestMessage[MessageLength] = '\0';
+
+// Initial delay
+usleep(TimePeriod * 1000); // usleep used for emulating msleep
+// usleep(TimePeriod * ptid); // usleep used for emulating msleep
+
+// Main loop
+do {
+// Write a message request to the mediator via provided pipe FD
+printf("[%s][%04d] -- Requesting message...\n", ShortName, loop);
+printf("[%s][%04d] -- Locking mutex\n", ShortName, loop);
+pthread_mutex_lock(&mutexMessage); // Lock mutex on Message
+
+	NewRequest = 1;
+	// NewRequest = NewRequest + 1;
+	printf("[%s][%04d] -- New request %d written to shared memory\n", ShortName, loop, NewRequest);
+
+pthread_mutex_unlock(&mutexMessage); // Unlock mutex on Message
+printf("[%s][%04d] -- Unlocking mutex\n", ShortName, loop);
+
+printf("[%s][%04d] -- Awaiting message...\n", ShortName, loop);
+printf("[%s][%04d] -- Locking mutex for subscriber 1\n", ShortName, loop);
+pthread_mutex_lock(&mutexSubscriber1); // Lock mutex on subscriber 1, waiting for mediator
+
+printf("[%s][%04d] -- Reading %d bytes from shared memory\n", ShortName, loop, MessageLength);
+memcpy(msg, MessageSubscriber1, MessageLength); // Read from shared memory
+if (sizeof(msg) == MessageLength) printf("[%s][%04d] -- Subscribing message: [%s]\n", ShortName, loop, msg);
+else printf("[%s][%04d] -- Subscribing message failed\n", ShortName, loop);
+
+// Assume zero delay in producing and transmitting data
+// TimePeriod pseudo corresponds to the period of the component
+// printf("[%s][%04d] -- Suspending subscriber 1\n", ShortName, loop);
+printf("[%s][%04d] -- Suspending subscriber 1 for %d ms\n", ShortName, loop, TimePeriod);
+usleep(TimePeriod * 1000); // usleep used for emulating msleep
+
+loop++; // Increase loop counter each cycle
+} while (ConditionSub1);
+
+// Exit message after receiving signal from signal handler
+printf("[%s][%04d] Thread id %d: Exiting %s\n", ShortName, loop, ptid, Names[4]);
+
+	pthread_exit(0);
+}
+
+// Subscriber 2
+void *subscriber2(void *ptr) {
+// Determine pthread identificator
+uint64_t ptid = gettid();
+
+// Default values
+// char ShortName[20] = "SUB2"; // The size is necessary for the GNU/Linux console codes //~COLOR
+char ShortName[20] = CS2"SUB2"CR; // The size is necessary for the GNU/Linux console codes //~COLOR
+int TimePeriod = SUB2_PERIOD;
+
+// Component specific parameters
+int loop = 1;
+
+printf("[%s][%04d] -- %s initialization\n", ShortName, loop, Names[5]);
+printf("[%s][INFO] -- Pthread ID: %d\n", ShortName, ptid);
+printf("[%s][INFO] -- Time period: %d\n", ShortName, TimePeriod);
+printf("[%s][INFO] -- Message length: %d\n", ShortName, MessageLength);
+
+// Declare local copy of message
+char msg[MessageLength]; // Local copy of message
+// RequestMessage[MessageLength] = '\0';
+
+// Initial delay
+usleep(TimePeriod * 1000); // usleep used for emulating msleep
+// usleep(TimePeriod * ptid); // usleep used for emulating msleep
+
+// Main loop
+do {
+// Write a message request to the mediator via provided pipe FD
+printf("[%s][%04d] -- Requesting message...\n", ShortName, loop);
+printf("[%s][%04d] -- Locking mutex\n", ShortName, loop);
+pthread_mutex_lock(&mutexMessage); // Lock mutex on Message
+
+	NewRequest = 2;
+	// NewRequest = NewRequest + 2;
+	printf("[%s][%04d] -- New request %d written to shared memory\n", ShortName, loop, NewRequest);
+
+pthread_mutex_unlock(&mutexMessage); // Unlock mutex on Message
+printf("[%s][%04d] -- Unlocking mutex\n", ShortName, loop);
+
+printf("[%s][%04d] -- Awaiting message...\n", ShortName, loop);
+printf("[%s][%04d] -- Locking mutex for subscriber 2\n", ShortName, loop);
+pthread_mutex_lock(&mutexSubscriber2); // Lock mutex on subscriber 2, waiting for mediator
+
+printf("[%s][%04d] -- Reading %d bytes from shared memory\n", ShortName, loop, MessageLength);
+memcpy(msg, MessageSubscriber2, MessageLength); // Read from shared memory
+if (sizeof(msg) == MessageLength) printf("[%s][%04d] -- Subscribing message: [%s]\n", ShortName, loop, msg);
+else printf("[%s][%04d] -- Subscribing message failed\n", ShortName, loop);
+
+// Assume zero delay in producing and transmitting data
+// TimePeriod pseudo corresponds to the period of the component
+// printf("[%s][%04d] -- Suspending subscriber 1\n", ShortName, loop);
+printf("[%s][%04d] -- Suspending subscriber 2 for %d ms\n", ShortName, loop, TimePeriod);
+usleep(TimePeriod * 1000); // usleep used for emulating msleep
+
+loop++; // Increase loop counter each cycle
+} while (ConditionSub2);
+
+// Exit message after receiving signal from signal handler
+printf("[%s][%04d] Thread id %d: Exiting %s\n", ShortName, loop, ptid, Names[5]);
+
+	pthread_exit(0);
+}
+
+// Subscriber 3
+void *subscriber3(void *ptr) {
+// Determine pthread identificator
+uint64_t ptid = gettid();
+
+// Default values
+// char ShortName[20] = "SUB3"; // The size is necessary for the GNU/Linux console codes //~COLOR
+char ShortName[20] = CS3"SUB3"CR; // The size is necessary for the GNU/Linux console codes //~COLOR
+int TimePeriod = SUB3_PERIOD;
+
+// Component specific parameters
+int loop = 1;
+
+printf("[%s][%04d] -- %s initialization\n", ShortName, loop, Names[6]);
+printf("[%s][INFO] -- Pthread ID: %d\n", ShortName, ptid);
+printf("[%s][INFO] -- Time period: %d\n", ShortName, TimePeriod);
+printf("[%s][INFO] -- Message length: %d\n", ShortName, MessageLength);
+
+// Declare local copy of message
+char msg[MessageLength]; // Local copy of message
+// RequestMessage[MessageLength] = '\0';
+
+// Initial delay
+usleep(TimePeriod * 1000); // usleep used for emulating msleep
+// usleep(TimePeriod * ptid); // usleep used for emulating msleep
+
+// Main loop
+do {
+// Write a message request to the mediator via provided pipe FD
+printf("[%s][%04d] -- Requesting message...\n", ShortName, loop);
+printf("[%s][%04d] -- Locking mutex\n", ShortName, loop);
+pthread_mutex_lock(&mutexMessage); // Lock mutex on Message
+
+	NewRequest = 3;
+	// NewRequest = NewRequest + 4;
+	printf("[%s][%04d] -- New request %d written to shared memory\n", ShortName, loop, NewRequest);
+
+pthread_mutex_unlock(&mutexMessage); // Unlock mutex on Message
+printf("[%s][%04d] -- Unlocking mutex\n", ShortName, loop);
+
+printf("[%s][%04d] -- Awaiting message...\n", ShortName, loop);
+printf("[%s][%04d] -- Locking mutex for subscriber 1\n", ShortName, loop);
+pthread_mutex_lock(&mutexSubscriber3); // Lock mutex on subscriber 3, waiting for mediator
+
+printf("[%s][%04d] -- Reading %d bytes from shared memory\n", ShortName, loop, MessageLength);
+memcpy(msg, MessageSubscriber3, MessageLength); // Read from shared memory
+if (sizeof(msg) == MessageLength) printf("[%s][%04d] -- Subscribing message: [%s]\n", ShortName, loop, msg);
+else printf("[%s][%04d] -- Subscribing message failed\n", ShortName, loop);
+
+// Assume zero delay in producing and transmitting data
+// TimePeriod pseudo corresponds to the period of the component
+// printf("[%s][%04d] -- Suspending subscriber 1\n", ShortName, loop);
+printf("[%s][%04d] -- Suspending subscriber 3 for %d ms\n", ShortName, loop, TimePeriod);
+usleep(TimePeriod * 1000); // usleep used for emulating msleep
+
+loop++; // Increase loop counter each cycle
+} while (ConditionSub1);
+
+// Exit message after receiving signal from signal handler
+printf("[%s][%04d] Thread id %d: Exiting %s\n", ShortName, loop, ptid, Names[6]);
+
+	pthread_exit(0);
+}

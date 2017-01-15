@@ -1,0 +1,13 @@
+A
+Create two processes.
+The first waits until the second asks the first to terminate (through signal).
+
+B
+Create two processes.
+The first inputs an array of integer values, sends to the second via pipe; the second process sorts the array and prints results.
+
+C
+As before, but the second sends back the results to the first one who prints them.
+
+D
+As before, but cyclically until a special input to the first process asks to terminate the second process (through signal) and to terminate itself.

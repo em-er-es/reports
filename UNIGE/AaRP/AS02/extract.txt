@@ -1,0 +1,4 @@
+#!/bin/bash
+CDATE="$(date +%d%m%y)";
+CTIME="$(date +%H%M%S)";
+echo "### $CDATE : $CTIME ###"

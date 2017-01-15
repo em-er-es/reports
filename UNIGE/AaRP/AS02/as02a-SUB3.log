@@ -1,0 +1,73 @@
+[[38;5;220mMEDI[0m][0033] [[38;5;162mSUB3[0m][0001] -- Subscriber-3 initialization
+[[38;5;162mSUB3[0m][INFO] -- PID: 30373
+[[38;5;162mSUB3[0m][INFO] -- Time period: 5000
+[[38;5;162mSUB3[0m][INFO] -- Message length: 4
+[[38;5;162mSUB3[0m][INFO] -- Pipe 1R: 15
+[[38;5;162mSUB3[0m][INFO] -- Pipe 1W: 16
+[[38;5;162mSUB3[0m][INFO] -- Pipe 2R: 17
+[[38;5;162mSUB3[0m][INFO] -- Pipe 2W: 18
+[[38;5;162mSUB3[0m][INFO] -- Awaiting semaphore release
+[[38;5;162mSUB3[0m][INFO] -- Semaphore released
+[[38;5;162mSUB3[0m][0001] -- Requesting message...
+[[38;5;162mSUB3[0m][0001] -- Writing 4 bytes to pipe (FD 16)
+[[38;5;162mSUB3[0m][0001] -- 4 bytes written to pipe (FD 16)
+[[38;5;162mSUB3[0m][0001] -- Active pipe (FD 17)
+[[38;5;162mSUB3[0m][0001] -- Awaiting message...
+[[38;5;162mSUB3[0m][0001] -- Reading 4 bytes from pipe (FD 17)
+[[38;5;162mSUB3[0m][0001] -- 4 bytes read from pipe (FD 17)
+[[38;5;162mSUB3[0m][0001] -- Subscribing message: [cyec]
+[[38;5;162mSUB3[0m][0002] -- Requesting message...
+[[38;5;162mSUB3[0m][0002] -- Writing 4 bytes to pipe (FD 16)
+[[38;5;162mSUB3[0m][0002] -- 4 bytes written to pipe (FD 16)
+[[38;5;162mSUB3[0m][0002] -- Active pipe (FD 17)
+[[38;5;162mSUB3[0m][0002] -- Awaiting message...
+[[38;5;162mSUB3[0m][0002] -- Reading 4 bytes from pipe (FD 17)
+[[38;5;162mSUB3[0m][0002] -- 4 bytes read from pipe (FD 17)
+[[38;5;162mSUB3[0m][0002] -- Subscribing message: [psht]
+[[38;5;162mSUB3[0m][0003] -- Requesting message...
+[[38;5;162mSUB3[0m][0003] -- Writing 4 bytes to pipe (FD 16)
+[[38;5;162mSUB3[0m][0003] -- 4 bytes written to pipe (FD 16)
+[[38;5;162mSUB3[0m][0003] -- Active pipe (FD 17)
+[[38;5;162mSUB3[0m][0003] -- Awaiting message...
+[[38;5;162mSUB3[0m][0003] -- Reading 4 bytes from pipe (FD 17)
+[[38;5;162mSUB3[0m][0003] -- 4 bytes read from pipe (FD 17)
+[[38;5;162mSUB3[0m][0003] -- Subscribing message: [gkll]
+[[38;5;162mSUB3[0m][0004] -- Requesting message...
+[[38;5;162mSUB3[0m][0004] -- Writing 4 bytes to pipe (FD 16)
+[[38;5;162mSUB3[0m][0004] -- 4 bytes written to pipe (FD 16)
+[[38;5;162mSUB3[0m][0004] -- Active pipe (FD 17)
+[[38;5;162mSUB3[0m][0004] -- Awaiting message...
+[[38;5;162mSUB3[0m][0004] -- Reading 4 bytes from pipe (FD 17)
+[[38;5;162mSUB3[0m][0004] -- 4 bytes read from pipe (FD 17)
+[[38;5;162mSUB3[0m][0004] -- Subscribing message: [behc]
+[[38;5;162mSUB3[0m][0005] -- Requesting message...
+[[38;5;162mSUB3[0m][0005] -- Writing 4 bytes to pipe (FD 16)
+[[38;5;162mSUB3[0m][0005] -- 4 bytes written to pipe (FD 16)
+[[38;5;162mSUB3[0m][0005] -- Active pipe (FD 17)
+[[38;5;162mSUB3[0m][0005] -- Awaiting message...
+[[38;5;162mSUB3[0m][0005] -- Reading 4 bytes from pipe (FD 17)
+[[38;5;162mSUB3[0m][0005] -- 4 bytes read from pipe (FD 17)
+[[38;5;162mSUB3[0m][0005] -- Subscribing message: [nzbr]
+[[38;5;162mSUB3[0m][0006] -- Requesting message...
+[[38;5;162mSUB3[0m][0006] -- Writing 4 bytes to pipe (FD 16)
+[[38;5;162mSUB3[0m][0006] -- 4 bytes written to pipe (FD 16)
+[[38;5;162mSUB3[0m][0006] -- Active pipe (FD 17)
+[[38;5;162mSUB3[0m][0006] -- Awaiting message...
+[[38;5;162mSUB3[0m][0006] -- Reading 4 bytes from pipe (FD 17)
+[[38;5;162mSUB3[0m][0006] -- 4 bytes read from pipe (FD 17)
+[[38;5;162mSUB3[0m][0006] -- Subscribing message: [pufa]
+[[38;5;162mSUB3[0m][0007] -- Requesting message...
+[[38;5;162mSUB3[0m][0007] -- Writing 4 bytes to pipe (FD 16)
+[[38;5;162mSUB3[0m][0007] -- 4 bytes written to pipe (FD 16)
+[[38;5;162mSUB3[0m][0007] -- Active pipe (FD 17)
+[[38;5;162mSUB3[0m][0007] -- Awaiting message...
+[[38;5;162mSUB3[0m][0007] -- Reading 4 bytes from pipe (FD 17)
+[[38;5;162mSUB3[0m][0007] -- 4 bytes read from pipe (FD 17)
+[[38;5;162mSUB3[0m][0007] -- Subscribing message: [lmgv]
+[[38;5;162mSUB3[0m][0008] -- Requesting message...
+[[38;5;162mSUB3[0m][0008] -- Writing 4 bytes to pipe (FD 16)
+[[38;5;162mSUB3[0m][0008] -- 4 bytes written to pipe (FD 16)
+[[38;5;162mSUB3[0m][0008] -- Active pipe (FD 17)
+[[38;5;162mSUB3[0m][0008] -- Awaiting message...
+[[38;5;162mSUB3[0m][0008] -- Reading 4 bytes from pipe (FD 17)
+emeres   30373  0.0  0.0  15264  1712 pts/6    S+   09:50   0:00 AS02A-S3 Subscriber-3 ?[38;5;162mSUB3?[0m 5000 4 15 16 17 18

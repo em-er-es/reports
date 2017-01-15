@@ -1,0 +1,2207 @@
+### ES4268738-AaRP-AS02A-I.cpp ###
+g++ -o "AS02A-I.cpp" -lpthread "ES4268738-AaRP-AS02A-I.cpp";
+### ES4268738-AaRP-AS02A-M.cpp ###
+g++ -o "AS02A-M.cpp" -lpthread "ES4268738-AaRP-AS02A-M.cpp";
+### ES4268738-AaRP-AS02A-P1.cpp ###
+g++ -o "AS02A-P1.cpp" -lpthread "ES4268738-AaRP-AS02A-P1.cpp";
+### ES4268738-AaRP-AS02A-P2.cpp ###
+g++ -o "AS02A-P2.cpp" -lpthread "ES4268738-AaRP-AS02A-P2.cpp";
+### ES4268738-AaRP-AS02A-S1.cpp ###
+g++ -o "AS02A-S1.cpp" -lpthread "ES4268738-AaRP-AS02A-S1.cpp";
+### ES4268738-AaRP-AS02A-S2.cpp ###
+g++ -o "AS02A-S2.cpp" -lpthread "ES4268738-AaRP-AS02A-S2.cpp";
+### ES4268738-AaRP-AS02A-S3.cpp ###
+g++ -o "AS02A-S3.cpp" -lpthread "ES4268738-AaRP-AS02A-S3.cpp";
+[3J[H[2J[SHELL] Start
+[[38;5;220mMEDI[0m][INFO] -- Mediator initialization
+[[38;5;220mMEDI[0m][INFO] -- Pid: 1069
+[[38;5;220mMEDI[0m][INFO] -- Time period: 100
+[[38;5;220mMEDI[0m][INFO] -- Time ratio (S_max = 5000 / P_min = 1000): 5
+[[38;5;220mMEDI[0m][INFO] -- Message length: 4
+[[38;5;220mMEDI[0m][INFO] -- Message buffer: 88
+[[38;5;220mMEDI[0m][INFO] -- Message slots: 8
+[[38;5;220mMEDI[0m][INFO] -- Message decay time: 7000
+[[38;5;220mMEDI[0m][INFO] -- Pipe 1R: 3
+[[38;5;220mMEDI[0m][INFO] -- Pipe 1W: 4
+[[38;5;220mMEDI[0m][INFO] -- Pipe 2R: 5
+[[38;5;220mMEDI[0m][INFO] -- Pipe 2W: 6
+[[38;5;220mMEDI[0m][INFO] -- Pipe 3R: 7
+[[38;5;220mMEDI[0m][INFO] -- Pipe 3W: 8
+[[38;5;220mMEDI[0m][INFO] -- Pipe 4R: 9
+[[38;5;220mMEDI[0m][INFO] -- Pipe 4W: 10
+[[38;5;220mMEDI[0m][INFO] -- Pipe 5R: 11
+[[38;5;220mMEDI[0m][INFO] -- Pipe 5W: 12
+[[38;5;220mMEDI[0m][INFO] -- Pipe 6R: 13
+[[38;5;220mMEDI[0m][INFO] -- Pipe 6W: 14
+[[38;5;220mMEDI[0m][INFO] -- Pipe 7R: 15
+[[38;5;220mMEDI[0m][INFO] -- Pipe 7W: 16
+[[38;5;220mMEDI[0m][INFO] -- Pipe 8R: 17
+[[38;5;220mMEDI[0m][INFO] -- Pipe 8W: 18
+[[38;5;220mMEDI[0m][INFO] -- Preparing semaphore release
+[[38;5;220mMEDI[0m][INFO] -- Releasing semaphore
+[[38;5;220mMEDI[0m][INFO] -- Initialization time (usec): 809605
+[[38;5;220mMEDI[0m][0001] -- Active pipes[*][0] R: FD 3 
+[[38;5;220mMEDI[0m][0001] -- Active pipes[*][1] W: FD 10 14 18 
+[[38;5;220mMEDI[0m][0001] -- Receiving message from pipe (FD 3)...
+[[38;5;220mMEDI[0m][0001] -- 4 bytes read from pipe (FD 3)
+[[38;5;220mMEDI[0m][0001] -- Received message #1: [uewi]
+[[38;5;220mMEDI[0m][0001] -- Sending message [uewi] to circular buffer...
+[[38;5;220mMEDI[0m][0001] -- Circular buffer variables: Message #1 offset: 0
+[[38;5;220mMEDI[0m][0001] -- Circular buffer: Pipe FD received: 3
+[[38;5;220mMEDI[0m][0001] -- Circular buffer: Determine free message slot in the circular buffer
+[[38;5;220mMEDI[0m][0001] -- Circular buffer: Found free message #1 slot in the circular buffer
+[[38;5;220mMEDI[0m][0001] -- Circular buffer: Writing message [uewi] to slot #1 to circular buffer
+[[38;5;220mMEDI[0m][0001] -- Circular buffer: Message #1 [uewi] from pipe (FD 3) written in 4 bytes to circular buffer
+[[38;5;220mMEDI[0m][0001] -- Circular buffer: Message #1 [ uewi | PXSSS ]
+[[38;5;220mMEDI[0m][0001] -- Circular buffer: 1 messages in the circular buffer
+[[38;5;220mMEDI[0m][0001] -- Message #1 [uewi] saved successfully in circular buffer...
+[[38;5;220mMEDI[0m][0001] -- Circular buffer: Buffer contents
+[[38;5;220mMEDI[0m][0001] -- Circular buffer: Message no [ Msg  |  Meta ]
+[[38;5;220mMEDI[0m][0001] -- Circular buffer: Message #1 [ uewi | PXSSS ]
+[[38;5;220mMEDI[0m][0001] -- Circular buffer: Message #2 [    EMPTY     ]
+[[38;5;220mMEDI[0m][0001] -- Circular buffer: Message #3 [    EMPTY     ]
+[[38;5;220mMEDI[0m][0001] -- Circular buffer: Message #4 [    EMPTY     ]
+[[38;5;220mMEDI[0m][0001] -- Circular buffer: Message #5 [    EMPTY     ]
+[[38;5;220mMEDI[0m][0001] -- Circular buffer: Message #6 [    EMPTY     ]
+[[38;5;220mMEDI[0m][0001] -- Circular buffer: Message #7 [    EMPTY     ]
+[[38;5;220mMEDI[0m][0001] -- Circular buffer: Message #8 [    EMPTY     ]
+[[38;5;220mMEDI[0m][0001] -- Circular buffer: Buffer contents listed
+[[38;5;220mMEDI[0m][0001] -- Circular buffer: Messages: 1, empty message: 7, slots: 8
+[[38;5;220mMEDI[0m][0001] -- Circular buffer: Determining next ready message and metadata
+[[38;5;220mMEDI[0m][0001] -- Circular buffer: Next message found at slot 1
+[[38;5;220mMEDI[0m][0001] -- Circular buffer: Message #1: [ uewi ]
+[[38;5;220mMEDI[0m][0001] -- Circular buffer: Metadata: [ PX | SSS ]
+[[38;5;220mMEDI[0m][0001] -- Circular buffer: Metadata: [ 3;0 | 10;14;18 ]
+[[38;5;220mMEDI[0m][0001] -- Circular buffer: Metadata checked for message #1: Subscriber condition 18 == 10 ]
+[[38;5;220mMEDI[0m][0001] -- Circular buffer: Metadata checked for message #1: Subscriber condition 18 == 14 ]
+[[38;5;220mMEDI[0m][0001] -- Circular buffer: Metadata checked for message #1: Subscriber condition 18 == 18 ]
+[[38;5;220mMEDI[0m][0001] -- Circular buffer: Message #1 matches the subscriber pipe (FD 18)
+[[38;5;220mMEDI[0m][0001] -- Circular buffer: Message #1 [uewi] loaded
+[[38;5;220mMEDI[0m][INFO] -- Current time (usec): 809677
+[[38;5;220mMEDI[0m][INFO] -- Time difference: 72
+[[38;5;220mMEDI[0m][0002] -- Active pipes[*][0] R: FD 5 
+[[38;5;220mMEDI[0m][0002] -- Active pipes[*][1] W: FD 10 14 18 
+[[38;5;220mMEDI[0m][0002] -- Receiving message from pipe (FD 5)...
+[[38;5;220mMEDI[0m][0002] -- 4 bytes read from pipe (FD 5)
+[[38;5;220mMEDI[0m][0002] -- Received message #2: [HSPX]
+[[38;5;220mMEDI[0m][0002] -- Sending message [HSPX] to circular buffer...
+[[38;5;220mMEDI[0m][0002] -- Circular buffer variables: Message #1 offset: 0
+[[38;5;220mMEDI[0m][0002] -- Circular buffer: Pipe FD received: 5
+[[38;5;220mMEDI[0m][0002] -- Circular buffer: Determine free message slot in the circular buffer
+[[38;5;220mMEDI[0m][0002] -- Circular buffer: Found free message #2 slot in the circular buffer
+[[38;5;220mMEDI[0m][0002] -- Circular buffer: Writing message [HSPX] to slot #2 to circular buffer
+[[38;5;220mMEDI[0m][0002] -- Circular buffer: Message #2 [HSPX] from pipe (FD 5) written in 4 bytes to circular buffer
+[[38;5;220mMEDI[0m][0002] -- Circular buffer: Message #2 [    EMPTY     ]
+[[38;5;220mMEDI[0m][0002] -- Circular buffer: 1 messages in the circular buffer
+[[38;5;220mMEDI[0m][0002] -- Message #2 [HSPX] saved successfully in circular buffer...
+[[38;5;220mMEDI[0m][0002] -- Circular buffer: Buffer contents
+[[38;5;220mMEDI[0m][0002] -- Circular buffer: Message no [ Msg  |  Meta ]
+[[38;5;220mMEDI[0m][0002] -- Circular buffer: Message #1 [ HSPX | XPSSS ]
+[[38;5;220mMEDI[0m][0002] -- Circular buffer: Message #2 [    EMPTY     ]
+[[38;5;220mMEDI[0m][0002] -- Circular buffer: Message #3 [    EMPTY     ]
+[[38;5;220mMEDI[0m][0002] -- Circular buffer: Message #4 [    EMPTY     ]
+[[38;5;220mMEDI[0m][0002] -- Circular buffer: Message #5 [    EMPTY     ]
+[[38;5;220mMEDI[0m][0002] -- Circular buffer: Message #6 [    EMPTY     ]
+[[38;5;220mMEDI[0m][0002] -- Circular buffer: Message #7 [    EMPTY     ]
+[[38;5;220mMEDI[0m][0002] -- Circular buffer: Message #8 [    EMPTY     ]
+[[38;5;220mMEDI[0m][0002] -- Circular buffer: Buffer contents listed
+[[38;5;220mMEDI[0m][0002] -- Circular buffer: Messages: 1, empty message: 7, slots: 8
+[[38;5;220mMEDI[0m][0002] -- Circular buffer: Determining next ready message and metadata
+[[38;5;220mMEDI[0m][0002] -- Circular buffer: Next message found at slot 1
+[[38;5;220mMEDI[0m][0002] -- Circular buffer: Message #1: [ HSPX ]
+[[38;5;220mMEDI[0m][0002] -- Circular buffer: Metadata: [ XP | SSS ]
+[[38;5;220mMEDI[0m][0002] -- Circular buffer: Metadata: [ 0;5 | 10;14;18 ]
+[[38;5;220mMEDI[0m][0002] -- Circular buffer: Metadata checked for message #1: Subscriber condition 18 == 10 ]
+[[38;5;220mMEDI[0m][0002] -- Circular buffer: Metadata checked for message #1: Subscriber condition 18 == 14 ]
+[[38;5;220mMEDI[0m][0002] -- Circular buffer: Metadata checked for message #1: Subscriber condition 18 == 18 ]
+[[38;5;220mMEDI[0m][0002] -- Circular buffer: Message #1 matches the subscriber pipe (FD 18)
+[[38;5;220mMEDI[0m][0002] -- Circular buffer: Message #1 [HSPX] loaded
+[[38;5;220mMEDI[0m][INFO] -- Current time (usec): 310545
+[[38;5;220mMEDI[0m][INFO] -- Time difference: 499060
+[[38;5;220mMEDI[0m][0003] -- Active pipes[*][0] R: FD 3 
+[[38;5;220mMEDI[0m][0003] -- Active pipes[*][1] W: FD 10 14 18 
+[[38;5;220mMEDI[0m][0003] -- Receiving message from pipe (FD 3)...
+[[38;5;220mMEDI[0m][0003] -- 4 bytes read from pipe (FD 3)
+[[38;5;220mMEDI[0m][0003] -- Received message #3: [uoks]
+[[38;5;220mMEDI[0m][0003] -- Sending message [uoks] to circular buffer...
+[[38;5;220mMEDI[0m][0003] -- Circular buffer variables: Message #1 offset: 0
+[[38;5;220mMEDI[0m][0003] -- Circular buffer: Pipe FD received: 3
+[[38;5;220mMEDI[0m][0003] -- Circular buffer: Determine free message slot in the circular buffer
+[[38;5;220mMEDI[0m][0003] -- Circular buffer: Found free message #2 slot in the circular buffer
+[[38;5;220mMEDI[0m][0003] -- Circular buffer: Writing message [uoks] to slot #2 to circular buffer
+[[38;5;220mMEDI[0m][0003] -- Circular buffer: Message #2 [uoks] from pipe (FD 3) written in 4 bytes to circular buffer
+[[38;5;220mMEDI[0m][0003] -- Circular buffer: Message #2 [    EMPTY     ]
+[[38;5;220mMEDI[0m][0003] -- Circular buffer: 1 messages in the circular buffer
+[[38;5;220mMEDI[0m][0003] -- Message #3 [uoks] saved successfully in circular buffer...
+[[38;5;220mMEDI[0m][0003] -- Circular buffer: Buffer contents
+[[38;5;220mMEDI[0m][0003] -- Circular buffer: Message no [ Msg  |  Meta ]
+[[38;5;220mMEDI[0m][0003] -- Circular buffer: Message #1 [ uoks | PXSSS ]
+[[38;5;220mMEDI[0m][0003] -- Circular buffer: Message #2 [    EMPTY     ]
+[[38;5;220mMEDI[0m][0003] -- Circular buffer: Message #3 [    EMPTY     ]
+[[38;5;220mMEDI[0m][0003] -- Circular buffer: Message #4 [    EMPTY     ]
+[[38;5;220mMEDI[0m][0003] -- Circular buffer: Message #5 [    EMPTY     ]
+[[38;5;220mMEDI[0m][0003] -- Circular buffer: Message #6 [    EMPTY     ]
+[[38;5;220mMEDI[0m][0003] -- Circular buffer: Message #7 [    EMPTY     ]
+[[38;5;220mMEDI[0m][0003] -- Circular buffer: Message #8 [    EMPTY     ]
+[[38;5;220mMEDI[0m][0003] -- Circular buffer: Buffer contents listed
+[[38;5;220mMEDI[0m][0003] -- Circular buffer: Messages: 1, empty message: 7, slots: 8
+[[38;5;220mMEDI[0m][0003] -- Circular buffer: Determining next ready message and metadata
+[[38;5;220mMEDI[0m][0003] -- Circular buffer: Next message found at slot 1
+[[38;5;220mMEDI[0m][0003] -- Circular buffer: Message #1: [ uoks ]
+[[38;5;220mMEDI[0m][0003] -- Circular buffer: Metadata: [ PX | SSS ]
+[[38;5;220mMEDI[0m][0003] -- Circular buffer: Metadata: [ 3;0 | 10;14;18 ]
+[[38;5;220mMEDI[0m][0003] -- Circular buffer: Metadata checked for message #1: Subscriber condition 18 == 10 ]
+[[38;5;220mMEDI[0m][0003] -- Circular buffer: Metadata checked for message #1: Subscriber condition 18 == 14 ]
+[[38;5;220mMEDI[0m][0003] -- Circular buffer: Metadata checked for message #1: Subscriber condition 18 == 18 ]
+[[38;5;220mMEDI[0m][0003] -- Circular buffer: Message #1 matches the subscriber pipe (FD 18)
+[[38;5;220mMEDI[0m][0003] -- Circular buffer: Message #1 [uoks] loaded
+[[38;5;220mMEDI[0m][INFO] -- Current time (usec): 10023
+[[38;5;220mMEDI[0m][INFO] -- Time difference: 799582
+[[38;5;220mMEDI[0m][0004] -- Active pipes[*][0] R: FD 3 
+[[38;5;220mMEDI[0m][0004] -- Active pipes[*][1] W: FD 10 14 18 
+[[38;5;220mMEDI[0m][0004] -- Receiving message from pipe (FD 3)...
+[[38;5;220mMEDI[0m][0004] -- 4 bytes read from pipe (FD 3)
+[[38;5;220mMEDI[0m][0004] -- Received message #4: [yqoe]
+[[38;5;220mMEDI[0m][0004] -- Sending message [yqoe] to circular buffer...
+[[38;5;220mMEDI[0m][0004] -- Circular buffer variables: Message #1 offset: 0
+[[38;5;220mMEDI[0m][0004] -- Circular buffer: Pipe FD received: 3
+[[38;5;220mMEDI[0m][0004] -- Circular buffer: Determine free message slot in the circular buffer
+[[38;5;220mMEDI[0m][0004] -- Circular buffer: Found free message #2 slot in the circular buffer
+[[38;5;220mMEDI[0m][0004] -- Circular buffer: Writing message [yqoe] to slot #2 to circular buffer
+[[38;5;220mMEDI[0m][0004] -- Circular buffer: Message #2 [yqoe] from pipe (FD 3) written in 4 bytes to circular buffer
+[[38;5;220mMEDI[0m][0004] -- Circular buffer: Message #2 [    EMPTY     ]
+[[38;5;220mMEDI[0m][0004] -- Circular buffer: 1 messages in the circular buffer
+[[38;5;220mMEDI[0m][0004] -- Message #4 [yqoe] saved successfully in circular buffer...
+[[38;5;220mMEDI[0m][0004] -- Circular buffer: Buffer contents
+[[38;5;220mMEDI[0m][0004] -- Circular buffer: Message no [ Msg  |  Meta ]
+[[38;5;220mMEDI[0m][0004] -- Circular buffer: Message #1 [ yqoe | PXSSS ]
+[[38;5;220mMEDI[0m][0004] -- Circular buffer: Message #2 [    EMPTY     ]
+[[38;5;220mMEDI[0m][0004] -- Circular buffer: Message #3 [    EMPTY     ]
+[[38;5;220mMEDI[0m][0004] -- Circular buffer: Message #4 [    EMPTY     ]
+[[38;5;220mMEDI[0m][0004] -- Circular buffer: Message #5 [    EMPTY     ]
+[[38;5;220mMEDI[0m][0004] -- Circular buffer: Message #6 [    EMPTY     ]
+[[38;5;220mMEDI[0m][0004] -- Circular buffer: Message #7 [    EMPTY     ]
+[[38;5;220mMEDI[0m][0004] -- Circular buffer: Message #8 [    EMPTY     ]
+[[38;5;220mMEDI[0m][0004] -- Circular buffer: Buffer contents listed
+[[38;5;220mMEDI[0m][0004] -- Circular buffer: Messages: 1, empty message: 7, slots: 8
+[[38;5;220mMEDI[0m][0004] -- Circular buffer: Determining next ready message and metadata
+[[38;5;220mMEDI[0m][0004] -- Circular buffer: Next message found at slot 1
+[[38;5;220mMEDI[0m][0004] -- Circular buffer: Message #1: [ yqoe ]
+[[38;5;220mMEDI[0m][0004] -- Circular buffer: Metadata: [ PX | SSS ]
+[[38;5;220mMEDI[0m][0004] -- Circular buffer: Metadata: [ 3;0 | 10;14;18 ]
+[[38;5;220mMEDI[0m][0004] -- Circular buffer: Metadata checked for message #1: Subscriber condition 18 == 10 ]
+[[38;5;220mMEDI[0m][0004] -- Circular buffer: Metadata checked for message #1: Subscriber condition 18 == 14 ]
+[[38;5;220mMEDI[0m][0004] -- Circular buffer: Metadata checked for message #1: Subscriber condition 18 == 18 ]
+[[38;5;220mMEDI[0m][0004] -- Circular buffer: Message #1 matches the subscriber pipe (FD 18)
+[[38;5;220mMEDI[0m][0004] -- Circular buffer: Message #1 [yqoe] loaded
+[[38;5;220mMEDI[0m][INFO] -- Current time (usec): 310822
+[[38;5;220mMEDI[0m][INFO] -- Time difference: 498783
+[[38;5;220mMEDI[0m][0005] -- Active pipes[*][0] R: FD 5 
+[[38;5;220mMEDI[0m][0005] -- Active pipes[*][1] W: FD 10 14 18 
+[[38;5;220mMEDI[0m][0005] -- Receiving message from pipe (FD 5)...
+[[38;5;220mMEDI[0m][0005] -- 4 bytes read from pipe (FD 5)
+[[38;5;220mMEDI[0m][0005] -- Received message #5: [HNAI]
+[[38;5;220mMEDI[0m][0005] -- Sending message [HNAI] to circular buffer...
+[[38;5;220mMEDI[0m][0005] -- Circular buffer variables: Message #1 offset: 0
+[[38;5;220mMEDI[0m][0005] -- Circular buffer: Pipe FD received: 5
+[[38;5;220mMEDI[0m][0005] -- Circular buffer: Determine free message slot in the circular buffer
+[[38;5;220mMEDI[0m][0005] -- Circular buffer: Found free message #2 slot in the circular buffer
+[[38;5;220mMEDI[0m][0005] -- Circular buffer: Writing message [HNAI] to slot #2 to circular buffer
+[[38;5;220mMEDI[0m][0005] -- Circular buffer: Message #2 [HNAI] from pipe (FD 5) written in 4 bytes to circular buffer
+[[38;5;220mMEDI[0m][0005] -- Circular buffer: Message #2 [    EMPTY     ]
+[[38;5;220mMEDI[0m][0005] -- Circular buffer: 1 messages in the circular buffer
+[[38;5;220mMEDI[0m][0005] -- Message #5 [HNAI] saved successfully in circular buffer...
+[[38;5;220mMEDI[0m][0005] -- Circular buffer: Buffer contents
+[[38;5;220mMEDI[0m][0005] -- Circular buffer: Message no [ Msg  |  Meta ]
+[[38;5;220mMEDI[0m][0005] -- Circular buffer: Message #1 [ HNAI | XPSSS ]
+[[38;5;220mMEDI[0m][0005] -- Circular buffer: Message #2 [    EMPTY     ]
+[[38;5;220mMEDI[0m][0005] -- Circular buffer: Message #3 [    EMPTY     ]
+[[38;5;220mMEDI[0m][0005] -- Circular buffer: Message #4 [    EMPTY     ]
+[[38;5;220mMEDI[0m][0005] -- Circular buffer: Message #5 [    EMPTY     ]
+[[38;5;220mMEDI[0m][0005] -- Circular buffer: Message #6 [    EMPTY     ]
+[[38;5;220mMEDI[0m][0005] -- Circular buffer: Message #7 [    EMPTY     ]
+[[38;5;220mMEDI[0m][0005] -- Circular buffer: Message #8 [    EMPTY     ]
+[[38;5;220mMEDI[0m][0005] -- Circular buffer: Buffer contents listed
+[[38;5;220mMEDI[0m][0005] -- Circular buffer: Messages: 1, empty message: 7, slots: 8
+[[38;5;220mMEDI[0m][0005] -- Circular buffer: Determining next ready message and metadata
+[[38;5;220mMEDI[0m][0005] -- Circular buffer: Next message found at slot 1
+[[38;5;220mMEDI[0m][0005] -- Circular buffer: Message #1: [ HNAI ]
+[[38;5;220mMEDI[0m][0005] -- Circular buffer: Metadata: [ XP | SSS ]
+[[38;5;220mMEDI[0m][0005] -- Circular buffer: Metadata: [ 0;5 | 10;14;18 ]
+[[38;5;220mMEDI[0m][0005] -- Circular buffer: Metadata checked for message #1: Subscriber condition 18 == 10 ]
+[[38;5;220mMEDI[0m][0005] -- Circular buffer: Metadata checked for message #1: Subscriber condition 18 == 14 ]
+[[38;5;220mMEDI[0m][0005] -- Circular buffer: Metadata checked for message #1: Subscriber condition 18 == 18 ]
+[[38;5;220mMEDI[0m][0005] -- Circular buffer: Message #1 matches the subscriber pipe (FD 18)
+[[38;5;220mMEDI[0m][0005] -- Circular buffer: Message #1 [HNAI] loaded
+[[38;5;220mMEDI[0m][INFO] -- Current time (usec): 310670
+[[38;5;220mMEDI[0m][INFO] -- Time difference: 498935
+[[38;5;220mMEDI[0m][0006] -- Active pipes[*][0] R: FD 3 15 
+[[38;5;220mMEDI[0m][0006] -- Active pipes[*][1] W: FD 10 14 18 
+[[38;5;220mMEDI[0m][0006] -- Receiving message from pipe (FD 3)...
+[[38;5;220mMEDI[0m][0006] -- 4 bytes read from pipe (FD 3)
+[[38;5;220mMEDI[0m][0006] -- Received message #6: [aceo]
+[[38;5;220mMEDI[0m][0006] -- Sending message [aceo] to circular buffer...
+[[38;5;220mMEDI[0m][0006] -- Circular buffer variables: Message #1 offset: 0
+[[38;5;220mMEDI[0m][0006] -- Circular buffer: Pipe FD received: 3
+[[38;5;220mMEDI[0m][0006] -- Circular buffer: Determine free message slot in the circular buffer
+[[38;5;220mMEDI[0m][0006] -- Circular buffer: Found free message #2 slot in the circular buffer
+[[38;5;220mMEDI[0m][0006] -- Circular buffer: Writing message [aceo] to slot #2 to circular buffer
+[[38;5;220mMEDI[0m][0006] -- Circular buffer: Message #2 [aceo] from pipe (FD 3) written in 4 bytes to circular buffer
+[[38;5;220mMEDI[0m][0006] -- Circular buffer: Message #2 [    EMPTY     ]
+[[38;5;220mMEDI[0m][0006] -- Circular buffer: 1 messages in the circular buffer
+[[38;5;220mMEDI[0m][0006] -- Message #6 [aceo] saved successfully in circular buffer...
+[[38;5;220mMEDI[0m][0006] -- Receiving message from pipe (FD 15)...
+[[38;5;220mMEDI[0m][0006] -- 4 bytes read from pipe (FD 15)
+[[38;5;220mMEDI[0m][0006] -- Received message #7: [REQ1]
+[[38;5;220mMEDI[0m][0006] -- Request received [REQ1] from subscriber 3 at pipe (FD 15)
+[[38;5;220mMEDI[0m][0006] -- Processing message request from pipe (FD 15)
+[[38;5;220mMEDI[0m][0006] -- Circular buffer: Determining next ready message and metadata
+[[38;5;220mMEDI[0m][0006] -- Circular buffer: Next message found at slot 1
+[[38;5;220mMEDI[0m][0006] -- Circular buffer: Message #1: [ aceo ]
+[[38;5;220mMEDI[0m][0006] -- Circular buffer: Metadata: [ PX | SSS ]
+[[38;5;220mMEDI[0m][0006] -- Circular buffer: Metadata: [ 3;0 | 10;14;18 ]
+[[38;5;220mMEDI[0m][0006] -- Circular buffer: Metadata checked for message #1: Subscriber condition 18 == 10 ]
+[[38;5;220mMEDI[0m][0006] -- Circular buffer: Metadata checked for message #1: Subscriber condition 18 == 14 ]
+[[38;5;220mMEDI[0m][0006] -- Circular buffer: Metadata checked for message #1: Subscriber condition 18 == 18 ]
+[[38;5;220mMEDI[0m][0006] -- Circular buffer: Message #1 matches the subscriber pipe (FD 18)
+[[38;5;220mMEDI[0m][0006] -- Circular buffer: Message #1 [aceo] loaded
+[[38;5;220mMEDI[0m][0006] -- Circular buffer: Buffer contents
+[[38;5;220mMEDI[0m][0006] -- Circular buffer: Message no [ Msg  |  Meta ]
+[[38;5;220mMEDI[0m][0006] -- Circular buffer: Message #1 [ aceo | PXSSS ]
+[[38;5;220mMEDI[0m][0006] -- Circular buffer: Message #2 [    EMPTY     ]
+[[38;5;220mMEDI[0m][0006] -- Circular buffer: Message #3 [    EMPTY     ]
+[[38;5;220mMEDI[0m][0006] -- Circular buffer: Message #4 [    EMPTY     ]
+[[38;5;220mMEDI[0m][0006] -- Circular buffer: Message #5 [    EMPTY     ]
+[[38;5;220mMEDI[0m][0006] -- Circular buffer: Message #6 [    EMPTY     ]
+[[38;5;220mMEDI[0m][0006] -- Circular buffer: Message #7 [    EMPTY     ]
+[[38;5;220mMEDI[0m][0006] -- Circular buffer: Message #8 [    EMPTY     ]
+[[38;5;220mMEDI[0m][0006] -- Circular buffer: Buffer contents listed
+[[38;5;220mMEDI[0m][0006] -- Circular buffer: Messages: 1, empty message: 7, slots: 8
+[[38;5;220mMEDI[0m][0006] -- Circular buffer: Update message counter: 1
+[[38;5;220mMEDI[0m][0006] -- Processing message 1 towards pipe (FD 18)
+[[38;5;220mMEDI[0m][0006] -- Sending message [aceo] to pipe (FD 18)...
+[[38;5;220mMEDI[0m][0006] -- 4 bytes written to pipe (FD 18)
+[[38;5;220mMEDI[0m][0006] -- Requests remaining 0
+[[38;5;220mMEDI[0m][0006] -- Circular buffer: Updating metadata for message 18
+[[38;5;220mMEDI[0m][0006] -- Circular buffer: Original metadata read: [ PX | Ð
+K ]
+[[38;5;220mMEDI[0m][0006] -- Circular buffer: Modified metadata: [ PX | Ð
+Y ]
+[[38;5;220mMEDI[0m][0006] -- Circular buffer: Based on metadata message #1 to be deleted
+[[38;5;220mMEDI[0m][0006] -- Circular buffer: Deleting message #2 from the circular buffer
+[[38;5;220mMEDI[0m][0006] -- Circular buffer: Message #2 in the circular buffer already empty
+[[38;5;220mMEDI[0m][0006] -- Circular buffer: 1 messages left in the circular buffer
+[[38;5;220mMEDI[0m][0006] -- Circular buffer: Message #19 [    EMPTY     ]
+[[38;5;220mMEDI[0m][0006] -- Message [] processed
+[[38;5;220mMEDI[0m][0006] -- Circular buffer: Buffer contents
+[[38;5;220mMEDI[0m][0006] -- Circular buffer: Message no [ Msg  |  Meta ]
+[[38;5;220mMEDI[0m][0006] -- Circular buffer: Message #1 [ aceo | PXSSS ]
+[[38;5;220mMEDI[0m][0006] -- Circular buffer: Message #2 [    EMPTY     ]
+[[38;5;220mMEDI[0m][0006] -- Circular buffer: Message #3 [    EMPTY     ]
+[[38;5;220mMEDI[0m][0006] -- Circular buffer: Message #4 [    EMPTY     ]
+[[38;5;220mMEDI[0m][0006] -- Circular buffer: Message #5 [    EMPTY     ]
+[[38;5;220mMEDI[0m][0006] -- Circular buffer: Message #6 [    EMPTY     ]
+[[38;5;220mMEDI[0m][0006] -- Circular buffer: Message #7 [    EMPTY     ]
+[[38;5;220mMEDI[0m][0006] -- Circular buffer: Message #8 [    EMPTY     ]
+[[38;5;220mMEDI[0m][0006] -- Circular buffer: Buffer contents listed
+[[38;5;220mMEDI[0m][0006] -- Circular buffer: Messages: 1, empty message: 7, slots: 8
+[[38;5;220mMEDI[0m][0006] -- Circular buffer: Buffer contents
+[[38;5;220mMEDI[0m][0006] -- Circular buffer: Message no [ Msg  |  Meta ]
+[[38;5;220mMEDI[0m][0006] -- Circular buffer: Message #1 [ aceo | PXSSS ]
+[[38;5;220mMEDI[0m][0006] -- Circular buffer: Message #2 [    EMPTY     ]
+[[38;5;220mMEDI[0m][0006] -- Circular buffer: Message #3 [    EMPTY     ]
+[[38;5;220mMEDI[0m][0006] -- Circular buffer: Message #4 [    EMPTY     ]
+[[38;5;220mMEDI[0m][0006] -- Circular buffer: Message #5 [    EMPTY     ]
+[[38;5;220mMEDI[0m][0006] -- Circular buffer: Message #6 [    EMPTY     ]
+[[38;5;220mMEDI[0m][0006] -- Circular buffer: Message #7 [    EMPTY     ]
+[[38;5;220mMEDI[0m][0006] -- Circular buffer: Message #8 [    EMPTY     ]
+[[38;5;220mMEDI[0m][0006] -- Circular buffer: Buffer contents listed
+[[38;5;220mMEDI[0m][0006] -- Circular buffer: Messages: 1, empty message: 7, slots: 8
+[[38;5;220mMEDI[0m][0006] -- Circular buffer: Determining next ready message and metadata
+[[38;5;220mMEDI[0m][0006] -- Circular buffer: Next message found at slot 1
+[[38;5;220mMEDI[0m][0006] -- Circular buffer: Message #1: [ aceo ]
+[[38;5;220mMEDI[0m][0006] -- Circular buffer: Metadata: [ PX | Ð
+Y ]
+[[38;5;220mMEDI[0m][0006] -- Circular buffer: Metadata: [ 3;0 | 10;14;18 ]
+[[38;5;220mMEDI[0m][0006] -- Circular buffer: Metadata checked for message #1: Subscriber condition 18 == 10 ]
+[[38;5;220mMEDI[0m][0006] -- Circular buffer: Metadata checked for message #1: Subscriber condition 18 == 14 ]
+[[38;5;220mMEDI[0m][0006] -- Circular buffer: Metadata checked for message #1: Subscriber condition 18 == 18 ]
+[[38;5;220mMEDI[0m][0006] -- Circular buffer: Message #1 matches the subscriber pipe (FD 18)
+[[38;5;220mMEDI[0m][0006] -- Circular buffer: Message #1 [aceo] loaded
+[[38;5;220mMEDI[0m][INFO] -- Current time (usec): 310574
+[[38;5;220mMEDI[0m][INFO] -- Time difference: 499031
+[[38;5;220mMEDI[0m][0007] -- Active pipes[*][0] R: FD 3 
+[[38;5;220mMEDI[0m][0007] -- Active pipes[*][1] W: FD 10 14 18 
+[[38;5;220mMEDI[0m][0007] -- Receiving message from pipe (FD 3)...
+[[38;5;220mMEDI[0m][0007] -- 4 bytes read from pipe (FD 3)
+[[38;5;220mMEDI[0m][0007] -- Received message #8: [skui]
+[[38;5;220mMEDI[0m][0007] -- Sending message [skui] to circular buffer...
+[[38;5;220mMEDI[0m][0007] -- Circular buffer variables: Message #1 offset: 0
+[[38;5;220mMEDI[0m][0007] -- Circular buffer: Pipe FD received: 3
+[[38;5;220mMEDI[0m][0007] -- Circular buffer: Determine free message slot in the circular buffer
+[[38;5;220mMEDI[0m][0007] -- Circular buffer: Found free message #2 slot in the circular buffer
+[[38;5;220mMEDI[0m][0007] -- Circular buffer: Writing message [skui] to slot #2 to circular buffer
+[[38;5;220mMEDI[0m][0007] -- Circular buffer: Message #2 [skui] from pipe (FD 3) written in 4 bytes to circular buffer
+[[38;5;220mMEDI[0m][0007] -- Circular buffer: Message #2 [    EMPTY     ]
+[[38;5;220mMEDI[0m][0007] -- Circular buffer: 1 messages in the circular buffer
+[[38;5;220mMEDI[0m][0007] -- Message #8 [skui] saved successfully in circular buffer...
+[[38;5;220mMEDI[0m][0007] -- Circular buffer: Buffer contents
+[[38;5;220mMEDI[0m][0007] -- Circular buffer: Message no [ Msg  |  Meta ]
+[[38;5;220mMEDI[0m][0007] -- Circular buffer: Message #1 [ skui | PXSSS ]
+[[38;5;220mMEDI[0m][0007] -- Circular buffer: Message #2 [    EMPTY     ]
+[[38;5;220mMEDI[0m][0007] -- Circular buffer: Message #3 [    EMPTY     ]
+[[38;5;220mMEDI[0m][0007] -- Circular buffer: Message #4 [    EMPTY     ]
+[[38;5;220mMEDI[0m][0007] -- Circular buffer: Message #5 [    EMPTY     ]
+[[38;5;220mMEDI[0m][0007] -- Circular buffer: Message #6 [    EMPTY     ]
+[[38;5;220mMEDI[0m][0007] -- Circular buffer: Message #7 [    EMPTY     ]
+[[38;5;220mMEDI[0m][0007] -- Circular buffer: Message #8 [    EMPTY     ]
+[[38;5;220mMEDI[0m][0007] -- Circular buffer: Buffer contents listed
+[[38;5;220mMEDI[0m][0007] -- Circular buffer: Messages: 1, empty message: 7, slots: 8
+[[38;5;220mMEDI[0m][0007] -- Circular buffer: Determining next ready message and metadata
+[[38;5;220mMEDI[0m][0007] -- Circular buffer: Next message found at slot 1
+[[38;5;220mMEDI[0m][0007] -- Circular buffer: Message #1: [ skui ]
+[[38;5;220mMEDI[0m][0007] -- Circular buffer: Metadata: [ PX | SSS ]
+[[38;5;220mMEDI[0m][0007] -- Circular buffer: Metadata: [ 3;0 | 10;14;18 ]
+[[38;5;220mMEDI[0m][0007] -- Circular buffer: Metadata checked for message #1: Subscriber condition 18 == 10 ]
+[[38;5;220mMEDI[0m][0007] -- Circular buffer: Metadata checked for message #1: Subscriber condition 18 == 14 ]
+[[38;5;220mMEDI[0m][0007] -- Circular buffer: Metadata checked for message #1: Subscriber condition 18 == 18 ]
+[[38;5;220mMEDI[0m][0007] -- Circular buffer: Message #1 matches the subscriber pipe (FD 18)
+[[38;5;220mMEDI[0m][0007] -- Circular buffer: Message #1 [skui] loaded
+[[38;5;220mMEDI[0m][INFO] -- Current time (usec): 410771
+[[38;5;220mMEDI[0m][INFO] -- Time difference: 398834
+[[38;5;220mMEDI[0m][0008] -- Active pipes[*][0] R: FD 5 
+[[38;5;220mMEDI[0m][0008] -- Active pipes[*][1] W: FD 10 14 18 
+[[38;5;220mMEDI[0m][0008] -- Receiving message from pipe (FD 5)...
+[[38;5;220mMEDI[0m][0008] -- 4 bytes read from pipe (FD 5)
+[[38;5;220mMEDI[0m][0008] -- Received message #9: [XZGP]
+[[38;5;220mMEDI[0m][0008] -- Sending message [XZGP] to circular buffer...
+[[38;5;220mMEDI[0m][0008] -- Circular buffer variables: Message #1 offset: 0
+[[38;5;220mMEDI[0m][0008] -- Circular buffer: Pipe FD received: 5
+[[38;5;220mMEDI[0m][0008] -- Circular buffer: Determine free message slot in the circular buffer
+[[38;5;220mMEDI[0m][0008] -- Circular buffer: Found free message #2 slot in the circular buffer
+[[38;5;220mMEDI[0m][0008] -- Circular buffer: Writing message [XZGP] to slot #2 to circular buffer
+[[38;5;220mMEDI[0m][0008] -- Circular buffer: Message #2 [XZGP] from pipe (FD 5) written in 4 bytes to circular buffer
+[[38;5;220mMEDI[0m][0008] -- Circular buffer: Message #2 [    EMPTY     ]
+[[38;5;220mMEDI[0m][0008] -- Circular buffer: 1 messages in the circular buffer
+[[38;5;220mMEDI[0m][0008] -- Message #9 [XZGP] saved successfully in circular buffer...
+[[38;5;220mMEDI[0m][0008] -- Circular buffer: Buffer contents
+[[38;5;220mMEDI[0m][0008] -- Circular buffer: Message no [ Msg  |  Meta ]
+[[38;5;220mMEDI[0m][0008] -- Circular buffer: Message #1 [ XZGP | XPSSS ]
+[[38;5;220mMEDI[0m][0008] -- Circular buffer: Message #2 [    EMPTY     ]
+[[38;5;220mMEDI[0m][0008] -- Circular buffer: Message #3 [    EMPTY     ]
+[[38;5;220mMEDI[0m][0008] -- Circular buffer: Message #4 [    EMPTY     ]
+[[38;5;220mMEDI[0m][0008] -- Circular buffer: Message #5 [    EMPTY     ]
+[[38;5;220mMEDI[0m][0008] -- Circular buffer: Message #6 [    EMPTY     ]
+[[38;5;220mMEDI[0m][0008] -- Circular buffer: Message #7 [    EMPTY     ]
+[[38;5;220mMEDI[0m][0008] -- Circular buffer: Message #8 [    EMPTY     ]
+[[38;5;220mMEDI[0m][0008] -- Circular buffer: Buffer contents listed
+[[38;5;220mMEDI[0m][0008] -- Circular buffer: Messages: 1, empty message: 7, slots: 8
+[[38;5;220mMEDI[0m][0008] -- Circular buffer: Determining next ready message and metadata
+[[38;5;220mMEDI[0m][0008] -- Circular buffer: Next message found at slot 1
+[[38;5;220mMEDI[0m][0008] -- Circular buffer: Message #1: [ XZGP ]
+[[38;5;220mMEDI[0m][0008] -- Circular buffer: Metadata: [ XP | SSS ]
+[[38;5;220mMEDI[0m][0008] -- Circular buffer: Metadata: [ 0;5 | 10;14;18 ]
+[[38;5;220mMEDI[0m][0008] -- Circular buffer: Metadata checked for message #1: Subscriber condition 18 == 10 ]
+[[38;5;220mMEDI[0m][0008] -- Circular buffer: Metadata checked for message #1: Subscriber condition 18 == 14 ]
+[[38;5;220mMEDI[0m][0008] -- Circular buffer: Metadata checked for message #1: Subscriber condition 18 == 18 ]
+[[38;5;220mMEDI[0m][0008] -- Circular buffer: Message #1 matches the subscriber pipe (FD 18)
+[[38;5;220mMEDI[0m][0008] -- Circular buffer: Message #1 [XZGP] loaded
+[[38;5;220mMEDI[0m][INFO] -- Current time (usec): 310771
+[[38;5;220mMEDI[0m][INFO] -- Time difference: 498834
+[[38;5;220mMEDI[0m][0009] -- Active pipes[*][0] R: FD 3 
+[[38;5;220mMEDI[0m][0009] -- Active pipes[*][1] W: FD 10 14 18 
+[[38;5;220mMEDI[0m][0009] -- Receiving message from pipe (FD 3)...
+[[38;5;220mMEDI[0m][0009] -- 4 bytes read from pipe (FD 3)
+[[38;5;220mMEDI[0m][0009] -- Received message #10: [ousq]
+[[38;5;220mMEDI[0m][0009] -- Sending message [ousq] to circular buffer...
+[[38;5;220mMEDI[0m][0009] -- Circular buffer variables: Message #1 offset: 0
+[[38;5;220mMEDI[0m][0009] -- Circular buffer: Pipe FD received: 3
+[[38;5;220mMEDI[0m][0009] -- Circular buffer: Determine free message slot in the circular buffer
+[[38;5;220mMEDI[0m][0009] -- Circular buffer: Found free message #2 slot in the circular buffer
+[[38;5;220mMEDI[0m][0009] -- Circular buffer: Writing message [ousq] to slot #2 to circular buffer
+[[38;5;220mMEDI[0m][0009] -- Circular buffer: Message #2 [ousq] from pipe (FD 3) written in 4 bytes to circular buffer
+[[38;5;220mMEDI[0m][0009] -- Circular buffer: Message #2 [    EMPTY     ]
+[[38;5;220mMEDI[0m][0009] -- Circular buffer: 1 messages in the circular buffer
+[[38;5;220mMEDI[0m][0009] -- Message #10 [ousq] saved successfully in circular buffer...
+[[38;5;220mMEDI[0m][0009] -- Circular buffer: Buffer contents
+[[38;5;220mMEDI[0m][0009] -- Circular buffer: Message no [ Msg  |  Meta ]
+[[38;5;220mMEDI[0m][0009] -- Circular buffer: Message #1 [ ousq | PXSSS ]
+[[38;5;220mMEDI[0m][0009] -- Circular buffer: Message #2 [    EMPTY     ]
+[[38;5;220mMEDI[0m][0009] -- Circular buffer: Message #3 [    EMPTY     ]
+[[38;5;220mMEDI[0m][0009] -- Circular buffer: Message #4 [    EMPTY     ]
+[[38;5;220mMEDI[0m][0009] -- Circular buffer: Message #5 [    EMPTY     ]
+[[38;5;220mMEDI[0m][0009] -- Circular buffer: Message #6 [    EMPTY     ]
+[[38;5;220mMEDI[0m][0009] -- Circular buffer: Message #7 [    EMPTY     ]
+[[38;5;220mMEDI[0m][0009] -- Circular buffer: Message #8 [    EMPTY     ]
+[[38;5;220mMEDI[0m][0009] -- Circular buffer: Buffer contents listed
+[[38;5;220mMEDI[0m][0009] -- Circular buffer: Messages: 1, empty message: 7, slots: 8
+[[38;5;220mMEDI[0m][0009] -- Circular buffer: Determining next ready message and metadata
+[[38;5;220mMEDI[0m][0009] -- Circular buffer: Next message found at slot 1
+[[38;5;220mMEDI[0m][0009] -- Circular buffer: Message #1: [ ousq ]
+[[38;5;220mMEDI[0m][0009] -- Circular buffer: Metadata: [ PX | SSS ]
+[[38;5;220mMEDI[0m][0009] -- Circular buffer: Metadata: [ 3;0 | 10;14;18 ]
+[[38;5;220mMEDI[0m][0009] -- Circular buffer: Metadata checked for message #1: Subscriber condition 18 == 10 ]
+[[38;5;220mMEDI[0m][0009] -- Circular buffer: Metadata checked for message #1: Subscriber condition 18 == 14 ]
+[[38;5;220mMEDI[0m][0009] -- Circular buffer: Metadata checked for message #1: Subscriber condition 18 == 18 ]
+[[38;5;220mMEDI[0m][0009] -- Circular buffer: Message #1 matches the subscriber pipe (FD 18)
+[[38;5;220mMEDI[0m][0009] -- Circular buffer: Message #1 [ousq] loaded
+[[38;5;220mMEDI[0m][INFO] -- Current time (usec): 611136
+[[38;5;220mMEDI[0m][INFO] -- Time difference: 198469
+[[38;5;220mMEDI[0m][0010] -- Active pipes[*][0] R: FD 15 
+[[38;5;220mMEDI[0m][0010] -- Active pipes[*][1] W: FD 10 14 18 
+[[38;5;220mMEDI[0m][0010] -- Receiving message from pipe (FD 15)...
+[[38;5;220mMEDI[0m][0010] -- 4 bytes read from pipe (FD 15)
+[[38;5;220mMEDI[0m][0010] -- Received message #11: [REQ1]
+[[38;5;220mMEDI[0m][0010] -- Request received [REQ1] from subscriber 3 at pipe (FD 15)
+[[38;5;220mMEDI[0m][0010] -- Processing message request from pipe (FD 15)
+[[38;5;220mMEDI[0m][0010] -- Circular buffer: Determining next ready message and metadata
+[[38;5;220mMEDI[0m][0010] -- Circular buffer: Next message found at slot 1
+[[38;5;220mMEDI[0m][0010] -- Circular buffer: Message #1: [ ousq ]
+[[38;5;220mMEDI[0m][0010] -- Circular buffer: Metadata: [ PX | SSS ]
+[[38;5;220mMEDI[0m][0010] -- Circular buffer: Metadata: [ 3;0 | 10;14;18 ]
+[[38;5;220mMEDI[0m][0010] -- Circular buffer: Metadata checked for message #1: Subscriber condition 18 == 10 ]
+[[38;5;220mMEDI[0m][0010] -- Circular buffer: Metadata checked for message #1: Subscriber condition 18 == 14 ]
+[[38;5;220mMEDI[0m][0010] -- Circular buffer: Metadata checked for message #1: Subscriber condition 18 == 18 ]
+[[38;5;220mMEDI[0m][0010] -- Circular buffer: Message #1 matches the subscriber pipe (FD 18)
+[[38;5;220mMEDI[0m][0010] -- Circular buffer: Message #1 [ousq] loaded
+[[38;5;220mMEDI[0m][0010] -- Circular buffer: Buffer contents
+[[38;5;220mMEDI[0m][0010] -- Circular buffer: Message no [ Msg  |  Meta ]
+[[38;5;220mMEDI[0m][0010] -- Circular buffer: Message #1 [ ousq | PXSSS ]
+[[38;5;220mMEDI[0m][0010] -- Circular buffer: Message #2 [    EMPTY     ]
+[[38;5;220mMEDI[0m][0010] -- Circular buffer: Message #3 [    EMPTY     ]
+[[38;5;220mMEDI[0m][0010] -- Circular buffer: Message #4 [    EMPTY     ]
+[[38;5;220mMEDI[0m][0010] -- Circular buffer: Message #5 [    EMPTY     ]
+[[38;5;220mMEDI[0m][0010] -- Circular buffer: Message #6 [    EMPTY     ]
+[[38;5;220mMEDI[0m][0010] -- Circular buffer: Message #7 [    EMPTY     ]
+[[38;5;220mMEDI[0m][0010] -- Circular buffer: Message #8 [    EMPTY     ]
+[[38;5;220mMEDI[0m][0010] -- Circular buffer: Buffer contents listed
+[[38;5;220mMEDI[0m][0010] -- Circular buffer: Messages: 1, empty message: 7, slots: 8
+[[38;5;220mMEDI[0m][0010] -- Circular buffer: Update message counter: 1
+[[38;5;220mMEDI[0m][0010] -- Processing message 1 towards pipe (FD 18)
+[[38;5;220mMEDI[0m][0010] -- Sending message [ousq] to pipe (FD 18)...
+[[38;5;220mMEDI[0m][0010] -- 4 bytes written to pipe (FD 18)
+[[38;5;220mMEDI[0m][0010] -- Requests remaining 0
+[[38;5;220mMEDI[0m][0010] -- Circular buffer: Updating metadata for message 18
+[[38;5;220mMEDI[0m][0010] -- Circular buffer: Original metadata read: [ PX | SSS ]
+[[38;5;220mMEDI[0m][0010] -- Circular buffer: Modified metadata: [ PX | SSY ]
+[[38;5;220mMEDI[0m][0010] -- Circular buffer: Based on metadata message #1 to be deleted
+[[38;5;220mMEDI[0m][0010] -- Circular buffer: Deleting message #2 from the circular buffer
+[[38;5;220mMEDI[0m][0010] -- Circular buffer: Message #2 in the circular buffer already empty
+[[38;5;220mMEDI[0m][0010] -- Circular buffer: 1 messages left in the circular buffer
+[[38;5;220mMEDI[0m][0010] -- Circular buffer: Message #19 [    EMPTY     ]
+[[38;5;220mMEDI[0m][0010] -- Message [] processed
+[[38;5;220mMEDI[0m][0010] -- Circular buffer: Buffer contents
+[[38;5;220mMEDI[0m][0010] -- Circular buffer: Message no [ Msg  |  Meta ]
+[[38;5;220mMEDI[0m][0010] -- Circular buffer: Message #1 [ ousq | PXSSS ]
+[[38;5;220mMEDI[0m][0010] -- Circular buffer: Message #2 [    EMPTY     ]
+[[38;5;220mMEDI[0m][0010] -- Circular buffer: Message #3 [    EMPTY     ]
+[[38;5;220mMEDI[0m][0010] -- Circular buffer: Message #4 [    EMPTY     ]
+[[38;5;220mMEDI[0m][0010] -- Circular buffer: Message #5 [    EMPTY     ]
+[[38;5;220mMEDI[0m][0010] -- Circular buffer: Message #6 [    EMPTY     ]
+[[38;5;220mMEDI[0m][0010] -- Circular buffer: Message #7 [    EMPTY     ]
+[[38;5;220mMEDI[0m][0010] -- Circular buffer: Message #8 [    EMPTY     ]
+[[38;5;220mMEDI[0m][0010] -- Circular buffer: Buffer contents listed
+[[38;5;220mMEDI[0m][0010] -- Circular buffer: Messages: 1, empty message: 7, slots: 8
+[[38;5;220mMEDI[0m][0010] -- Circular buffer: Buffer contents
+[[38;5;220mMEDI[0m][0010] -- Circular buffer: Message no [ Msg  |  Meta ]
+[[38;5;220mMEDI[0m][0010] -- Circular buffer: Message #1 [ ousq | PXSSS ]
+[[38;5;220mMEDI[0m][0010] -- Circular buffer: Message #2 [    EMPTY     ]
+[[38;5;220mMEDI[0m][0010] -- Circular buffer: Message #3 [    EMPTY     ]
+[[38;5;220mMEDI[0m][0010] -- Circular buffer: Message #4 [    EMPTY     ]
+[[38;5;220mMEDI[0m][0010] -- Circular buffer: Message #5 [    EMPTY     ]
+[[38;5;220mMEDI[0m][0010] -- Circular buffer: Message #6 [    EMPTY     ]
+[[38;5;220mMEDI[0m][0010] -- Circular buffer: Message #7 [    EMPTY     ]
+[[38;5;220mMEDI[0m][0010] -- Circular buffer: Message #8 [    EMPTY     ]
+[[38;5;220mMEDI[0m][0010] -- Circular buffer: Buffer contents listed
+[[38;5;220mMEDI[0m][0010] -- Circular buffer: Messages: 1, empty message: 7, slots: 8
+[[38;5;220mMEDI[0m][0010] -- Circular buffer: Determining next ready message and metadata
+[[38;5;220mMEDI[0m][0010] -- Circular buffer: Next message found at slot 1
+[[38;5;220mMEDI[0m][0010] -- Circular buffer: Message #1: [ ousq ]
+[[38;5;220mMEDI[0m][0010] -- Circular buffer: Metadata: [ PX | SSY ]
+[[38;5;220mMEDI[0m][0010] -- Circular buffer: Metadata: [ 3;0 | 10;14;0 ]
+[[38;5;220mMEDI[0m][0010] -- Circular buffer: Metadata checked for message #1: Subscriber condition 18 == 10 ]
+[[38;5;220mMEDI[0m][0010] -- Circular buffer: Metadata checked for message #1: Subscriber condition 18 == 14 ]
+[[38;5;220mMEDI[0m][0010] -- Circular buffer: Metadata checked for message #1: Subscriber condition 18 == 0 ]
+[[38;5;220mMEDI[0m][INFO] -- Current time (usec): 810671
+[[38;5;220mMEDI[0m][INFO] -- Time difference: 1066
+[[38;5;220mMEDI[0m][0011] -- Active pipes[*][0] R: FD 3 
+[[38;5;220mMEDI[0m][0011] -- Active pipes[*][1] W: FD 10 14 18 
+[[38;5;220mMEDI[0m][0011] -- Receiving message from pipe (FD 3)...
+[[38;5;220mMEDI[0m][0011] -- 4 bytes read from pipe (FD 3)
+[[38;5;220mMEDI[0m][0011] -- Received message #12: [qeyk]
+[[38;5;220mMEDI[0m][0011] -- Sending message [qeyk] to circular buffer...
+[[38;5;220mMEDI[0m][0011] -- Circular buffer variables: Message #2 offset: 11
+[[38;5;220mMEDI[0m][0011] -- Circular buffer: Pipe FD received: 3
+[[38;5;220mMEDI[0m][0011] -- Circular buffer: Determine free message slot in the circular buffer
+[[38;5;220mMEDI[0m][0011] -- Circular buffer: Found free message #2 slot in the circular buffer
+[[38;5;220mMEDI[0m][0011] -- Circular buffer: Writing message [qeyk] to slot #2 to circular buffer
+[[38;5;220mMEDI[0m][0011] -- Circular buffer: Message #2 [qeyk] from pipe (FD 3) written in 4 bytes to circular buffer
+[[38;5;220mMEDI[0m][0011] -- Circular buffer: Message #2 [ qeyk | PXSSS ]
+[[38;5;220mMEDI[0m][0011] -- Circular buffer: 2 messages in the circular buffer
+[[38;5;220mMEDI[0m][0011] -- Message #12 [qeyk] saved successfully in circular buffer...
+[[38;5;220mMEDI[0m][0011] -- Circular buffer: Buffer contents
+[[38;5;220mMEDI[0m][0011] -- Circular buffer: Message no [ Msg  |  Meta ]
+[[38;5;220mMEDI[0m][0011] -- Circular buffer: Message #1 [ ousq | PXSSS ]
+[[38;5;220mMEDI[0m][0011] -- Circular buffer: Message #2 [ qeyk | PXSSS ]
+[[38;5;220mMEDI[0m][0011] -- Circular buffer: Message #3 [    EMPTY     ]
+[[38;5;220mMEDI[0m][0011] -- Circular buffer: Message #4 [    EMPTY     ]
+[[38;5;220mMEDI[0m][0011] -- Circular buffer: Message #5 [    EMPTY     ]
+[[38;5;220mMEDI[0m][0011] -- Circular buffer: Message #6 [    EMPTY     ]
+[[38;5;220mMEDI[0m][0011] -- Circular buffer: Message #7 [    EMPTY     ]
+[[38;5;220mMEDI[0m][0011] -- Circular buffer: Message #8 [    EMPTY     ]
+[[38;5;220mMEDI[0m][0011] -- Circular buffer: Buffer contents listed
+[[38;5;220mMEDI[0m][0011] -- Circular buffer: Messages: 2, empty message: 6, slots: 8
+[[38;5;220mMEDI[0m][0011] -- Circular buffer: Determining next ready message and metadata
+[[38;5;220mMEDI[0m][0011] -- Circular buffer: Next message found at slot 1
+[[38;5;220mMEDI[0m][0011] -- Circular buffer: Message #1: [ ousq ]
+[[38;5;220mMEDI[0m][0011] -- Circular buffer: Metadata: [ PX | SSS ]
+[[38;5;220mMEDI[0m][0011] -- Circular buffer: Metadata: [ 3;0 | 10;14;18 ]
+[[38;5;220mMEDI[0m][0011] -- Circular buffer: Metadata checked for message #1: Subscriber condition 18 == 10 ]
+[[38;5;220mMEDI[0m][0011] -- Circular buffer: Metadata checked for message #1: Subscriber condition 18 == 14 ]
+[[38;5;220mMEDI[0m][0011] -- Circular buffer: Metadata checked for message #1: Subscriber condition 18 == 18 ]
+[[38;5;220mMEDI[0m][0011] -- Circular buffer: Message #1 matches the subscriber pipe (FD 18)
+[[38;5;220mMEDI[0m][0011] -- Circular buffer: Message #1 [ousq] loaded
+[[38;5;220mMEDI[0m][INFO] -- Current time (usec): 311155
+[[38;5;220mMEDI[0m][INFO] -- Time difference: 498450
+[[38;5;220mMEDI[0m][0012] -- Active pipes[*][0] R: FD 5 15 
+[[38;5;220mMEDI[0m][0012] -- Active pipes[*][1] W: FD 10 14 18 
+[[38;5;220mMEDI[0m][0012] -- Receiving message from pipe (FD 5)...
+[[38;5;220mMEDI[0m][0012] -- 4 bytes read from pipe (FD 5)
+[[38;5;220mMEDI[0m][0012] -- Received message #13: [ALTU]
+[[38;5;220mMEDI[0m][0012] -- Sending message [ALTU] to circular buffer...
+[[38;5;220mMEDI[0m][0012] -- Circular buffer variables: Message #1 offset: 0
+[[38;5;220mMEDI[0m][0012] -- Circular buffer: Pipe FD received: 5
+[[38;5;220mMEDI[0m][0012] -- Circular buffer: Determine free message slot in the circular buffer
+[[38;5;220mMEDI[0m][0012] -- Circular buffer: Found free message #3 slot in the circular buffer
+[[38;5;220mMEDI[0m][0012] -- Circular buffer: Writing message [ALTU] to slot #3 to circular buffer
+[[38;5;220mMEDI[0m][0012] -- Circular buffer: Message #3 [ALTU] from pipe (FD 5) written in 4 bytes to circular buffer
+[[38;5;220mMEDI[0m][0012] -- Circular buffer: Message #3 [    EMPTY     ]
+[[38;5;220mMEDI[0m][0012] -- Circular buffer: 1 messages in the circular buffer
+[[38;5;220mMEDI[0m][0012] -- Message #13 [ALTU] saved successfully in circular buffer...
+[[38;5;220mMEDI[0m][0012] -- Receiving message from pipe (FD 15)...
+[[38;5;220mMEDI[0m][0012] -- 4 bytes read from pipe (FD 15)
+[[38;5;220mMEDI[0m][0012] -- Received message #14: [REQ1]
+[[38;5;220mMEDI[0m][0012] -- Request received [REQ1] from subscriber 3 at pipe (FD 15)
+[[38;5;220mMEDI[0m][0012] -- Processing message request from pipe (FD 15)
+[[38;5;220mMEDI[0m][0012] -- Circular buffer: Determining next ready message and metadata
+[[38;5;220mMEDI[0m][0012] -- Circular buffer: Next message found at slot 1
+[[38;5;220mMEDI[0m][0012] -- Circular buffer: Message #1: [ ALTU ]
+[[38;5;220mMEDI[0m][0012] -- Circular buffer: Metadata: [ XP | SSS ]
+[[38;5;220mMEDI[0m][0012] -- Circular buffer: Metadata: [ 0;5 | 10;14;18 ]
+[[38;5;220mMEDI[0m][0012] -- Circular buffer: Metadata checked for message #1: Subscriber condition 18 == 10 ]
+[[38;5;220mMEDI[0m][0012] -- Circular buffer: Metadata checked for message #1: Subscriber condition 18 == 14 ]
+[[38;5;220mMEDI[0m][0012] -- Circular buffer: Metadata checked for message #1: Subscriber condition 18 == 18 ]
+[[38;5;220mMEDI[0m][0012] -- Circular buffer: Message #1 matches the subscriber pipe (FD 18)
+[[38;5;220mMEDI[0m][0012] -- Circular buffer: Message #1 [ALTU] loaded
+[[38;5;220mMEDI[0m][0012] -- Circular buffer: Buffer contents
+[[38;5;220mMEDI[0m][0012] -- Circular buffer: Message no [ Msg  |  Meta ]
+[[38;5;220mMEDI[0m][0012] -- Circular buffer: Message #1 [ ALTU | XPSSS ]
+[[38;5;220mMEDI[0m][0012] -- Circular buffer: Message #2 [ qeyk | PXSSS ]
+[[38;5;220mMEDI[0m][0012] -- Circular buffer: Message #3 [    EMPTY     ]
+[[38;5;220mMEDI[0m][0012] -- Circular buffer: Message #4 [    EMPTY     ]
+[[38;5;220mMEDI[0m][0012] -- Circular buffer: Message #5 [    EMPTY     ]
+[[38;5;220mMEDI[0m][0012] -- Circular buffer: Message #6 [    EMPTY     ]
+[[38;5;220mMEDI[0m][0012] -- Circular buffer: Message #7 [    EMPTY     ]
+[[38;5;220mMEDI[0m][0012] -- Circular buffer: Message #8 [    EMPTY     ]
+[[38;5;220mMEDI[0m][0012] -- Circular buffer: Buffer contents listed
+[[38;5;220mMEDI[0m][0012] -- Circular buffer: Messages: 2, empty message: 6, slots: 8
+[[38;5;220mMEDI[0m][0012] -- Circular buffer: Update message counter: 2
+[[38;5;220mMEDI[0m][0012] -- Processing message 2 towards pipe (FD 18)
+[[38;5;220mMEDI[0m][0012] -- Sending message [ALTU] to pipe (FD 18)...
+[[38;5;220mMEDI[0m][0012] -- 4 bytes written to pipe (FD 18)
+[[38;5;220mMEDI[0m][0012] -- Requests remaining 0
+[[38;5;220mMEDI[0m][0012] -- Circular buffer: Updating metadata for message 18
+[[38;5;220mMEDI[0m][0012] -- Circular buffer: Original metadata read: [ XP | SSS ]
+[[38;5;220mMEDI[0m][0012] -- Circular buffer: Modified metadata: [ XP | SSY ]
+[[38;5;220mMEDI[0m][0012] -- Circular buffer: Based on metadata message #2 to be deleted
+[[38;5;220mMEDI[0m][0012] -- Circular buffer: Deleting message #3 from the circular buffer
+[[38;5;220mMEDI[0m][0012] -- Circular buffer: Message #3 in the circular buffer already empty
+[[38;5;220mMEDI[0m][0012] -- Circular buffer: 2 messages left in the circular buffer
+[[38;5;220mMEDI[0m][0012] -- Circular buffer: Message #19 [    EMPTY     ]
+[[38;5;220mMEDI[0m][0012] -- Message [] processed
+[[38;5;220mMEDI[0m][0012] -- Circular buffer: Buffer contents
+[[38;5;220mMEDI[0m][0012] -- Circular buffer: Message no [ Msg  |  Meta ]
+[[38;5;220mMEDI[0m][0012] -- Circular buffer: Message #1 [ ALTU | XPSSS ]
+[[38;5;220mMEDI[0m][0012] -- Circular buffer: Message #2 [ qeyk | PXSSS ]
+[[38;5;220mMEDI[0m][0012] -- Circular buffer: Message #3 [    EMPTY     ]
+[[38;5;220mMEDI[0m][0012] -- Circular buffer: Message #4 [    EMPTY     ]
+[[38;5;220mMEDI[0m][0012] -- Circular buffer: Message #5 [    EMPTY     ]
+[[38;5;220mMEDI[0m][0012] -- Circular buffer: Message #6 [    EMPTY     ]
+[[38;5;220mMEDI[0m][0012] -- Circular buffer: Message #7 [    EMPTY     ]
+[[38;5;220mMEDI[0m][0012] -- Circular buffer: Message #8 [    EMPTY     ]
+[[38;5;220mMEDI[0m][0012] -- Circular buffer: Buffer contents listed
+[[38;5;220mMEDI[0m][0012] -- Circular buffer: Messages: 2, empty message: 6, slots: 8
+[[38;5;220mMEDI[0m][0012] -- Circular buffer: Buffer contents
+[[38;5;220mMEDI[0m][0012] -- Circular buffer: Message no [ Msg  |  Meta ]
+[[38;5;220mMEDI[0m][0012] -- Circular buffer: Message #1 [ ALTU | XPSSS ]
+[[38;5;220mMEDI[0m][0012] -- Circular buffer: Message #2 [ qeyk | PXSSS ]
+[[38;5;220mMEDI[0m][0012] -- Circular buffer: Message #3 [    EMPTY     ]
+[[38;5;220mMEDI[0m][0012] -- Circular buffer: Message #4 [    EMPTY     ]
+[[38;5;220mMEDI[0m][0012] -- Circular buffer: Message #5 [    EMPTY     ]
+[[38;5;220mMEDI[0m][0012] -- Circular buffer: Message #6 [    EMPTY     ]
+[[38;5;220mMEDI[0m][0012] -- Circular buffer: Message #7 [    EMPTY     ]
+[[38;5;220mMEDI[0m][0012] -- Circular buffer: Message #8 [    EMPTY     ]
+[[38;5;220mMEDI[0m][0012] -- Circular buffer: Buffer contents listed
+[[38;5;220mMEDI[0m][0012] -- Circular buffer: Messages: 2, empty message: 6, slots: 8
+[[38;5;220mMEDI[0m][0012] -- Circular buffer: Determining next ready message and metadata
+[[38;5;220mMEDI[0m][0012] -- Circular buffer: Next message found at slot 1
+[[38;5;220mMEDI[0m][0012] -- Circular buffer: Message #1: [ ALTU ]
+[[38;5;220mMEDI[0m][0012] -- Circular buffer: Metadata: [ XP | SSY ]
+[[38;5;220mMEDI[0m][0012] -- Circular buffer: Metadata: [ 0;5 | 10;14;0 ]
+[[38;5;220mMEDI[0m][0012] -- Circular buffer: Metadata checked for message #1: Subscriber condition 18 == 10 ]
+[[38;5;220mMEDI[0m][0012] -- Circular buffer: Metadata checked for message #1: Subscriber condition 18 == 14 ]
+[[38;5;220mMEDI[0m][0012] -- Circular buffer: Metadata checked for message #1: Subscriber condition 18 == 0 ]
+[[38;5;220mMEDI[0m][0012] -- Circular buffer: Next message found at slot 2
+[[38;5;220mMEDI[0m][0012] -- Circular buffer: Message #2: [ qeyk ]
+[[38;5;220mMEDI[0m][0012] -- Circular buffer: Metadata: [ XP | SSY ]
+[[38;5;220mMEDI[0m][0012] -- Circular buffer: Metadata: [ 0;5 | 10;14;0 ]
+[[38;5;220mMEDI[0m][0012] -- Circular buffer: Metadata checked for message #2: Subscriber condition 18 == 10 ]
+[[38;5;220mMEDI[0m][0012] -- Circular buffer: Metadata checked for message #2: Subscriber condition 18 == 14 ]
+[[38;5;220mMEDI[0m][0012] -- Circular buffer: Metadata checked for message #2: Subscriber condition 18 == 0 ]
+[[38;5;220mMEDI[0m][INFO] -- Current time (usec): 310863
+[[38;5;220mMEDI[0m][INFO] -- Time difference: 498742
+[[38;5;220mMEDI[0m][0013] -- Active pipes[*][0] R: FD 3 
+[[38;5;220mMEDI[0m][0013] -- Active pipes[*][1] W: FD 10 14 18 
+[[38;5;220mMEDI[0m][0013] -- Receiving message from pipe (FD 3)...
+[[38;5;220mMEDI[0m][0013] -- 4 bytes read from pipe (FD 3)
+[[38;5;220mMEDI[0m][0013] -- Received message #15: [skoc]
+[[38;5;220mMEDI[0m][0013] -- Sending message [skoc] to circular buffer...
+[[38;5;220mMEDI[0m][0013] -- Circular buffer variables: Message #3 offset: 22
+[[38;5;220mMEDI[0m][0013] -- Circular buffer: Pipe FD received: 3
+[[38;5;220mMEDI[0m][0013] -- Circular buffer: Determine free message slot in the circular buffer
+[[38;5;220mMEDI[0m][0013] -- Circular buffer: Found free message #3 slot in the circular buffer
+[[38;5;220mMEDI[0m][0013] -- Circular buffer: Writing message [skoc] to slot #3 to circular buffer
+[[38;5;220mMEDI[0m][0013] -- Circular buffer: Message #3 [skoc] from pipe (FD 3) written in 4 bytes to circular buffer
+[[38;5;220mMEDI[0m][0013] -- Circular buffer: Message #3 [ skoc | PXSSS ]
+[[38;5;220mMEDI[0m][0013] -- Circular buffer: 3 messages in the circular buffer
+[[38;5;220mMEDI[0m][0013] -- Message #15 [skoc] saved successfully in circular buffer...
+[[38;5;220mMEDI[0m][0013] -- Circular buffer: Buffer contents
+[[38;5;220mMEDI[0m][0013] -- Circular buffer: Message no [ Msg  |  Meta ]
+[[38;5;220mMEDI[0m][0013] -- Circular buffer: Message #1 [ ALTU | XPSSS ]
+[[38;5;220mMEDI[0m][0013] -- Circular buffer: Message #2 [ qeyk | PXSSS ]
+[[38;5;220mMEDI[0m][0013] -- Circular buffer: Message #3 [ skoc | PXSSS ]
+[[38;5;220mMEDI[0m][0013] -- Circular buffer: Message #4 [    EMPTY     ]
+[[38;5;220mMEDI[0m][0013] -- Circular buffer: Message #5 [    EMPTY     ]
+[[38;5;220mMEDI[0m][0013] -- Circular buffer: Message #6 [    EMPTY     ]
+[[38;5;220mMEDI[0m][0013] -- Circular buffer: Message #7 [    EMPTY     ]
+[[38;5;220mMEDI[0m][0013] -- Circular buffer: Message #8 [    EMPTY     ]
+[[38;5;220mMEDI[0m][0013] -- Circular buffer: Buffer contents listed
+[[38;5;220mMEDI[0m][0013] -- Circular buffer: Messages: 3, empty message: 5, slots: 8
+[[38;5;220mMEDI[0m][0013] -- Circular buffer: Determining next ready message and metadata
+[[38;5;220mMEDI[0m][0013] -- Circular buffer: Next message found at slot 1
+[[38;5;220mMEDI[0m][0013] -- Circular buffer: Message #1: [ ALTU ]
+[[38;5;220mMEDI[0m][0013] -- Circular buffer: Metadata: [ PX | SSS ]
+[[38;5;220mMEDI[0m][0013] -- Circular buffer: Metadata: [ 3;0 | 10;14;18 ]
+[[38;5;220mMEDI[0m][0013] -- Circular buffer: Metadata checked for message #1: Subscriber condition 18 == 10 ]
+[[38;5;220mMEDI[0m][0013] -- Circular buffer: Metadata checked for message #1: Subscriber condition 18 == 14 ]
+[[38;5;220mMEDI[0m][0013] -- Circular buffer: Metadata checked for message #1: Subscriber condition 18 == 18 ]
+[[38;5;220mMEDI[0m][0013] -- Circular buffer: Message #1 matches the subscriber pipe (FD 18)
+[[38;5;220mMEDI[0m][0013] -- Circular buffer: Message #1 [ALTU] loaded
+[[38;5;220mMEDI[0m][INFO] -- Current time (usec): 11852
+[[38;5;220mMEDI[0m][INFO] -- Time difference: 797753
+[[38;5;220mMEDI[0m][0014] -- Active pipes[*][0] R: FD 3 
+[[38;5;220mMEDI[0m][0014] -- Active pipes[*][1] W: FD 10 14 18 
+[[38;5;220mMEDI[0m][0014] -- Receiving message from pipe (FD 3)...
+[[38;5;220mMEDI[0m][0014] -- 4 bytes read from pipe (FD 3)
+[[38;5;220mMEDI[0m][0014] -- Received message #16: [ksgs]
+[[38;5;220mMEDI[0m][0014] -- Sending message [ksgs] to circular buffer...
+[[38;5;220mMEDI[0m][0014] -- Circular buffer variables: Message #1 offset: 0
+[[38;5;220mMEDI[0m][0014] -- Circular buffer: Pipe FD received: 3
+[[38;5;220mMEDI[0m][0014] -- Circular buffer: Determine free message slot in the circular buffer
+[[38;5;220mMEDI[0m][0014] -- Circular buffer: Found free message #4 slot in the circular buffer
+[[38;5;220mMEDI[0m][0014] -- Circular buffer: Writing message [ksgs] to slot #4 to circular buffer
+[[38;5;220mMEDI[0m][0014] -- Circular buffer: Message #4 [ksgs] from pipe (FD 3) written in 4 bytes to circular buffer
+[[38;5;220mMEDI[0m][0014] -- Circular buffer: Message #4 [    EMPTY     ]
+[[38;5;220mMEDI[0m][0014] -- Circular buffer: 1 messages in the circular buffer
+[[38;5;220mMEDI[0m][0014] -- Message #16 [ksgs] saved successfully in circular buffer...
+[[38;5;220mMEDI[0m][0014] -- Circular buffer: Buffer contents
+[[38;5;220mMEDI[0m][0014] -- Circular buffer: Message no [ Msg  |  Meta ]
+[[38;5;220mMEDI[0m][0014] -- Circular buffer: Message #1 [ ksgs | PXSSS ]
+[[38;5;220mMEDI[0m][0014] -- Circular buffer: Message #2 [ qeyk | PXSSS ]
+[[38;5;220mMEDI[0m][0014] -- Circular buffer: Message #3 [ skoc | PXSSS ]
+[[38;5;220mMEDI[0m][0014] -- Circular buffer: Message #4 [    EMPTY     ]
+[[38;5;220mMEDI[0m][0014] -- Circular buffer: Message #5 [    EMPTY     ]
+[[38;5;220mMEDI[0m][0014] -- Circular buffer: Message #6 [    EMPTY     ]
+[[38;5;220mMEDI[0m][0014] -- Circular buffer: Message #7 [    EMPTY     ]
+[[38;5;220mMEDI[0m][0014] -- Circular buffer: Message #8 [    EMPTY     ]
+[[38;5;220mMEDI[0m][0014] -- Circular buffer: Buffer contents listed
+[[38;5;220mMEDI[0m][0014] -- Circular buffer: Messages: 3, empty message: 5, slots: 8
+[[38;5;220mMEDI[0m][0014] -- Circular buffer: Update message counter: 3
+[[38;5;220mMEDI[0m][0014] -- Circular buffer: Determining next ready message and metadata
+[[38;5;220mMEDI[0m][0014] -- Circular buffer: Next message found at slot 1
+[[38;5;220mMEDI[0m][0014] -- Circular buffer: Message #1: [ ksgs ]
+[[38;5;220mMEDI[0m][0014] -- Circular buffer: Metadata: [ PX | SSS ]
+[[38;5;220mMEDI[0m][0014] -- Circular buffer: Metadata: [ 3;0 | 10;14;18 ]
+[[38;5;220mMEDI[0m][0014] -- Circular buffer: Metadata checked for message #1: Subscriber condition 18 == 10 ]
+[[38;5;220mMEDI[0m][0014] -- Circular buffer: Metadata checked for message #1: Subscriber condition 18 == 14 ]
+[[38;5;220mMEDI[0m][0014] -- Circular buffer: Metadata checked for message #1: Subscriber condition 18 == 18 ]
+[[38;5;220mMEDI[0m][0014] -- Circular buffer: Message #1 matches the subscriber pipe (FD 18)
+[[38;5;220mMEDI[0m][0014] -- Circular buffer: Message #1 [ksgs] loaded
+[[38;5;220mMEDI[0m][INFO] -- Current time (usec): 311330
+[[38;5;220mMEDI[0m][INFO] -- Time difference: 498275
+[[38;5;220mMEDI[0m][0015] -- Active pipes[*][0] R: FD 15 
+[[38;5;220mMEDI[0m][0015] -- Active pipes[*][1] W: FD 10 14 18 
+[[38;5;220mMEDI[0m][0015] -- Receiving message from pipe (FD 15)...
+[[38;5;220mMEDI[0m][0015] -- 4 bytes read from pipe (FD 15)
+[[38;5;220mMEDI[0m][0015] -- Received message #17: [REQ1]
+[[38;5;220mMEDI[0m][0015] -- Request received [REQ1] from subscriber 3 at pipe (FD 15)
+[[38;5;220mMEDI[0m][0015] -- Processing message request from pipe (FD 15)
+[[38;5;220mMEDI[0m][0015] -- Circular buffer: Determining next ready message and metadata
+[[38;5;220mMEDI[0m][0015] -- Circular buffer: Next message found at slot 1
+[[38;5;220mMEDI[0m][0015] -- Circular buffer: Message #1: [ ksgs ]
+[[38;5;220mMEDI[0m][0015] -- Circular buffer: Metadata: [ PX | SSS ]
+[[38;5;220mMEDI[0m][0015] -- Circular buffer: Metadata: [ 3;0 | 10;14;18 ]
+[[38;5;220mMEDI[0m][0015] -- Circular buffer: Metadata checked for message #1: Subscriber condition 18 == 10 ]
+[[38;5;220mMEDI[0m][0015] -- Circular buffer: Metadata checked for message #1: Subscriber condition 18 == 14 ]
+[[38;5;220mMEDI[0m][0015] -- Circular buffer: Metadata checked for message #1: Subscriber condition 18 == 18 ]
+[[38;5;220mMEDI[0m][0015] -- Circular buffer: Message #1 matches the subscriber pipe (FD 18)
+[[38;5;220mMEDI[0m][0015] -- Circular buffer: Message #1 [ksgs] loaded
+[[38;5;220mMEDI[0m][0015] -- Circular buffer: Buffer contents
+[[38;5;220mMEDI[0m][0015] -- Circular buffer: Message no [ Msg  |  Meta ]
+[[38;5;220mMEDI[0m][0015] -- Circular buffer: Message #1 [ ksgs | PXSSS ]
+[[38;5;220mMEDI[0m][0015] -- Circular buffer: Message #2 [ qeyk | PXSSS ]
+[[38;5;220mMEDI[0m][0015] -- Circular buffer: Message #3 [ skoc | PXSSS ]
+[[38;5;220mMEDI[0m][0015] -- Circular buffer: Message #4 [    EMPTY     ]
+[[38;5;220mMEDI[0m][0015] -- Circular buffer: Message #5 [    EMPTY     ]
+[[38;5;220mMEDI[0m][0015] -- Circular buffer: Message #6 [    EMPTY     ]
+[[38;5;220mMEDI[0m][0015] -- Circular buffer: Message #7 [    EMPTY     ]
+[[38;5;220mMEDI[0m][0015] -- Circular buffer: Message #8 [    EMPTY     ]
+[[38;5;220mMEDI[0m][0015] -- Circular buffer: Buffer contents listed
+[[38;5;220mMEDI[0m][0015] -- Circular buffer: Messages: 3, empty message: 5, slots: 8
+[[38;5;220mMEDI[0m][0015] -- Circular buffer: Update message counter: 3
+[[38;5;220mMEDI[0m][0015] -- Processing message 3 towards pipe (FD 18)
+[[38;5;220mMEDI[0m][0015] -- Sending message [ksgs] to pipe (FD 18)...
+[[38;5;220mMEDI[0m][0015] -- 4 bytes written to pipe (FD 18)
+[[38;5;220mMEDI[0m][0015] -- Requests remaining 0
+[[38;5;220mMEDI[0m][0015] -- Circular buffer: Updating metadata for message 18
+[[38;5;220mMEDI[0m][0015] -- Circular buffer: Original metadata read: [ PX | SSS ]
+[[38;5;220mMEDI[0m][0015] -- Circular buffer: Modified metadata: [ PX | SSY ]
+[[38;5;220mMEDI[0m][0015] -- Circular buffer: Based on metadata message #3 to be deleted
+[[38;5;220mMEDI[0m][0015] -- Circular buffer: Deleting message #4 from the circular buffer
+[[38;5;220mMEDI[0m][0015] -- Circular buffer: Message #4 in the circular buffer already empty
+[[38;5;220mMEDI[0m][0015] -- Circular buffer: 3 messages left in the circular buffer
+[[38;5;220mMEDI[0m][0015] -- Circular buffer: Message #19 [    EMPTY     ]
+[[38;5;220mMEDI[0m][0015] -- Message [] processed
+[[38;5;220mMEDI[0m][0015] -- Circular buffer: Buffer contents
+[[38;5;220mMEDI[0m][0015] -- Circular buffer: Message no [ Msg  |  Meta ]
+[[38;5;220mMEDI[0m][0015] -- Circular buffer: Message #1 [ ksgs | PXSSS ]
+[[38;5;220mMEDI[0m][0015] -- Circular buffer: Message #2 [ qeyk | PXSSS ]
+[[38;5;220mMEDI[0m][0015] -- Circular buffer: Message #3 [ skoc | PXSSS ]
+[[38;5;220mMEDI[0m][0015] -- Circular buffer: Message #4 [    EMPTY     ]
+[[38;5;220mMEDI[0m][0015] -- Circular buffer: Message #5 [    EMPTY     ]
+[[38;5;220mMEDI[0m][0015] -- Circular buffer: Message #6 [    EMPTY     ]
+[[38;5;220mMEDI[0m][0015] -- Circular buffer: Message #7 [    EMPTY     ]
+[[38;5;220mMEDI[0m][0015] -- Circular buffer: Message #8 [    EMPTY     ]
+[[38;5;220mMEDI[0m][0015] -- Circular buffer: Buffer contents listed
+[[38;5;220mMEDI[0m][0015] -- Circular buffer: Messages: 3, empty message: 5, slots: 8
+[[38;5;220mMEDI[0m][0015] -- Circular buffer: Buffer contents
+[[38;5;220mMEDI[0m][0015] -- Circular buffer: Message no [ Msg  |  Meta ]
+[[38;5;220mMEDI[0m][0015] -- Circular buffer: Message #1 [ ksgs | PXSSS ]
+[[38;5;220mMEDI[0m][0015] -- Circular buffer: Message #2 [ qeyk | PXSSS ]
+[[38;5;220mMEDI[0m][0015] -- Circular buffer: Message #3 [ skoc | PXSSS ]
+[[38;5;220mMEDI[0m][0015] -- Circular buffer: Message #4 [    EMPTY     ]
+[[38;5;220mMEDI[0m][0015] -- Circular buffer: Message #5 [    EMPTY     ]
+[[38;5;220mMEDI[0m][0015] -- Circular buffer: Message #6 [    EMPTY     ]
+[[38;5;220mMEDI[0m][0015] -- Circular buffer: Message #7 [    EMPTY     ]
+[[38;5;220mMEDI[0m][0015] -- Circular buffer: Message #8 [    EMPTY     ]
+[[38;5;220mMEDI[0m][0015] -- Circular buffer: Buffer contents listed
+[[38;5;220mMEDI[0m][0015] -- Circular buffer: Messages: 3, empty message: 5, slots: 8
+[[38;5;220mMEDI[0m][0015] -- Circular buffer: Determining next ready message and metadata
+[[38;5;220mMEDI[0m][0015] -- Circular buffer: Next message found at slot 1
+[[38;5;220mMEDI[0m][0015] -- Circular buffer: Message #1: [ ksgs ]
+[[38;5;220mMEDI[0m][0015] -- Circular buffer: Metadata: [ PX | SSY ]
+[[38;5;220mMEDI[0m][0015] -- Circular buffer: Metadata: [ 3;0 | 10;14;0 ]
+[[38;5;220mMEDI[0m][0015] -- Circular buffer: Metadata checked for message #1: Subscriber condition 18 == 10 ]
+[[38;5;220mMEDI[0m][0015] -- Circular buffer: Metadata checked for message #1: Subscriber condition 18 == 14 ]
+[[38;5;220mMEDI[0m][0015] -- Circular buffer: Metadata checked for message #1: Subscriber condition 18 == 0 ]
+[[38;5;220mMEDI[0m][0015] -- Circular buffer: Next message found at slot 2
+[[38;5;220mMEDI[0m][0015] -- Circular buffer: Message #2: [ qeyk ]
+[[38;5;220mMEDI[0m][0015] -- Circular buffer: Metadata: [ PX | SSY ]
+[[38;5;220mMEDI[0m][0015] -- Circular buffer: Metadata: [ 3;0 | 10;14;0 ]
+[[38;5;220mMEDI[0m][0015] -- Circular buffer: Metadata checked for message #2: Subscriber condition 18 == 10 ]
+[[38;5;220mMEDI[0m][0015] -- Circular buffer: Metadata checked for message #2: Subscriber condition 18 == 14 ]
+[[38;5;220mMEDI[0m][0015] -- Circular buffer: Metadata checked for message #2: Subscriber condition 18 == 0 ]
+[[38;5;220mMEDI[0m][0015] -- Circular buffer: Next message found at slot 3
+[[38;5;220mMEDI[0m][0015] -- Circular buffer: Message #3: [ skoc ]
+[[38;5;220mMEDI[0m][0015] -- Circular buffer: Metadata: [ PX | SSY ]
+[[38;5;220mMEDI[0m][0015] -- Circular buffer: Metadata: [ 3;0 | 10;14;0 ]
+[[38;5;220mMEDI[0m][0015] -- Circular buffer: Metadata checked for message #3: Subscriber condition 18 == 10 ]
+[[38;5;220mMEDI[0m][0015] -- Circular buffer: Metadata checked for message #3: Subscriber condition 18 == 14 ]
+[[38;5;220mMEDI[0m][0015] -- Circular buffer: Metadata checked for message #3: Subscriber condition 18 == 0 ]
+[[38;5;220mMEDI[0m][INFO] -- Current time (usec): 212209
+[[38;5;220mMEDI[0m][INFO] -- Time difference: 597396
+[[38;5;220mMEDI[0m][0016] -- Active pipes[*][0] R: FD 3 5 
+[[38;5;220mMEDI[0m][0016] -- Active pipes[*][1] W: FD 10 14 18 
+[[38;5;220mMEDI[0m][0016] -- Receiving message from pipe (FD 3)...
+[[38;5;220mMEDI[0m][0016] -- 4 bytes read from pipe (FD 3)
+[[38;5;220mMEDI[0m][0016] -- Received message #18: [euku]
+[[38;5;220mMEDI[0m][0016] -- Sending message [euku] to circular buffer...
+[[38;5;220mMEDI[0m][0016] -- Circular buffer variables: Message #4 offset: 33
+[[38;5;220mMEDI[0m][0016] -- Circular buffer: Pipe FD received: 3
+[[38;5;220mMEDI[0m][0016] -- Circular buffer: Determine free message slot in the circular buffer
+[[38;5;220mMEDI[0m][0016] -- Circular buffer: Found free message #4 slot in the circular buffer
+[[38;5;220mMEDI[0m][0016] -- Circular buffer: Writing message [euku] to slot #4 to circular buffer
+[[38;5;220mMEDI[0m][0016] -- Circular buffer: Message #4 [euku] from pipe (FD 3) written in 4 bytes to circular buffer
+[[38;5;220mMEDI[0m][0016] -- Circular buffer: Message #4 [ euku | PXSSS ]
+[[38;5;220mMEDI[0m][0016] -- Circular buffer: 4 messages in the circular buffer
+[[38;5;220mMEDI[0m][0016] -- Message #18 [euku] saved successfully in circular buffer...
+[[38;5;220mMEDI[0m][0016] -- Receiving message from pipe (FD 5)...
+[[38;5;220mMEDI[0m][0016] -- 4 bytes read from pipe (FD 5)
+[[38;5;220mMEDI[0m][0016] -- Received message #19: [OAKQ]
+[[38;5;220mMEDI[0m][0016] -- Sending message [OAKQ] to circular buffer...
+[[38;5;220mMEDI[0m][0016] -- Circular buffer variables: Message #5 offset: 44
+[[38;5;220mMEDI[0m][0016] -- Circular buffer: Pipe FD received: 5
+[[38;5;220mMEDI[0m][0016] -- Circular buffer: Determine free message slot in the circular buffer
+[[38;5;220mMEDI[0m][0016] -- Circular buffer: Found free message #5 slot in the circular buffer
+[[38;5;220mMEDI[0m][0016] -- Circular buffer: Writing message [OAKQ] to slot #5 to circular buffer
+[[38;5;220mMEDI[0m][0016] -- Circular buffer: Message #5 [OAKQ] from pipe (FD 5) written in 4 bytes to circular buffer
+[[38;5;220mMEDI[0m][0016] -- Circular buffer: Message #5 [ OAKQ | XPSSS ]
+[[38;5;220mMEDI[0m][0016] -- Circular buffer: 5 messages in the circular buffer
+[[38;5;220mMEDI[0m][0016] -- Message #19 [OAKQ] saved successfully in circular buffer...
+[[38;5;220mMEDI[0m][0016] -- Circular buffer: Buffer contents
+[[38;5;220mMEDI[0m][0016] -- Circular buffer: Message no [ Msg  |  Meta ]
+[[38;5;220mMEDI[0m][0016] -- Circular buffer: Message #1 [ ksgs | PXSSS ]
+[[38;5;220mMEDI[0m][0016] -- Circular buffer: Message #2 [ qeyk | PXSSS ]
+[[38;5;220mMEDI[0m][0016] -- Circular buffer: Message #3 [ skoc | PXSSS ]
+[[38;5;220mMEDI[0m][0016] -- Circular buffer: Message #4 [ euku | PXSSS ]
+[[38;5;220mMEDI[0m][0016] -- Circular buffer: Message #5 [ OAKQ | XPSSS ]
+[[38;5;220mMEDI[0m][0016] -- Circular buffer: Message #6 [    EMPTY     ]
+[[38;5;220mMEDI[0m][0016] -- Circular buffer: Message #7 [    EMPTY     ]
+[[38;5;220mMEDI[0m][0016] -- Circular buffer: Message #8 [    EMPTY     ]
+[[38;5;220mMEDI[0m][0016] -- Circular buffer: Buffer contents listed
+[[38;5;220mMEDI[0m][0016] -- Circular buffer: Messages: 5, empty message: 3, slots: 8
+[[38;5;220mMEDI[0m][0016] -- Circular buffer: Determining next ready message and metadata
+[[38;5;220mMEDI[0m][0016] -- Circular buffer: Next message found at slot 1
+[[38;5;220mMEDI[0m][0016] -- Circular buffer: Message #1: [ ksgs ]
+[[38;5;220mMEDI[0m][0016] -- Circular buffer: Metadata: [ XP | SSS ]
+[[38;5;220mMEDI[0m][0016] -- Circular buffer: Metadata: [ 0;5 | 10;14;18 ]
+[[38;5;220mMEDI[0m][0016] -- Circular buffer: Metadata checked for message #1: Subscriber condition 18 == 10 ]
+[[38;5;220mMEDI[0m][0016] -- Circular buffer: Metadata checked for message #1: Subscriber condition 18 == 14 ]
+[[38;5;220mMEDI[0m][0016] -- Circular buffer: Metadata checked for message #1: Subscriber condition 18 == 18 ]
+[[38;5;220mMEDI[0m][0016] -- Circular buffer: Message #1 matches the subscriber pipe (FD 18)
+[[38;5;220mMEDI[0m][0016] -- Circular buffer: Message #1 [ksgs] loaded
+[[38;5;220mMEDI[0m][INFO] -- Current time (usec): 312345
+[[38;5;220mMEDI[0m][INFO] -- Time difference: 497260
+[[38;5;220mMEDI[0m][0017] -- Active pipes[*][0] R: FD 15 
+[[38;5;220mMEDI[0m][0017] -- Active pipes[*][1] W: FD 10 14 18 
+[[38;5;220mMEDI[0m][0017] -- Receiving message from pipe (FD 15)...
+[[38;5;220mMEDI[0m][0017] -- 4 bytes read from pipe (FD 15)
+[[38;5;220mMEDI[0m][0017] -- Received message #20: [REQ1]
+[[38;5;220mMEDI[0m][0017] -- Request received [REQ1] from subscriber 3 at pipe (FD 15)
+[[38;5;220mMEDI[0m][0017] -- Processing message request from pipe (FD 15)
+[[38;5;220mMEDI[0m][0017] -- Circular buffer: Determining next ready message and metadata
+[[38;5;220mMEDI[0m][0017] -- Circular buffer: Next message found at slot 1
+[[38;5;220mMEDI[0m][0017] -- Circular buffer: Message #1: [ ksgs ]
+[[38;5;220mMEDI[0m][0017] -- Circular buffer: Metadata: [ XP | SSS ]
+[[38;5;220mMEDI[0m][0017] -- Circular buffer: Metadata: [ 0;5 | 10;14;18 ]
+[[38;5;220mMEDI[0m][0017] -- Circular buffer: Metadata checked for message #1: Subscriber condition 18 == 10 ]
+[[38;5;220mMEDI[0m][0017] -- Circular buffer: Metadata checked for message #1: Subscriber condition 18 == 14 ]
+[[38;5;220mMEDI[0m][0017] -- Circular buffer: Metadata checked for message #1: Subscriber condition 18 == 18 ]
+[[38;5;220mMEDI[0m][0017] -- Circular buffer: Message #1 matches the subscriber pipe (FD 18)
+[[38;5;220mMEDI[0m][0017] -- Circular buffer: Message #1 [ksgs] loaded
+[[38;5;220mMEDI[0m][0017] -- Circular buffer: Buffer contents
+[[38;5;220mMEDI[0m][0017] -- Circular buffer: Message no [ Msg  |  Meta ]
+[[38;5;220mMEDI[0m][0017] -- Circular buffer: Message #1 [ ksgs | PXSSS ]
+[[38;5;220mMEDI[0m][0017] -- Circular buffer: Message #2 [ qeyk | PXSSS ]
+[[38;5;220mMEDI[0m][0017] -- Circular buffer: Message #3 [ skoc | PXSSS ]
+[[38;5;220mMEDI[0m][0017] -- Circular buffer: Message #4 [ euku | PXSSS ]
+[[38;5;220mMEDI[0m][0017] -- Circular buffer: Message #5 [ OAKQ | XPSSS ]
+[[38;5;220mMEDI[0m][0017] -- Circular buffer: Message #6 [    EMPTY     ]
+[[38;5;220mMEDI[0m][0017] -- Circular buffer: Message #7 [    EMPTY     ]
+[[38;5;220mMEDI[0m][0017] -- Circular buffer: Message #8 [    EMPTY     ]
+[[38;5;220mMEDI[0m][0017] -- Circular buffer: Buffer contents listed
+[[38;5;220mMEDI[0m][0017] -- Circular buffer: Messages: 5, empty message: 3, slots: 8
+[[38;5;220mMEDI[0m][0017] -- Circular buffer: Update message counter: 5
+[[38;5;220mMEDI[0m][0017] -- Processing message 5 towards pipe (FD 18)
+[[38;5;220mMEDI[0m][0017] -- Sending message [ksgs] to pipe (FD 18)...
+[[38;5;220mMEDI[0m][0017] -- 4 bytes written to pipe (FD 18)
+[[38;5;220mMEDI[0m][0017] -- Requests remaining 0
+[[38;5;220mMEDI[0m][0017] -- Circular buffer: Updating metadata for message 18
+[[38;5;220mMEDI[0m][0017] -- Circular buffer: Original metadata read: [ XP | SSS ]
+[[38;5;220mMEDI[0m][0017] -- Circular buffer: Modified metadata: [ XP | SSY ]
+[[38;5;220mMEDI[0m][0017] -- Circular buffer: Based on metadata message #5 to be deleted
+[[38;5;220mMEDI[0m][0017] -- Circular buffer: Deleting message #6 from the circular buffer
+[[38;5;220mMEDI[0m][0017] -- Circular buffer: Message #6 in the circular buffer already empty
+[[38;5;220mMEDI[0m][0017] -- Circular buffer: 5 messages left in the circular buffer
+[[38;5;220mMEDI[0m][0017] -- Circular buffer: Message #19 [    EMPTY     ]
+[[38;5;220mMEDI[0m][0017] -- Message [] processed
+[[38;5;220mMEDI[0m][0017] -- Circular buffer: Buffer contents
+[[38;5;220mMEDI[0m][0017] -- Circular buffer: Message no [ Msg  |  Meta ]
+[[38;5;220mMEDI[0m][0017] -- Circular buffer: Message #1 [ ksgs | PXSSS ]
+[[38;5;220mMEDI[0m][0017] -- Circular buffer: Message #2 [ qeyk | PXSSS ]
+[[38;5;220mMEDI[0m][0017] -- Circular buffer: Message #3 [ skoc | PXSSS ]
+[[38;5;220mMEDI[0m][0017] -- Circular buffer: Message #4 [ euku | PXSSS ]
+[[38;5;220mMEDI[0m][0017] -- Circular buffer: Message #5 [ OAKQ | XPSSS ]
+[[38;5;220mMEDI[0m][0017] -- Circular buffer: Message #6 [    EMPTY     ]
+[[38;5;220mMEDI[0m][0017] -- Circular buffer: Message #7 [    EMPTY     ]
+[[38;5;220mMEDI[0m][0017] -- Circular buffer: Message #8 [    EMPTY     ]
+[[38;5;220mMEDI[0m][0017] -- Circular buffer: Buffer contents listed
+[[38;5;220mMEDI[0m][0017] -- Circular buffer: Messages: 5, empty message: 3, slots: 8
+[[38;5;220mMEDI[0m][0017] -- Circular buffer: Buffer contents
+[[38;5;220mMEDI[0m][0017] -- Circular buffer: Message no [ Msg  |  Meta ]
+[[38;5;220mMEDI[0m][0017] -- Circular buffer: Message #1 [ ksgs | PXSSS ]
+[[38;5;220mMEDI[0m][0017] -- Circular buffer: Message #2 [ qeyk | PXSSS ]
+[[38;5;220mMEDI[0m][0017] -- Circular buffer: Message #3 [ skoc | PXSSS ]
+[[38;5;220mMEDI[0m][0017] -- Circular buffer: Message #4 [ euku | PXSSS ]
+[[38;5;220mMEDI[0m][0017] -- Circular buffer: Message #5 [ OAKQ | XPSSS ]
+[[38;5;220mMEDI[0m][0017] -- Circular buffer: Message #6 [    EMPTY     ]
+[[38;5;220mMEDI[0m][0017] -- Circular buffer: Message #7 [    EMPTY     ]
+[[38;5;220mMEDI[0m][0017] -- Circular buffer: Message #8 [    EMPTY     ]
+[[38;5;220mMEDI[0m][0017] -- Circular buffer: Buffer contents listed
+[[38;5;220mMEDI[0m][0017] -- Circular buffer: Messages: 5, empty message: 3, slots: 8
+[[38;5;220mMEDI[0m][0017] -- Circular buffer: Determining next ready message and metadata
+[[38;5;220mMEDI[0m][0017] -- Circular buffer: Next message found at slot 1
+[[38;5;220mMEDI[0m][0017] -- Circular buffer: Message #1: [ ksgs ]
+[[38;5;220mMEDI[0m][0017] -- Circular buffer: Metadata: [ XP | SSY ]
+[[38;5;220mMEDI[0m][0017] -- Circular buffer: Metadata: [ 0;5 | 10;14;0 ]
+[[38;5;220mMEDI[0m][0017] -- Circular buffer: Metadata checked for message #1: Subscriber condition 18 == 10 ]
+[[38;5;220mMEDI[0m][0017] -- Circular buffer: Metadata checked for message #1: Subscriber condition 18 == 14 ]
+[[38;5;220mMEDI[0m][0017] -- Circular buffer: Metadata checked for message #1: Subscriber condition 18 == 0 ]
+[[38;5;220mMEDI[0m][0017] -- Circular buffer: Next message found at slot 2
+[[38;5;220mMEDI[0m][0017] -- Circular buffer: Message #2: [ qeyk ]
+[[38;5;220mMEDI[0m][0017] -- Circular buffer: Metadata: [ XP | SSY ]
+[[38;5;220mMEDI[0m][0017] -- Circular buffer: Metadata: [ 0;5 | 10;14;0 ]
+[[38;5;220mMEDI[0m][0017] -- Circular buffer: Metadata checked for message #2: Subscriber condition 18 == 10 ]
+[[38;5;220mMEDI[0m][0017] -- Circular buffer: Metadata checked for message #2: Subscriber condition 18 == 14 ]
+[[38;5;220mMEDI[0m][0017] -- Circular buffer: Metadata checked for message #2: Subscriber condition 18 == 0 ]
+[[38;5;220mMEDI[0m][0017] -- Circular buffer: Next message found at slot 3
+[[38;5;220mMEDI[0m][0017] -- Circular buffer: Message #3: [ skoc ]
+[[38;5;220mMEDI[0m][0017] -- Circular buffer: Metadata: [ XP | SSY ]
+[[38;5;220mMEDI[0m][0017] -- Circular buffer: Metadata: [ 0;5 | 10;14;0 ]
+[[38;5;220mMEDI[0m][0017] -- Circular buffer: Metadata checked for message #3: Subscriber condition 18 == 10 ]
+[[38;5;220mMEDI[0m][0017] -- Circular buffer: Metadata checked for message #3: Subscriber condition 18 == 14 ]
+[[38;5;220mMEDI[0m][0017] -- Circular buffer: Metadata checked for message #3: Subscriber condition 18 == 0 ]
+[[38;5;220mMEDI[0m][0017] -- Circular buffer: Next message found at slot 4
+[[38;5;220mMEDI[0m][0017] -- Circular buffer: Message #4: [ euku ]
+[[38;5;220mMEDI[0m][0017] -- Circular buffer: Metadata: [ XP | SSY ]
+[[38;5;220mMEDI[0m][0017] -- Circular buffer: Metadata: [ 0;5 | 10;14;0 ]
+[[38;5;220mMEDI[0m][0017] -- Circular buffer: Metadata checked for message #4: Subscriber condition 18 == 10 ]
+[[38;5;220mMEDI[0m][0017] -- Circular buffer: Metadata checked for message #4: Subscriber condition 18 == 14 ]
+[[38;5;220mMEDI[0m][0017] -- Circular buffer: Metadata checked for message #4: Subscriber condition 18 == 0 ]
+[[38;5;220mMEDI[0m][0017] -- Circular buffer: Next message found at slot 5
+[[38;5;220mMEDI[0m][0017] -- Circular buffer: Message #5: [ OAKQ ]
+[[38;5;220mMEDI[0m][0017] -- Circular buffer: Metadata: [ XP | SSY ]
+[[38;5;220mMEDI[0m][0017] -- Circular buffer: Metadata: [ 0;5 | 10;14;0 ]
+[[38;5;220mMEDI[0m][0017] -- Circular buffer: Metadata checked for message #5: Subscriber condition 18 == 10 ]
+[[38;5;220mMEDI[0m][0017] -- Circular buffer: Metadata checked for message #5: Subscriber condition 18 == 14 ]
+[[38;5;220mMEDI[0m][0017] -- Circular buffer: Metadata checked for message #5: Subscriber condition 18 == 0 ]
+[[38;5;220mMEDI[0m][INFO] -- Current time (usec): 311311
+[[38;5;220mMEDI[0m][INFO] -- Time difference: 498294
+[[38;5;220mMEDI[0m][0018] -- Active pipes[*][0] R: FD 3 
+[[38;5;220mMEDI[0m][0018] -- Active pipes[*][1] W: FD 10 14 18 
+[[38;5;220mMEDI[0m][0018] -- Receiving message from pipe (FD 3)...
+[[38;5;220mMEDI[0m][0018] -- 4 bytes read from pipe (FD 3)
+[[38;5;220mMEDI[0m][0018] -- Received message #21: [mykm]
+[[38;5;220mMEDI[0m][0018] -- Sending message [mykm] to circular buffer...
+[[38;5;220mMEDI[0m][0018] -- Circular buffer variables: Message #6 offset: 55
+[[38;5;220mMEDI[0m][0018] -- Circular buffer: Pipe FD received: 3
+[[38;5;220mMEDI[0m][0018] -- Circular buffer: Determine free message slot in the circular buffer
+[[38;5;220mMEDI[0m][0018] -- Circular buffer: Found free message #6 slot in the circular buffer
+[[38;5;220mMEDI[0m][0018] -- Circular buffer: Writing message [mykm] to slot #6 to circular buffer
+[[38;5;220mMEDI[0m][0018] -- Circular buffer: Message #6 [mykm] from pipe (FD 3) written in 4 bytes to circular buffer
+[[38;5;220mMEDI[0m][0018] -- Circular buffer: Message #6 [ mykm | PXSSS ]
+[[38;5;220mMEDI[0m][0018] -- Circular buffer: 6 messages in the circular buffer
+[[38;5;220mMEDI[0m][0018] -- Message #21 [mykm] saved successfully in circular buffer...
+[[38;5;220mMEDI[0m][0018] -- Circular buffer: Buffer contents
+[[38;5;220mMEDI[0m][0018] -- Circular buffer: Message no [ Msg  |  Meta ]
+[[38;5;220mMEDI[0m][0018] -- Circular buffer: Message #1 [ ksgs | PXSSS ]
+[[38;5;220mMEDI[0m][0018] -- Circular buffer: Message #2 [ qeyk | PXSSS ]
+[[38;5;220mMEDI[0m][0018] -- Circular buffer: Message #3 [ skoc | PXSSS ]
+[[38;5;220mMEDI[0m][0018] -- Circular buffer: Message #4 [ euku | PXSSS ]
+[[38;5;220mMEDI[0m][0018] -- Circular buffer: Message #5 [ OAKQ | XPSSS ]
+[[38;5;220mMEDI[0m][0018] -- Circular buffer: Message #6 [ mykm | PXSSS ]
+[[38;5;220mMEDI[0m][0018] -- Circular buffer: Message #7 [    EMPTY     ]
+[[38;5;220mMEDI[0m][0018] -- Circular buffer: Message #8 [    EMPTY     ]
+[[38;5;220mMEDI[0m][0018] -- Circular buffer: Buffer contents listed
+[[38;5;220mMEDI[0m][0018] -- Circular buffer: Messages: 6, empty message: 2, slots: 8
+[[38;5;220mMEDI[0m][0018] -- Circular buffer: Determining next ready message and metadata
+[[38;5;220mMEDI[0m][0018] -- Circular buffer: Next message found at slot 1
+[[38;5;220mMEDI[0m][0018] -- Circular buffer: Message #1: [ ksgs ]
+[[38;5;220mMEDI[0m][0018] -- Circular buffer: Metadata: [ PX | SSS ]
+[[38;5;220mMEDI[0m][0018] -- Circular buffer: Metadata: [ 3;0 | 10;14;18 ]
+[[38;5;220mMEDI[0m][0018] -- Circular buffer: Metadata checked for message #1: Subscriber condition 18 == 10 ]
+[[38;5;220mMEDI[0m][0018] -- Circular buffer: Metadata checked for message #1: Subscriber condition 18 == 14 ]
+[[38;5;220mMEDI[0m][0018] -- Circular buffer: Metadata checked for message #1: Subscriber condition 18 == 18 ]
+[[38;5;220mMEDI[0m][0018] -- Circular buffer: Message #1 matches the subscriber pipe (FD 18)
+[[38;5;220mMEDI[0m][0018] -- Circular buffer: Message #1 [ksgs] loaded
+[[38;5;220mMEDI[0m][INFO] -- Current time (usec): 512768
+[[38;5;220mMEDI[0m][INFO] -- Time difference: 296837
+[[38;5;220mMEDI[0m][0019] -- Active pipes[*][0] R: FD 5 
+[[38;5;220mMEDI[0m][0019] -- Active pipes[*][1] W: FD 10 14 18 
+[[38;5;220mMEDI[0m][0019] -- Receiving message from pipe (FD 5)...
+[[38;5;220mMEDI[0m][0019] -- 4 bytes read from pipe (FD 5)
+[[38;5;220mMEDI[0m][0019] -- Received message #22: [HOVD]
+[[38;5;220mMEDI[0m][0019] -- Sending message [HOVD] to circular buffer...
+[[38;5;220mMEDI[0m][0019] -- Circular buffer variables: Message #1 offset: 0
+[[38;5;220mMEDI[0m][0019] -- Circular buffer: Pipe FD received: 5
+[[38;5;220mMEDI[0m][0019] -- Circular buffer: Determine free message slot in the circular buffer
+[[38;5;220mMEDI[0m][0019] -- Circular buffer: Found free message #7 slot in the circular buffer
+[[38;5;220mMEDI[0m][0019] -- Circular buffer: Writing message [HOVD] to slot #7 to circular buffer
+[[38;5;220mMEDI[0m][0019] -- Circular buffer: Message #7 [HOVD] from pipe (FD 5) written in 4 bytes to circular buffer
+[[38;5;220mMEDI[0m][0019] -- Circular buffer: Message #7 [    EMPTY     ]
+[[38;5;220mMEDI[0m][0019] -- Circular buffer: 1 messages in the circular buffer
+[[38;5;220mMEDI[0m][0019] -- Message #22 [HOVD] saved successfully in circular buffer...
+[[38;5;220mMEDI[0m][0019] -- Circular buffer: Buffer contents
+[[38;5;220mMEDI[0m][0019] -- Circular buffer: Message no [ Msg  |  Meta ]
+[[38;5;220mMEDI[0m][0019] -- Circular buffer: Message #1 [ HOVD | XPSSS ]
+[[38;5;220mMEDI[0m][0019] -- Circular buffer: Message #2 [ qeyk | PXSSS ]
+[[38;5;220mMEDI[0m][0019] -- Circular buffer: Message #3 [ skoc | PXSSS ]
+[[38;5;220mMEDI[0m][0019] -- Circular buffer: Message #4 [ euku | PXSSS ]
+[[38;5;220mMEDI[0m][0019] -- Circular buffer: Message #5 [ OAKQ | XPSSS ]
+[[38;5;220mMEDI[0m][0019] -- Circular buffer: Message #6 [ mykm | PXSSS ]
+[[38;5;220mMEDI[0m][0019] -- Circular buffer: Message #7 [    EMPTY     ]
+[[38;5;220mMEDI[0m][0019] -- Circular buffer: Message #8 [    EMPTY     ]
+[[38;5;220mMEDI[0m][0019] -- Circular buffer: Buffer contents listed
+[[38;5;220mMEDI[0m][0019] -- Circular buffer: Messages: 6, empty message: 2, slots: 8
+[[38;5;220mMEDI[0m][0019] -- Circular buffer: Update message counter: 6
+[[38;5;220mMEDI[0m][0019] -- Circular buffer: Determining next ready message and metadata
+[[38;5;220mMEDI[0m][0019] -- Circular buffer: Next message found at slot 1
+[[38;5;220mMEDI[0m][0019] -- Circular buffer: Message #1: [ HOVD ]
+[[38;5;220mMEDI[0m][0019] -- Circular buffer: Metadata: [ XP | SSS ]
+[[38;5;220mMEDI[0m][0019] -- Circular buffer: Metadata: [ 0;5 | 10;14;18 ]
+[[38;5;220mMEDI[0m][0019] -- Circular buffer: Metadata checked for message #1: Subscriber condition 18 == 10 ]
+[[38;5;220mMEDI[0m][0019] -- Circular buffer: Metadata checked for message #1: Subscriber condition 18 == 14 ]
+[[38;5;220mMEDI[0m][0019] -- Circular buffer: Metadata checked for message #1: Subscriber condition 18 == 18 ]
+[[38;5;220mMEDI[0m][0019] -- Circular buffer: Message #1 matches the subscriber pipe (FD 18)
+[[38;5;220mMEDI[0m][0019] -- Circular buffer: Message #1 [HOVD] loaded
+[[38;5;220mMEDI[0m][INFO] -- Current time (usec): 311120
+[[38;5;220mMEDI[0m][INFO] -- Time difference: 498485
+[[38;5;220mMEDI[0m][0020] -- Active pipes[*][0] R: FD 3 
+[[38;5;220mMEDI[0m][0020] -- Active pipes[*][1] W: FD 10 14 18 
+[[38;5;220mMEDI[0m][0020] -- Receiving message from pipe (FD 3)...
+[[38;5;220mMEDI[0m][0020] -- 4 bytes read from pipe (FD 3)
+[[38;5;220mMEDI[0m][0020] -- Received message #23: [aegi]
+[[38;5;220mMEDI[0m][0020] -- Sending message [aegi] to circular buffer...
+[[38;5;220mMEDI[0m][0020] -- Circular buffer variables: Message #1 offset: 0
+[[38;5;220mMEDI[0m][0020] -- Circular buffer: Pipe FD received: 3
+[[38;5;220mMEDI[0m][0020] -- Circular buffer: Determine free message slot in the circular buffer
+[[38;5;220mMEDI[0m][0020] -- Circular buffer: Found free message #7 slot in the circular buffer
+[[38;5;220mMEDI[0m][0020] -- Circular buffer: Writing message [aegi] to slot #7 to circular buffer
+[[38;5;220mMEDI[0m][0020] -- Circular buffer: Message #7 [aegi] from pipe (FD 3) written in 4 bytes to circular buffer
+[[38;5;220mMEDI[0m][0020] -- Circular buffer: Message #7 [    EMPTY     ]
+[[38;5;220mMEDI[0m][0020] -- Circular buffer: 1 messages in the circular buffer
+[[38;5;220mMEDI[0m][0020] -- Message #23 [aegi] saved successfully in circular buffer...
+[[38;5;220mMEDI[0m][0020] -- Circular buffer: Buffer contents
+[[38;5;220mMEDI[0m][0020] -- Circular buffer: Message no [ Msg  |  Meta ]
+[[38;5;220mMEDI[0m][0020] -- Circular buffer: Message #1 [ aegi | PXSSS ]
+[[38;5;220mMEDI[0m][0020] -- Circular buffer: Message #2 [ qeyk | PXSSS ]
+[[38;5;220mMEDI[0m][0020] -- Circular buffer: Message #3 [ skoc | PXSSS ]
+[[38;5;220mMEDI[0m][0020] -- Circular buffer: Message #4 [ euku | PXSSS ]
+[[38;5;220mMEDI[0m][0020] -- Circular buffer: Message #5 [ OAKQ | XPSSS ]
+[[38;5;220mMEDI[0m][0020] -- Circular buffer: Message #6 [ mykm | PXSSS ]
+[[38;5;220mMEDI[0m][0020] -- Circular buffer: Message #7 [    EMPTY     ]
+[[38;5;220mMEDI[0m][0020] -- Circular buffer: Message #8 [    EMPTY     ]
+[[38;5;220mMEDI[0m][0020] -- Circular buffer: Buffer contents listed
+[[38;5;220mMEDI[0m][0020] -- Circular buffer: Messages: 6, empty message: 2, slots: 8
+[[38;5;220mMEDI[0m][0020] -- Circular buffer: Update message counter: 6
+[[38;5;220mMEDI[0m][0020] -- Circular buffer: Determining next ready message and metadata
+[[38;5;220mMEDI[0m][0020] -- Circular buffer: Next message found at slot 1
+[[38;5;220mMEDI[0m][0020] -- Circular buffer: Message #1: [ aegi ]
+[[38;5;220mMEDI[0m][0020] -- Circular buffer: Metadata: [ PX | SSS ]
+[[38;5;220mMEDI[0m][0020] -- Circular buffer: Metadata: [ 3;0 | 10;14;18 ]
+[[38;5;220mMEDI[0m][0020] -- Circular buffer: Metadata checked for message #1: Subscriber condition 18 == 10 ]
+[[38;5;220mMEDI[0m][0020] -- Circular buffer: Metadata checked for message #1: Subscriber condition 18 == 14 ]
+[[38;5;220mMEDI[0m][0020] -- Circular buffer: Metadata checked for message #1: Subscriber condition 18 == 18 ]
+[[38;5;220mMEDI[0m][0020] -- Circular buffer: Message #1 matches the subscriber pipe (FD 18)
+[[38;5;220mMEDI[0m][0020] -- Circular buffer: Message #1 [aegi] loaded
+[[38;5;220mMEDI[0m][INFO] -- Current time (usec): 713140
+[[38;5;220mMEDI[0m][INFO] -- Time difference: 96465
+[[38;5;220mMEDI[0m][0021] -- Active pipes[*][0] R: FD 15 
+[[38;5;220mMEDI[0m][0021] -- Active pipes[*][1] W: FD 10 14 18 
+[[38;5;220mMEDI[0m][0021] -- Receiving message from pipe (FD 15)...
+[[38;5;220mMEDI[0m][0021] -- 4 bytes read from pipe (FD 15)
+[[38;5;220mMEDI[0m][0021] -- Received message #24: [REQ1]
+[[38;5;220mMEDI[0m][0021] -- Request received [REQ1] from subscriber 3 at pipe (FD 15)
+[[38;5;220mMEDI[0m][0021] -- Processing message request from pipe (FD 15)
+[[38;5;220mMEDI[0m][0021] -- Circular buffer: Determining next ready message and metadata
+[[38;5;220mMEDI[0m][0021] -- Circular buffer: Next message found at slot 1
+[[38;5;220mMEDI[0m][0021] -- Circular buffer: Message #1: [ aegi ]
+[[38;5;220mMEDI[0m][0021] -- Circular buffer: Metadata: [ PX | SSS ]
+[[38;5;220mMEDI[0m][0021] -- Circular buffer: Metadata: [ 3;0 | 10;14;18 ]
+[[38;5;220mMEDI[0m][0021] -- Circular buffer: Metadata checked for message #1: Subscriber condition 18 == 10 ]
+[[38;5;220mMEDI[0m][0021] -- Circular buffer: Metadata checked for message #1: Subscriber condition 18 == 14 ]
+[[38;5;220mMEDI[0m][0021] -- Circular buffer: Metadata checked for message #1: Subscriber condition 18 == 18 ]
+[[38;5;220mMEDI[0m][0021] -- Circular buffer: Message #1 matches the subscriber pipe (FD 18)
+[[38;5;220mMEDI[0m][0021] -- Circular buffer: Message #1 [aegi] loaded
+[[38;5;220mMEDI[0m][0021] -- Circular buffer: Buffer contents
+[[38;5;220mMEDI[0m][0021] -- Circular buffer: Message no [ Msg  |  Meta ]
+[[38;5;220mMEDI[0m][0021] -- Circular buffer: Message #1 [ aegi | PXSSS ]
+[[38;5;220mMEDI[0m][0021] -- Circular buffer: Message #2 [ qeyk | PXSSS ]
+[[38;5;220mMEDI[0m][0021] -- Circular buffer: Message #3 [ skoc | PXSSS ]
+[[38;5;220mMEDI[0m][0021] -- Circular buffer: Message #4 [ euku | PXSSS ]
+[[38;5;220mMEDI[0m][0021] -- Circular buffer: Message #5 [ OAKQ | XPSSS ]
+[[38;5;220mMEDI[0m][0021] -- Circular buffer: Message #6 [ mykm | PXSSS ]
+[[38;5;220mMEDI[0m][0021] -- Circular buffer: Message #7 [    EMPTY     ]
+[[38;5;220mMEDI[0m][0021] -- Circular buffer: Message #8 [    EMPTY     ]
+[[38;5;220mMEDI[0m][0021] -- Circular buffer: Buffer contents listed
+[[38;5;220mMEDI[0m][0021] -- Circular buffer: Messages: 6, empty message: 2, slots: 8
+[[38;5;220mMEDI[0m][0021] -- Circular buffer: Update message counter: 6
+[[38;5;220mMEDI[0m][0021] -- Processing message 6 towards pipe (FD 18)
+[[38;5;220mMEDI[0m][0021] -- Sending message [aegi] to pipe (FD 18)...
+[[38;5;220mMEDI[0m][0021] -- 4 bytes written to pipe (FD 18)
+[[38;5;220mMEDI[0m][0021] -- Requests remaining 0
+[[38;5;220mMEDI[0m][0021] -- Circular buffer: Updating metadata for message 18
+[[38;5;220mMEDI[0m][0021] -- Circular buffer: Original metadata read: [ PX | SSS ]
+[[38;5;220mMEDI[0m][0021] -- Circular buffer: Modified metadata: [ PX | SSY ]
+[[38;5;220mMEDI[0m][0021] -- Circular buffer: Based on metadata message #6 to be deleted
+[[38;5;220mMEDI[0m][0021] -- Circular buffer: Deleting message #7 from the circular buffer
+[[38;5;220mMEDI[0m][0021] -- Circular buffer: Message #7 in the circular buffer already empty
+[[38;5;220mMEDI[0m][0021] -- Circular buffer: 6 messages left in the circular buffer
+[[38;5;220mMEDI[0m][0021] -- Circular buffer: Message #19 [    EMPTY     ]
+[[38;5;220mMEDI[0m][0021] -- Message [] processed
+[[38;5;220mMEDI[0m][0021] -- Circular buffer: Buffer contents
+[[38;5;220mMEDI[0m][0021] -- Circular buffer: Message no [ Msg  |  Meta ]
+[[38;5;220mMEDI[0m][0021] -- Circular buffer: Message #1 [ aegi | PXSSS ]
+[[38;5;220mMEDI[0m][0021] -- Circular buffer: Message #2 [ qeyk | PXSSS ]
+[[38;5;220mMEDI[0m][0021] -- Circular buffer: Message #3 [ skoc | PXSSS ]
+[[38;5;220mMEDI[0m][0021] -- Circular buffer: Message #4 [ euku | PXSSS ]
+[[38;5;220mMEDI[0m][0021] -- Circular buffer: Message #5 [ OAKQ | XPSSS ]
+[[38;5;220mMEDI[0m][0021] -- Circular buffer: Message #6 [ mykm | PXSSS ]
+[[38;5;220mMEDI[0m][0021] -- Circular buffer: Message #7 [    EMPTY     ]
+[[38;5;220mMEDI[0m][0021] -- Circular buffer: Message #8 [    EMPTY     ]
+[[38;5;220mMEDI[0m][0021] -- Circular buffer: Buffer contents listed
+[[38;5;220mMEDI[0m][0021] -- Circular buffer: Messages: 6, empty message: 2, slots: 8
+[[38;5;220mMEDI[0m][0021] -- Circular buffer: Buffer contents
+[[38;5;220mMEDI[0m][0021] -- Circular buffer: Message no [ Msg  |  Meta ]
+[[38;5;220mMEDI[0m][0021] -- Circular buffer: Message #1 [ aegi | PXSSS ]
+[[38;5;220mMEDI[0m][0021] -- Circular buffer: Message #2 [ qeyk | PXSSS ]
+[[38;5;220mMEDI[0m][0021] -- Circular buffer: Message #3 [ skoc | PXSSS ]
+[[38;5;220mMEDI[0m][0021] -- Circular buffer: Message #4 [ euku | PXSSS ]
+[[38;5;220mMEDI[0m][0021] -- Circular buffer: Message #5 [ OAKQ | XPSSS ]
+[[38;5;220mMEDI[0m][0021] -- Circular buffer: Message #6 [ mykm | PXSSS ]
+[[38;5;220mMEDI[0m][0021] -- Circular buffer: Message #7 [    EMPTY     ]
+[[38;5;220mMEDI[0m][0021] -- Circular buffer: Message #8 [    EMPTY     ]
+[[38;5;220mMEDI[0m][0021] -- Circular buffer: Buffer contents listed
+[[38;5;220mMEDI[0m][0021] -- Circular buffer: Messages: 6, empty message: 2, slots: 8
+[[38;5;220mMEDI[0m][0021] -- Circular buffer: Determining next ready message and metadata
+[[38;5;220mMEDI[0m][0021] -- Circular buffer: Next message found at slot 1
+[[38;5;220mMEDI[0m][0021] -- Circular buffer: Message #1: [ aegi ]
+[[38;5;220mMEDI[0m][0021] -- Circular buffer: Metadata: [ PX | SSY ]
+[[38;5;220mMEDI[0m][0021] -- Circular buffer: Metadata: [ 3;0 | 10;14;0 ]
+[[38;5;220mMEDI[0m][0021] -- Circular buffer: Metadata checked for message #1: Subscriber condition 18 == 10 ]
+[[38;5;220mMEDI[0m][0021] -- Circular buffer: Metadata checked for message #1: Subscriber condition 18 == 14 ]
+[[38;5;220mMEDI[0m][0021] -- Circular buffer: Metadata checked for message #1: Subscriber condition 18 == 0 ]
+[[38;5;220mMEDI[0m][0021] -- Circular buffer: Next message found at slot 2
+[[38;5;220mMEDI[0m][0021] -- Circular buffer: Message #2: [ qeyk ]
+[[38;5;220mMEDI[0m][0021] -- Circular buffer: Metadata: [ PX | SSY ]
+[[38;5;220mMEDI[0m][0021] -- Circular buffer: Metadata: [ 3;0 | 10;14;0 ]
+[[38;5;220mMEDI[0m][0021] -- Circular buffer: Metadata checked for message #2: Subscriber condition 18 == 10 ]
+[[38;5;220mMEDI[0m][0021] -- Circular buffer: Metadata checked for message #2: Subscriber condition 18 == 14 ]
+[[38;5;220mMEDI[0m][0021] -- Circular buffer: Metadata checked for message #2: Subscriber condition 18 == 0 ]
+[[38;5;220mMEDI[0m][0021] -- Circular buffer: Next message found at slot 3
+[[38;5;220mMEDI[0m][0021] -- Circular buffer: Message #3: [ skoc ]
+[[38;5;220mMEDI[0m][0021] -- Circular buffer: Metadata: [ PX | SSY ]
+[[38;5;220mMEDI[0m][0021] -- Circular buffer: Metadata: [ 3;0 | 10;14;0 ]
+[[38;5;220mMEDI[0m][0021] -- Circular buffer: Metadata checked for message #3: Subscriber condition 18 == 10 ]
+[[38;5;220mMEDI[0m][0021] -- Circular buffer: Metadata checked for message #3: Subscriber condition 18 == 14 ]
+[[38;5;220mMEDI[0m][0021] -- Circular buffer: Metadata checked for message #3: Subscriber condition 18 == 0 ]
+[[38;5;220mMEDI[0m][0021] -- Circular buffer: Next message found at slot 4
+[[38;5;220mMEDI[0m][0021] -- Circular buffer: Message #4: [ euku ]
+[[38;5;220mMEDI[0m][0021] -- Circular buffer: Metadata: [ PX | SSY ]
+[[38;5;220mMEDI[0m][0021] -- Circular buffer: Metadata: [ 3;0 | 10;14;0 ]
+[[38;5;220mMEDI[0m][0021] -- Circular buffer: Metadata checked for message #4: Subscriber condition 18 == 10 ]
+[[38;5;220mMEDI[0m][0021] -- Circular buffer: Metadata checked for message #4: Subscriber condition 18 == 14 ]
+[[38;5;220mMEDI[0m][0021] -- Circular buffer: Metadata checked for message #4: Subscriber condition 18 == 0 ]
+[[38;5;220mMEDI[0m][0021] -- Circular buffer: Next message found at slot 5
+[[38;5;220mMEDI[0m][0021] -- Circular buffer: Message #5: [ OAKQ ]
+[[38;5;220mMEDI[0m][0021] -- Circular buffer: Metadata: [ PX | SSY ]
+[[38;5;220mMEDI[0m][0021] -- Circular buffer: Metadata: [ 3;0 | 10;14;0 ]
+[[38;5;220mMEDI[0m][0021] -- Circular buffer: Metadata checked for message #5: Subscriber condition 18 == 10 ]
+[[38;5;220mMEDI[0m][0021] -- Circular buffer: Metadata checked for message #5: Subscriber condition 18 == 14 ]
+[[38;5;220mMEDI[0m][0021] -- Circular buffer: Metadata checked for message #5: Subscriber condition 18 == 0 ]
+[[38;5;220mMEDI[0m][0021] -- Circular buffer: Next message found at slot 6
+[[38;5;220mMEDI[0m][0021] -- Circular buffer: Message #6: [ mykm ]
+[[38;5;220mMEDI[0m][0021] -- Circular buffer: Metadata: [ PX | SSY ]
+[[38;5;220mMEDI[0m][0021] -- Circular buffer: Metadata: [ 3;0 | 10;14;0 ]
+[[38;5;220mMEDI[0m][0021] -- Circular buffer: Metadata checked for message #6: Subscriber condition 18 == 10 ]
+[[38;5;220mMEDI[0m][0021] -- Circular buffer: Metadata checked for message #6: Subscriber condition 18 == 14 ]
+[[38;5;220mMEDI[0m][0021] -- Circular buffer: Metadata checked for message #6: Subscriber condition 18 == 0 ]
+[[38;5;220mMEDI[0m][INFO] -- Current time (usec): 813385
+[[38;5;220mMEDI[0m][INFO] -- Time difference: 3780
+[[38;5;220mMEDI[0m][0022] -- Active pipes[*][0] R: FD 3 
+[[38;5;220mMEDI[0m][0022] -- Active pipes[*][1] W: FD 10 14 18 
+[[38;5;220mMEDI[0m][0022] -- Receiving message from pipe (FD 3)...
+[[38;5;220mMEDI[0m][0022] -- 4 bytes read from pipe (FD 3)
+[[38;5;220mMEDI[0m][0022] -- Received message #25: [ioku]
+[[38;5;220mMEDI[0m][0022] -- Sending message [ioku] to circular buffer...
+[[38;5;220mMEDI[0m][0022] -- Circular buffer variables: Message #7 offset: 66
+[[38;5;220mMEDI[0m][0022] -- Circular buffer: Pipe FD received: 3
+[[38;5;220mMEDI[0m][0022] -- Circular buffer: Determine free message slot in the circular buffer
+[[38;5;220mMEDI[0m][0022] -- Circular buffer: Found free message #7 slot in the circular buffer
+[[38;5;220mMEDI[0m][0022] -- Circular buffer: Writing message [ioku] to slot #7 to circular buffer
+[[38;5;220mMEDI[0m][0022] -- Circular buffer: Message #7 [ioku] from pipe (FD 3) written in 4 bytes to circular buffer
+[[38;5;220mMEDI[0m][0022] -- Circular buffer: Message #7 [ ioku | PXSSS ]
+[[38;5;220mMEDI[0m][0022] -- Circular buffer: 7 messages in the circular buffer
+[[38;5;220mMEDI[0m][0022] -- Message #25 [ioku] saved successfully in circular buffer...
+[[38;5;220mMEDI[0m][0022] -- Circular buffer: Buffer contents
+[[38;5;220mMEDI[0m][0022] -- Circular buffer: Message no [ Msg  |  Meta ]
+[[38;5;220mMEDI[0m][0022] -- Circular buffer: Message #1 [ aegi | PXSSS ]
+[[38;5;220mMEDI[0m][0022] -- Circular buffer: Message #2 [ qeyk | PXSSS ]
+[[38;5;220mMEDI[0m][0022] -- Circular buffer: Message #3 [ skoc | PXSSS ]
+[[38;5;220mMEDI[0m][0022] -- Circular buffer: Message #4 [ euku | PXSSS ]
+[[38;5;220mMEDI[0m][0022] -- Circular buffer: Message #5 [ OAKQ | XPSSS ]
+[[38;5;220mMEDI[0m][0022] -- Circular buffer: Message #6 [ mykm | PXSSS ]
+[[38;5;220mMEDI[0m][0022] -- Circular buffer: Message #7 [ ioku | PXSSS ]
+[[38;5;220mMEDI[0m][0022] -- Circular buffer: Message #8 [    EMPTY     ]
+[[38;5;220mMEDI[0m][0022] -- Circular buffer: Buffer contents listed
+[[38;5;220mMEDI[0m][0022] -- Circular buffer: Messages: 7, empty message: 1, slots: 8
+[[38;5;220mMEDI[0m][0022] -- Circular buffer: Determining next ready message and metadata
+[[38;5;220mMEDI[0m][0022] -- Circular buffer: Next message found at slot 1
+[[38;5;220mMEDI[0m][0022] -- Circular buffer: Message #1: [ aegi ]
+[[38;5;220mMEDI[0m][0022] -- Circular buffer: Metadata: [ PX | SSS ]
+[[38;5;220mMEDI[0m][0022] -- Circular buffer: Metadata: [ 3;0 | 10;14;18 ]
+[[38;5;220mMEDI[0m][0022] -- Circular buffer: Metadata checked for message #1: Subscriber condition 18 == 10 ]
+[[38;5;220mMEDI[0m][0022] -- Circular buffer: Metadata checked for message #1: Subscriber condition 18 == 14 ]
+[[38;5;220mMEDI[0m][0022] -- Circular buffer: Metadata checked for message #1: Subscriber condition 18 == 18 ]
+[[38;5;220mMEDI[0m][0022] -- Circular buffer: Message #1 matches the subscriber pipe (FD 18)
+[[38;5;220mMEDI[0m][0022] -- Circular buffer: Message #1 [aegi] loaded
+[[38;5;220mMEDI[0m][INFO] -- Current time (usec): 311669
+[[38;5;220mMEDI[0m][INFO] -- Time difference: 497936
+[[38;5;220mMEDI[0m][0023] -- Active pipes[*][0] R: FD 5 
+[[38;5;220mMEDI[0m][0023] -- Active pipes[*][1] W: FD 10 14 18 
+[[38;5;220mMEDI[0m][0023] -- Receiving message from pipe (FD 5)...
+[[38;5;220mMEDI[0m][0023] -- 4 bytes read from pipe (FD 5)
+[[38;5;220mMEDI[0m][0023] -- Received message #26: [AMWN]
+[[38;5;220mMEDI[0m][0023] -- Sending message [AMWN] to circular buffer...
+[[38;5;220mMEDI[0m][0023] -- Circular buffer variables: Message #1 offset: 0
+[[38;5;220mMEDI[0m][0023] -- Circular buffer: Pipe FD received: 5
+[[38;5;220mMEDI[0m][0023] -- Circular buffer: Determine free message slot in the circular buffer
+[[38;5;220mMEDI[0m][0023] -- Circular buffer: Found free message #8 slot in the circular buffer
+[[38;5;220mMEDI[0m][0023] -- Circular buffer: Writing message [AMWN] to slot #8 to circular buffer
+[[38;5;220mMEDI[0m][0023] -- Circular buffer: Message #8 [AMWN] from pipe (FD 5) written in 4 bytes to circular buffer
+[[38;5;220mMEDI[0m][0023] -- Circular buffer: Message #8 [    EMPTY     ]
+[[38;5;220mMEDI[0m][0023] -- Circular buffer: 1 messages in the circular buffer
+[[38;5;220mMEDI[0m][0023] -- Message #26 [AMWN] saved successfully in circular buffer...
+[[38;5;220mMEDI[0m][0023] -- Circular buffer: Buffer contents
+[[38;5;220mMEDI[0m][0023] -- Circular buffer: Message no [ Msg  |  Meta ]
+[[38;5;220mMEDI[0m][0023] -- Circular buffer: Message #1 [ AMWN | XPSSS ]
+[[38;5;220mMEDI[0m][0023] -- Circular buffer: Message #2 [ qeyk | PXSSS ]
+[[38;5;220mMEDI[0m][0023] -- Circular buffer: Message #3 [ skoc | PXSSS ]
+[[38;5;220mMEDI[0m][0023] -- Circular buffer: Message #4 [ euku | PXSSS ]
+[[38;5;220mMEDI[0m][0023] -- Circular buffer: Message #5 [ OAKQ | XPSSS ]
+[[38;5;220mMEDI[0m][0023] -- Circular buffer: Message #6 [ mykm | PXSSS ]
+[[38;5;220mMEDI[0m][0023] -- Circular buffer: Message #7 [ ioku | PXSSS ]
+[[38;5;220mMEDI[0m][0023] -- Circular buffer: Message #8 [    EMPTY     ]
+[[38;5;220mMEDI[0m][0023] -- Circular buffer: Buffer contents listed
+[[38;5;220mMEDI[0m][0023] -- Circular buffer: Messages: 7, empty message: 1, slots: 8
+[[38;5;220mMEDI[0m][0023] -- Circular buffer: Update message counter: 7
+[[38;5;220mMEDI[0m][0023] -- Circular buffer: Determining next ready message and metadata
+[[38;5;220mMEDI[0m][0023] -- Circular buffer: Next message found at slot 1
+[[38;5;220mMEDI[0m][0023] -- Circular buffer: Message #1: [ AMWN ]
+[[38;5;220mMEDI[0m][0023] -- Circular buffer: Metadata: [ XP | SSS ]
+[[38;5;220mMEDI[0m][0023] -- Circular buffer: Metadata: [ 0;5 | 10;14;18 ]
+[[38;5;220mMEDI[0m][0023] -- Circular buffer: Metadata checked for message #1: Subscriber condition 18 == 10 ]
+[[38;5;220mMEDI[0m][0023] -- Circular buffer: Metadata checked for message #1: Subscriber condition 18 == 14 ]
+[[38;5;220mMEDI[0m][0023] -- Circular buffer: Metadata checked for message #1: Subscriber condition 18 == 18 ]
+[[38;5;220mMEDI[0m][0023] -- Circular buffer: Message #1 matches the subscriber pipe (FD 18)
+[[38;5;220mMEDI[0m][0023] -- Circular buffer: Message #1 [AMWN] loaded
+[[38;5;220mMEDI[0m][INFO] -- Current time (usec): 311205
+[[38;5;220mMEDI[0m][INFO] -- Time difference: 498400
+[[38;5;220mMEDI[0m][0024] -- Active pipes[*][0] R: FD 3 15 
+[[38;5;220mMEDI[0m][0024] -- Active pipes[*][1] W: FD 10 14 18 
+[[38;5;220mMEDI[0m][0024] -- Receiving message from pipe (FD 3)...
+[[38;5;220mMEDI[0m][0024] -- 4 bytes read from pipe (FD 3)
+[[38;5;220mMEDI[0m][0024] -- Received message #27: [euou]
+[[38;5;220mMEDI[0m][0024] -- Sending message [euou] to circular buffer...
+[[38;5;220mMEDI[0m][0024] -- Circular buffer variables: Message #1 offset: 0
+[[38;5;220mMEDI[0m][0024] -- Circular buffer: Pipe FD received: 3
+[[38;5;220mMEDI[0m][0024] -- Circular buffer: Determine free message slot in the circular buffer
+[[38;5;220mMEDI[0m][0024] -- Circular buffer: Found free message #8 slot in the circular buffer
+[[38;5;220mMEDI[0m][0024] -- Circular buffer: Writing message [euou] to slot #8 to circular buffer
+[[38;5;220mMEDI[0m][0024] -- Circular buffer: Message #8 [euou] from pipe (FD 3) written in 4 bytes to circular buffer
+[[38;5;220mMEDI[0m][0024] -- Circular buffer: Message #8 [    EMPTY     ]
+[[38;5;220mMEDI[0m][0024] -- Circular buffer: 1 messages in the circular buffer
+[[38;5;220mMEDI[0m][0024] -- Message #27 [euou] saved successfully in circular buffer...
+[[38;5;220mMEDI[0m][0024] -- Receiving message from pipe (FD 15)...
+[[38;5;220mMEDI[0m][0024] -- 4 bytes read from pipe (FD 15)
+[[38;5;220mMEDI[0m][0024] -- Received message #28: [REQ1]
+[[38;5;220mMEDI[0m][0024] -- Request received [REQ1] from subscriber 3 at pipe (FD 15)
+[[38;5;220mMEDI[0m][0024] -- Processing message request from pipe (FD 15)
+[[38;5;220mMEDI[0m][0024] -- Circular buffer: Determining next ready message and metadata
+[[38;5;220mMEDI[0m][0024] -- Circular buffer: Next message found at slot 1
+[[38;5;220mMEDI[0m][0024] -- Circular buffer: Message #1: [ euou ]
+[[38;5;220mMEDI[0m][0024] -- Circular buffer: Metadata: [ PX | SSS ]
+[[38;5;220mMEDI[0m][0024] -- Circular buffer: Metadata: [ 3;0 | 10;14;18 ]
+[[38;5;220mMEDI[0m][0024] -- Circular buffer: Metadata checked for message #1: Subscriber condition 18 == 10 ]
+[[38;5;220mMEDI[0m][0024] -- Circular buffer: Metadata checked for message #1: Subscriber condition 18 == 14 ]
+[[38;5;220mMEDI[0m][0024] -- Circular buffer: Metadata checked for message #1: Subscriber condition 18 == 18 ]
+[[38;5;220mMEDI[0m][0024] -- Circular buffer: Message #1 matches the subscriber pipe (FD 18)
+[[38;5;220mMEDI[0m][0024] -- Circular buffer: Message #1 [euou] loaded
+[[38;5;220mMEDI[0m][0024] -- Circular buffer: Buffer contents
+[[38;5;220mMEDI[0m][0024] -- Circular buffer: Message no [ Msg  |  Meta ]
+[[38;5;220mMEDI[0m][0024] -- Circular buffer: Message #1 [ euou | PXSSS ]
+[[38;5;220mMEDI[0m][0024] -- Circular buffer: Message #2 [ qeyk | PXSSS ]
+[[38;5;220mMEDI[0m][0024] -- Circular buffer: Message #3 [ skoc | PXSSS ]
+[[38;5;220mMEDI[0m][0024] -- Circular buffer: Message #4 [ euku | PXSSS ]
+[[38;5;220mMEDI[0m][0024] -- Circular buffer: Message #5 [ OAKQ | XPSSS ]
+[[38;5;220mMEDI[0m][0024] -- Circular buffer: Message #6 [ mykm | PXSSS ]
+[[38;5;220mMEDI[0m][0024] -- Circular buffer: Message #7 [ ioku | PXSSS ]
+[[38;5;220mMEDI[0m][0024] -- Circular buffer: Message #8 [    EMPTY     ]
+[[38;5;220mMEDI[0m][0024] -- Circular buffer: Buffer contents listed
+[[38;5;220mMEDI[0m][0024] -- Circular buffer: Messages: 7, empty message: 1, slots: 8
+[[38;5;220mMEDI[0m][0024] -- Circular buffer: Update message counter: 7
+[[38;5;220mMEDI[0m][0024] -- Processing message 7 towards pipe (FD 18)
+[[38;5;220mMEDI[0m][0024] -- Sending message [euou] to pipe (FD 18)...
+[[38;5;220mMEDI[0m][0024] -- 4 bytes written to pipe (FD 18)
+[[38;5;220mMEDI[0m][0024] -- Requests remaining 0
+[[38;5;220mMEDI[0m][0024] -- Circular buffer: Updating metadata for message 18
+[[38;5;220mMEDI[0m][0024] -- Circular buffer: Original metadata read: [ PX | SSS ]
+[[38;5;220mMEDI[0m][0024] -- Circular buffer: Modified metadata: [ PX | SSY ]
+[[38;5;220mMEDI[0m][0024] -- Circular buffer: Based on metadata message #7 to be deleted
+[[38;5;220mMEDI[0m][0024] -- Circular buffer: Deleting message #8 from the circular buffer
+[[38;5;220mMEDI[0m][0024] -- Circular buffer: Message #8 in the circular buffer already empty
+[[38;5;220mMEDI[0m][0024] -- Circular buffer: 7 messages left in the circular buffer
+[[38;5;220mMEDI[0m][0024] -- Circular buffer: Message #19 [    EMPTY     ]
+[[38;5;220mMEDI[0m][0024] -- Message [] processed
+[[38;5;220mMEDI[0m][0024] -- Circular buffer: Buffer contents
+[[38;5;220mMEDI[0m][0024] -- Circular buffer: Message no [ Msg  |  Meta ]
+[[38;5;220mMEDI[0m][0024] -- Circular buffer: Message #1 [ euou | PXSSS ]
+[[38;5;220mMEDI[0m][0024] -- Circular buffer: Message #2 [ qeyk | PXSSS ]
+[[38;5;220mMEDI[0m][0024] -- Circular buffer: Message #3 [ skoc | PXSSS ]
+[[38;5;220mMEDI[0m][0024] -- Circular buffer: Message #4 [ euku | PXSSS ]
+[[38;5;220mMEDI[0m][0024] -- Circular buffer: Message #5 [ OAKQ | XPSSS ]
+[[38;5;220mMEDI[0m][0024] -- Circular buffer: Message #6 [ mykm | PXSSS ]
+[[38;5;220mMEDI[0m][0024] -- Circular buffer: Message #7 [ ioku | PXSSS ]
+[[38;5;220mMEDI[0m][0024] -- Circular buffer: Message #8 [    EMPTY     ]
+[[38;5;220mMEDI[0m][0024] -- Circular buffer: Buffer contents listed
+[[38;5;220mMEDI[0m][0024] -- Circular buffer: Messages: 7, empty message: 1, slots: 8
+[[38;5;220mMEDI[0m][0024] -- Circular buffer: Buffer contents
+[[38;5;220mMEDI[0m][0024] -- Circular buffer: Message no [ Msg  |  Meta ]
+[[38;5;220mMEDI[0m][0024] -- Circular buffer: Message #1 [ euou | PXSSS ]
+[[38;5;220mMEDI[0m][0024] -- Circular buffer: Message #2 [ qeyk | PXSSS ]
+[[38;5;220mMEDI[0m][0024] -- Circular buffer: Message #3 [ skoc | PXSSS ]
+[[38;5;220mMEDI[0m][0024] -- Circular buffer: Message #4 [ euku | PXSSS ]
+[[38;5;220mMEDI[0m][0024] -- Circular buffer: Message #5 [ OAKQ | XPSSS ]
+[[38;5;220mMEDI[0m][0024] -- Circular buffer: Message #6 [ mykm | PXSSS ]
+[[38;5;220mMEDI[0m][0024] -- Circular buffer: Message #7 [ ioku | PXSSS ]
+[[38;5;220mMEDI[0m][0024] -- Circular buffer: Message #8 [    EMPTY     ]
+[[38;5;220mMEDI[0m][0024] -- Circular buffer: Buffer contents listed
+[[38;5;220mMEDI[0m][0024] -- Circular buffer: Messages: 7, empty message: 1, slots: 8
+[[38;5;220mMEDI[0m][0024] -- Circular buffer: Determining next ready message and metadata
+[[38;5;220mMEDI[0m][0024] -- Circular buffer: Next message found at slot 1
+[[38;5;220mMEDI[0m][0024] -- Circular buffer: Message #1: [ euou ]
+[[38;5;220mMEDI[0m][0024] -- Circular buffer: Metadata: [ PX | SSY ]
+[[38;5;220mMEDI[0m][0024] -- Circular buffer: Metadata: [ 3;0 | 10;14;0 ]
+[[38;5;220mMEDI[0m][0024] -- Circular buffer: Metadata checked for message #1: Subscriber condition 18 == 10 ]
+[[38;5;220mMEDI[0m][0024] -- Circular buffer: Metadata checked for message #1: Subscriber condition 18 == 14 ]
+[[38;5;220mMEDI[0m][0024] -- Circular buffer: Metadata checked for message #1: Subscriber condition 18 == 0 ]
+[[38;5;220mMEDI[0m][0024] -- Circular buffer: Next message found at slot 2
+[[38;5;220mMEDI[0m][0024] -- Circular buffer: Message #2: [ qeyk ]
+[[38;5;220mMEDI[0m][0024] -- Circular buffer: Metadata: [ PX | SSY ]
+[[38;5;220mMEDI[0m][0024] -- Circular buffer: Metadata: [ 3;0 | 10;14;0 ]
+[[38;5;220mMEDI[0m][0024] -- Circular buffer: Metadata checked for message #2: Subscriber condition 18 == 10 ]
+[[38;5;220mMEDI[0m][0024] -- Circular buffer: Metadata checked for message #2: Subscriber condition 18 == 14 ]
+[[38;5;220mMEDI[0m][0024] -- Circular buffer: Metadata checked for message #2: Subscriber condition 18 == 0 ]
+[[38;5;220mMEDI[0m][0024] -- Circular buffer: Next message found at slot 3
+[[38;5;220mMEDI[0m][0024] -- Circular buffer: Message #3: [ skoc ]
+[[38;5;220mMEDI[0m][0024] -- Circular buffer: Metadata: [ PX | SSY ]
+[[38;5;220mMEDI[0m][0024] -- Circular buffer: Metadata: [ 3;0 | 10;14;0 ]
+[[38;5;220mMEDI[0m][0024] -- Circular buffer: Metadata checked for message #3: Subscriber condition 18 == 10 ]
+[[38;5;220mMEDI[0m][0024] -- Circular buffer: Metadata checked for message #3: Subscriber condition 18 == 14 ]
+[[38;5;220mMEDI[0m][0024] -- Circular buffer: Metadata checked for message #3: Subscriber condition 18 == 0 ]
+[[38;5;220mMEDI[0m][0024] -- Circular buffer: Next message found at slot 4
+[[38;5;220mMEDI[0m][0024] -- Circular buffer: Message #4: [ euku ]
+[[38;5;220mMEDI[0m][0024] -- Circular buffer: Metadata: [ PX | SSY ]
+[[38;5;220mMEDI[0m][0024] -- Circular buffer: Metadata: [ 3;0 | 10;14;0 ]
+[[38;5;220mMEDI[0m][0024] -- Circular buffer: Metadata checked for message #4: Subscriber condition 18 == 10 ]
+[[38;5;220mMEDI[0m][0024] -- Circular buffer: Metadata checked for message #4: Subscriber condition 18 == 14 ]
+[[38;5;220mMEDI[0m][0024] -- Circular buffer: Metadata checked for message #4: Subscriber condition 18 == 0 ]
+[[38;5;220mMEDI[0m][0024] -- Circular buffer: Next message found at slot 5
+[[38;5;220mMEDI[0m][0024] -- Circular buffer: Message #5: [ OAKQ ]
+[[38;5;220mMEDI[0m][0024] -- Circular buffer: Metadata: [ PX | SSY ]
+[[38;5;220mMEDI[0m][0024] -- Circular buffer: Metadata: [ 3;0 | 10;14;0 ]
+[[38;5;220mMEDI[0m][0024] -- Circular buffer: Metadata checked for message #5: Subscriber condition 18 == 10 ]
+[[38;5;220mMEDI[0m][0024] -- Circular buffer: Metadata checked for message #5: Subscriber condition 18 == 14 ]
+[[38;5;220mMEDI[0m][0024] -- Circular buffer: Metadata checked for message #5: Subscriber condition 18 == 0 ]
+[[38;5;220mMEDI[0m][0024] -- Circular buffer: Next message found at slot 6
+[[38;5;220mMEDI[0m][0024] -- Circular buffer: Message #6: [ mykm ]
+[[38;5;220mMEDI[0m][0024] -- Circular buffer: Metadata: [ PX | SSY ]
+[[38;5;220mMEDI[0m][0024] -- Circular buffer: Metadata: [ 3;0 | 10;14;0 ]
+[[38;5;220mMEDI[0m][0024] -- Circular buffer: Metadata checked for message #6: Subscriber condition 18 == 10 ]
+[[38;5;220mMEDI[0m][0024] -- Circular buffer: Metadata checked for message #6: Subscriber condition 18 == 14 ]
+[[38;5;220mMEDI[0m][0024] -- Circular buffer: Metadata checked for message #6: Subscriber condition 18 == 0 ]
+[[38;5;220mMEDI[0m][0024] -- Circular buffer: Next message found at slot 7
+[[38;5;220mMEDI[0m][0024] -- Circular buffer: Message #7: [ ioku ]
+[[38;5;220mMEDI[0m][0024] -- Circular buffer: Metadata: [ PX | SSY ]
+[[38;5;220mMEDI[0m][0024] -- Circular buffer: Metadata: [ 3;0 | 10;14;0 ]
+[[38;5;220mMEDI[0m][0024] -- Circular buffer: Metadata checked for message #7: Subscriber condition 18 == 10 ]
+[[38;5;220mMEDI[0m][0024] -- Circular buffer: Metadata checked for message #7: Subscriber condition 18 == 14 ]
+[[38;5;220mMEDI[0m][0024] -- Circular buffer: Metadata checked for message #7: Subscriber condition 18 == 0 ]
+[[38;5;220mMEDI[0m][INFO] -- Current time (usec): 113930
+[[38;5;220mMEDI[0m][INFO] -- Time difference: 695675
+[[38;5;220mMEDI[0m][0025] -- Active pipes[*][0] R: FD 3 
+[[38;5;220mMEDI[0m][0025] -- Active pipes[*][1] W: FD 10 14 18 
+[[38;5;220mMEDI[0m][0025] -- Receiving message from pipe (FD 3)...
+[[38;5;220mMEDI[0m][0025] -- 4 bytes read from pipe (FD 3)
+[[38;5;220mMEDI[0m][0025] -- Received message #29: [ykkg]
+[[38;5;220mMEDI[0m][0025] -- Sending message [ykkg] to circular buffer...
+[[38;5;220mMEDI[0m][0025] -- Circular buffer variables: Message #8 offset: 77
+[[38;5;220mMEDI[0m][0025] -- Circular buffer: Pipe FD received: 3
+[[38;5;220mMEDI[0m][0025] -- Circular buffer: Determine free message slot in the circular buffer
+[[38;5;220mMEDI[0m][0025] -- Circular buffer: Found free message #8 slot in the circular buffer
+[[38;5;220mMEDI[0m][0025] -- Circular buffer: Writing message [ykkg] to slot #8 to circular buffer
+[[38;5;220mMEDI[0m][0025] -- Circular buffer: Message #8 [ykkg] from pipe (FD 3) written in 4 bytes to circular buffer
+[[38;5;220mMEDI[0m][0025] -- Circular buffer: Message #8 [ ykkg | PXSSS ]
+[[38;5;220mMEDI[0m][0025] -- Circular buffer: 8 messages in the circular buffer
+[[38;5;220mMEDI[0m][0025] -- Message #29 [ykkg] saved successfully in circular buffer...
+[[38;5;220mMEDI[0m][0025] -- Circular buffer: Buffer contents
+[[38;5;220mMEDI[0m][0025] -- Circular buffer: Message no [ Msg  |  Meta ]
+[[38;5;220mMEDI[0m][0025] -- Circular buffer: Message #1 [ euou | PXSSS ]
+[[38;5;220mMEDI[0m][0025] -- Circular buffer: Message #2 [ qeyk | PXSSS ]
+[[38;5;220mMEDI[0m][0025] -- Circular buffer: Message #3 [ skoc | PXSSS ]
+[[38;5;220mMEDI[0m][0025] -- Circular buffer: Message #4 [ euku | PXSSS ]
+[[38;5;220mMEDI[0m][0025] -- Circular buffer: Message #5 [ OAKQ | XPSSS ]
+[[38;5;220mMEDI[0m][0025] -- Circular buffer: Message #6 [ mykm | PXSSS ]
+[[38;5;220mMEDI[0m][0025] -- Circular buffer: Message #7 [ ioku | PXSSS ]
+[[38;5;220mMEDI[0m][0025] -- Circular buffer: Message #8 [ ykkg | PXSSS ]
+[[38;5;220mMEDI[0m][0025] -- Circular buffer: Buffer contents listed
+[[38;5;220mMEDI[0m][0025] -- Circular buffer: Messages: 8, empty message: 0, slots: 8
+[[38;5;220mMEDI[0m][0025] -- Circular buffer: Determining next ready message and metadata
+[[38;5;220mMEDI[0m][0025] -- Circular buffer: Next message found at slot 1
+[[38;5;220mMEDI[0m][0025] -- Circular buffer: Message #1: [ euou ]
+[[38;5;220mMEDI[0m][0025] -- Circular buffer: Metadata: [ PX | SSS ]
+[[38;5;220mMEDI[0m][0025] -- Circular buffer: Metadata: [ 3;0 | 10;14;18 ]
+[[38;5;220mMEDI[0m][0025] -- Circular buffer: Metadata checked for message #1: Subscriber condition 18 == 10 ]
+[[38;5;220mMEDI[0m][0025] -- Circular buffer: Metadata checked for message #1: Subscriber condition 18 == 14 ]
+[[38;5;220mMEDI[0m][0025] -- Circular buffer: Metadata checked for message #1: Subscriber condition 18 == 18 ]
+[[38;5;220mMEDI[0m][0025] -- Circular buffer: Message #1 matches the subscriber pipe (FD 18)
+[[38;5;220mMEDI[0m][0025] -- Circular buffer: Message #1 [euou] loaded
+[[38;5;220mMEDI[0m][INFO] -- Current time (usec): 311899
+[[38;5;220mMEDI[0m][INFO] -- Time difference: 497706
+[[38;5;220mMEDI[0m][0026] -- Active pipes[*][0] R: FD 15 
+[[38;5;220mMEDI[0m][0026] -- Active pipes[*][1] W: FD 10 14 18 
+[[38;5;220mMEDI[0m][0026] -- Receiving message from pipe (FD 15)...
+[[38;5;220mMEDI[0m][0026] -- 4 bytes read from pipe (FD 15)
+[[38;5;220mMEDI[0m][0026] -- Received message #30: [REQ1]
+[[38;5;220mMEDI[0m][0026] -- Request received [REQ1] from subscriber 3 at pipe (FD 15)
+[[38;5;220mMEDI[0m][0026] -- Processing message request from pipe (FD 15)
+[[38;5;220mMEDI[0m][0026] -- Circular buffer: Determining next ready message and metadata
+[[38;5;220mMEDI[0m][0026] -- Circular buffer: Next message found at slot 1
+[[38;5;220mMEDI[0m][0026] -- Circular buffer: Message #1: [ euou ]
+[[38;5;220mMEDI[0m][0026] -- Circular buffer: Metadata: [ PX | SSS ]
+[[38;5;220mMEDI[0m][0026] -- Circular buffer: Metadata: [ 3;0 | 10;14;18 ]
+[[38;5;220mMEDI[0m][0026] -- Circular buffer: Metadata checked for message #1: Subscriber condition 18 == 10 ]
+[[38;5;220mMEDI[0m][0026] -- Circular buffer: Metadata checked for message #1: Subscriber condition 18 == 14 ]
+[[38;5;220mMEDI[0m][0026] -- Circular buffer: Metadata checked for message #1: Subscriber condition 18 == 18 ]
+[[38;5;220mMEDI[0m][0026] -- Circular buffer: Message #1 matches the subscriber pipe (FD 18)
+[[38;5;220mMEDI[0m][0026] -- Circular buffer: Message #1 [euou] loaded
+[[38;5;220mMEDI[0m][0026] -- Circular buffer: Buffer contents
+[[38;5;220mMEDI[0m][0026] -- Circular buffer: Message no [ Msg  |  Meta ]
+[[38;5;220mMEDI[0m][0026] -- Circular buffer: Message #1 [ euou | PXSSS ]
+[[38;5;220mMEDI[0m][0026] -- Circular buffer: Message #2 [ qeyk | PXSSS ]
+[[38;5;220mMEDI[0m][0026] -- Circular buffer: Message #3 [ skoc | PXSSS ]
+[[38;5;220mMEDI[0m][0026] -- Circular buffer: Message #4 [ euku | PXSSS ]
+[[38;5;220mMEDI[0m][0026] -- Circular buffer: Message #5 [ OAKQ | XPSSS ]
+[[38;5;220mMEDI[0m][0026] -- Circular buffer: Message #6 [ mykm | PXSSS ]
+[[38;5;220mMEDI[0m][0026] -- Circular buffer: Message #7 [ ioku | PXSSS ]
+[[38;5;220mMEDI[0m][0026] -- Circular buffer: Message #8 [ ykkg | PXSSS ]
+[[38;5;220mMEDI[0m][0026] -- Circular buffer: Buffer contents listed
+[[38;5;220mMEDI[0m][0026] -- Circular buffer: Messages: 8, empty message: 0, slots: 8
+[[38;5;220mMEDI[0m][0026] -- Circular buffer: Update message counter: 8
+[[38;5;220mMEDI[0m][0026] -- Processing message 8 towards pipe (FD 18)
+[[38;5;220mMEDI[0m][0026] -- Sending message [euou] to pipe (FD 18)...
+[[38;5;220mMEDI[0m][0026] -- 4 bytes written to pipe (FD 18)
+[[38;5;220mMEDI[0m][0026] -- Requests remaining 0
+[[38;5;220mMEDI[0m][0026] -- Circular buffer: Updating metadata for message 18
+[[38;5;220mMEDI[0m][0026] -- Circular buffer: Original metadata read: [ PX | SSS ]
+[[38;5;220mMEDI[0m][0026] -- Circular buffer: Modified metadata: [ PX | SSY ]
+[[38;5;220mMEDI[0m][0026] -- Circular buffer: Based on metadata message #8 to be deleted
+[[38;5;220mMEDI[0m][0026] -- Circular buffer: Deleting message #9 from the circular buffer
+[[38;5;220mMEDI[0m][0026] -- Circular buffer: 7 messages left in the circular buffer
+[[38;5;220mMEDI[0m][0026] -- Circular buffer: Message #19 [    EMPTY     ]
+[[38;5;220mMEDI[0m][0026] -- Message [] processed
+[[38;5;220mMEDI[0m][0026] -- Circular buffer: Buffer contents
+[[38;5;220mMEDI[0m][0026] -- Circular buffer: Message no [ Msg  |  Meta ]
+[[38;5;220mMEDI[0m][0026] -- Circular buffer: Message #1 [ euou | PXSSS ]
+[[38;5;220mMEDI[0m][0026] -- Circular buffer: Message #2 [ qeyk | PXSSS ]
+[[38;5;220mMEDI[0m][0026] -- Circular buffer: Message #3 [ skoc | PXSSS ]
+[[38;5;220mMEDI[0m][0026] -- Circular buffer: Message #4 [ euku | PXSSS ]
+[[38;5;220mMEDI[0m][0026] -- Circular buffer: Message #5 [ OAKQ | XPSSS ]
+[[38;5;220mMEDI[0m][0026] -- Circular buffer: Message #6 [ mykm | PXSSS ]
+[[38;5;220mMEDI[0m][0026] -- Circular buffer: Message #7 [ ioku | PXSSS ]
+[[38;5;220mMEDI[0m][0026] -- Circular buffer: Message #8 [ ykkg | PXSSS ]
+[[38;5;220mMEDI[0m][0026] -- Circular buffer: Buffer contents listed
+[[38;5;220mMEDI[0m][0026] -- Circular buffer: Messages: 8, empty message: 0, slots: 8
+[[38;5;220mMEDI[0m][0026] -- Circular buffer: Update message counter: 8
+[[38;5;220mMEDI[0m][0026] -- Circular buffer: Buffer contents
+[[38;5;220mMEDI[0m][0026] -- Circular buffer: Message no [ Msg  |  Meta ]
+[[38;5;220mMEDI[0m][0026] -- Circular buffer: Message #1 [ euou | PXSSS ]
+[[38;5;220mMEDI[0m][0026] -- Circular buffer: Message #2 [ qeyk | PXSSS ]
+[[38;5;220mMEDI[0m][0026] -- Circular buffer: Message #3 [ skoc | PXSSS ]
+[[38;5;220mMEDI[0m][0026] -- Circular buffer: Message #4 [ euku | PXSSS ]
+[[38;5;220mMEDI[0m][0026] -- Circular buffer: Message #5 [ OAKQ | XPSSS ]
+[[38;5;220mMEDI[0m][0026] -- Circular buffer: Message #6 [ mykm | PXSSS ]
+[[38;5;220mMEDI[0m][0026] -- Circular buffer: Message #7 [ ioku | PXSSS ]
+[[38;5;220mMEDI[0m][0026] -- Circular buffer: Message #8 [ ykkg | PXSSS ]
+[[38;5;220mMEDI[0m][0026] -- Circular buffer: Buffer contents listed
+[[38;5;220mMEDI[0m][0026] -- Circular buffer: Messages: 8, empty message: 0, slots: 8
+[[38;5;220mMEDI[0m][0026] -- Circular buffer: Determining next ready message and metadata
+[[38;5;220mMEDI[0m][0026] -- Circular buffer: Next message found at slot 1
+[[38;5;220mMEDI[0m][0026] -- Circular buffer: Message #1: [ euou ]
+[[38;5;220mMEDI[0m][0026] -- Circular buffer: Metadata: [ PX | SSY ]
+[[38;5;220mMEDI[0m][0026] -- Circular buffer: Metadata: [ 3;0 | 10;14;0 ]
+[[38;5;220mMEDI[0m][0026] -- Circular buffer: Metadata checked for message #1: Subscriber condition 18 == 10 ]
+[[38;5;220mMEDI[0m][0026] -- Circular buffer: Metadata checked for message #1: Subscriber condition 18 == 14 ]
+[[38;5;220mMEDI[0m][0026] -- Circular buffer: Metadata checked for message #1: Subscriber condition 18 == 0 ]
+[[38;5;220mMEDI[0m][0026] -- Circular buffer: Next message found at slot 2
+[[38;5;220mMEDI[0m][0026] -- Circular buffer: Message #2: [ qeyk ]
+[[38;5;220mMEDI[0m][0026] -- Circular buffer: Metadata: [ PX | SSY ]
+[[38;5;220mMEDI[0m][0026] -- Circular buffer: Metadata: [ 3;0 | 10;14;0 ]
+[[38;5;220mMEDI[0m][0026] -- Circular buffer: Metadata checked for message #2: Subscriber condition 18 == 10 ]
+[[38;5;220mMEDI[0m][0026] -- Circular buffer: Metadata checked for message #2: Subscriber condition 18 == 14 ]
+[[38;5;220mMEDI[0m][0026] -- Circular buffer: Metadata checked for message #2: Subscriber condition 18 == 0 ]
+[[38;5;220mMEDI[0m][0026] -- Circular buffer: Next message found at slot 3
+[[38;5;220mMEDI[0m][0026] -- Circular buffer: Message #3: [ skoc ]
+[[38;5;220mMEDI[0m][0026] -- Circular buffer: Metadata: [ PX | SSY ]
+[[38;5;220mMEDI[0m][0026] -- Circular buffer: Metadata: [ 3;0 | 10;14;0 ]
+[[38;5;220mMEDI[0m][0026] -- Circular buffer: Metadata checked for message #3: Subscriber condition 18 == 10 ]
+[[38;5;220mMEDI[0m][0026] -- Circular buffer: Metadata checked for message #3: Subscriber condition 18 == 14 ]
+[[38;5;220mMEDI[0m][0026] -- Circular buffer: Metadata checked for message #3: Subscriber condition 18 == 0 ]
+[[38;5;220mMEDI[0m][0026] -- Circular buffer: Next message found at slot 4
+[[38;5;220mMED[[38;5;162mSUB3[0m][0001] -- Subscriber-3 initialization
+[[38;5;162mSUB3[0m][INFO] -- PID: 1074
+[[38;5;162mSUB3[0m][INFO] -- Time period: 5000
+[[38;5;162mSUB3[0m][INFO] -- Message length: 4
+[[38;5;162mSUB3[0m][INFO] -- Pipe 1R: 15
+[[38;5;162mSUB3[0m][INFO] -- Pipe 1W: 16
+[[38;5;162mSUB3[0m][INFO] -- Pipe 2R: 17
+[[38;5;162mSUB3[0m][INFO] -- Pipe 2W: 18
+[[38;5;162mSUB3[0m][INFO] -- Awaiting semaphore release
+[[38;5;162mSUB3[0m][INFO] -- Semaphore released
+[[38;5;162mSUB3[0m][0001] -- Requesting message...
+[[38;5;162mSUB3[0m][0001] -- Writing 4 bytes to pipe (FD 16)
+[[38;5;162mSUB3[0m][0001] -- 4 bytes written to pipe (FD 16)
+[[38;5;162mSUB3[0m][0001] -- Active pipe (FD 17)
+[[38;5;162mSUB3[0m][0001] -- Awaiting message...
+[[38;5;162mSUB3[0m][0001] -- Reading 4 bytes from pipe (FD 17)
+[[38;5;162mSUB3[0m][0001] -- 4 bytes read from pipe (FD 17)
+[[38;5;162mSUB3[0m][0001] -- Subscribing message: [aceo]
+[[38;5;162mSUB3[0m][0002] -- Requesting message...
+[[38;5;162mSUB3[0m][0002] -- Writing 4 bytes to pipe (FD 16)
+[[38;5;162mSUB3[0m][0002] -- 4 bytes written to pipe (FD 16)
+[[38;5;162mSUB3[0m][0002] -- Active pipe (FD 17)
+[[38;5;162mSUB3[0m][0002] -- Awaiting message...
+[[38;5;162mSUB3[0m][0002] -- Reading 4 bytes from pipe (FD 17)
+[[38;5;162mSUB3[0m][0002] -- 4 bytes read from pipe (FD 17)
+[[38;5;162mSUB3[0m][0002] -- Subscribing message: [ousq]
+[[38;5;162mSUB3[0m][0003] -- Requesting message...
+[[38;5;162mSUB3[0m][0003] -- Writing 4 bytes to pipe (FD 16)
+[[38;5;162mSUB3[0m][0003] -- 4 bytes written to pipe (FD 16)
+[[38;5;162mSUB3[0m][0003] -- Active pipe (FD 17)
+[[38;5;162mSUB3[0m][0003] -- Awaiting message...
+[[38;5;162mSUB3[0m][0003] -- Reading 4 bytes from pipe (FD 17)
+[[38;5;162mSUB3[0m][0003] -- 4 bytes read from pipe (FD 17)
+[[38;5;162mSUB3[0m][0003] -- Subscribing message: [ALTU]
+[[38;5;162mSUB3[0m][0004] -- Requesting message...
+[[38;5;162mSUB3[0m][0004] -- Writing 4 bytes to pipe (FD 16)
+[[38;5;162mSUB3[0m][0004] -- 4 bytes written to pipe (FD 16)
+[[38;5;162mSUB3[0m][0004] -- Active pipe (FD 17)
+[[38;5;162mSUB3[0m][0004] -- Awaiting message...
+[[38;5;162mSUB3[0m][0004] -- Reading 4 bytes from pipe (FD 17)
+[[38;5;162mSUB3[0m][0004] -- 4 bytes read from pipe (FD 17)
+[[38;5;162mSUB3[0m][0004] -- Subscribing message: [ksgs]
+[[38;5;162mSUB3[0m][0005] -- Requesting message...
+[[38;5;162mSUB3[0m][0005] -- Writing 4 bytes to pipe (FD 16)
+[[38;5;162mSUB3[0m][0005] -- 4 bytes written to pipe (FD 16)
+[[38;5;162mSUB3[0m][0005] -- Active pipe (FD 17)
+[[38;5;162mSUB3[0m][0005] -- Awaiting message...
+[[38;5;162mSUB3[0m][0005] -- Reading 4 bytes from pipe (FD 17)
+[[38;5;162mSUB3[0m][0005] -- 4 bytes read from pipe (FD 17)
+[[38;5;162mSUB3[0m][0005] -- Subscribing message: [ksgs]
+[[38;5;162mSUB3[0m][0006] -- Requesting message...
+[[38;5;162mSUB3[0m][0006] -- Writing 4 bytes to pipe (FD 16)
+[[38;5;162mSUB3[0m][0006] -- 4 bytes written to pipe (FD 16)
+[[38;5;162mSUB3[0m][0006] -- Active pipe (FD 17)
+[[38;5;162mSUB3[0m][0006] -- Awaiting message...
+[[38;5;162mSUB3[0m][0006] -- Reading 4 bytes from pipe (FD 17)
+[[38;5;162mSUB3[0m][0006] -- 4 bytes read from pipe (FD 17)
+[[38;5;162mSUB3[0m][0006] -- Subscribing message: [aegi]
+[[38;5;162mSUB3[0m][0007] -- Requesting message...
+[[38;5;162mSUB3[0m][0007] -- Writing 4 bytes to pipe (FD 16)
+[[38;5;162mSUB3[0m][0007] -- 4 bytes written to pipe (FD 16)
+[[38;5;162mSUB3[0m][0007] -- Active pipe (FD 17)
+[[38;5;162mSUB3[0m][0007] -- Awaiting message...
+[[38;5;162mSUB3[0m][0007] -- Reading 4 bytes from pipe (FD 17)
+[[38;5;162mSUB3[0m][0007] -- 4 bytes read from pipe (FD 17)
+[[38;5;162mSUB3[0m][0007] -- Subscribing message: [euou]
+[[38;5;162mSUB3[0m][0008] -- Requesting message...
+[[38;5;162mSUB3[0m][0008] -- Writing 4 bytes to pipe (FD 16)
+[[38;5;162mSUB3[0m][0008] -- 4 bytes written to pipe (FD 16)
+[[38;5;162mSUB3[0m][0008] -- Active pipe (FD 17)
+[[38;5;162mSUB3[0m][0008] -- Awaiting message...
+[[38;5;162mSUB3[0m][0008] -- Reading 4 bytes from pipe (FD 17)
+[[I[0m][0026] -- Circular buffer: Message #4: [ euku ]
+[[38;5;220mMEDI[0m][0026] -- Circular buffer: Metadata: [ PX | SSY ]
+[[38;5;220mMEDI[0m][0026] -- Circular buffer: Metadata: [ 3;0 | 10;14;0 ]
+[[38;5;220mMEDI[0m][0026] -- Circular buffer: Metadata checked for message #4: Subscriber condition 18 == 10 ]
+[[38;5;220mMEDI[0m][0026] -- Circular buffer: Metadata checked for message #4: Subscriber condition 18 == 14 ]
+[[38;5;220mMEDI[0m][0026] -- Circular buffer: Metadata checked for message #4: Subscriber condition 18 == 0 ]
+[[38;5;220mMEDI[0m][0026] -- Circular buffer: Next message found at slot 5
+[[38;5;220mMEDI[0m][0026] -- Circular buffer: Message #5: [ OAKQ ]
+[[38;5;220mMEDI[0m][0026] -- Circular buffer: Metadata: [ PX | SSY ]
+[[38;5;220mMEDI[0m][0026] -- Circular buffer: Metadata: [ 3;0 | 10;14;0 ]
+[[38;5;220mMEDI[0m][0026] -- Circular buffer: Metadata checked for message #5: Subscriber condition 18 == 10 ]
+[[38;5;220mMEDI[0m][0026] -- Circular buffer: Metadata checked for message #5: Subscriber condition 18 == 14 ]
+[[38;5;220mMEDI[0m][0026] -- Circular buffer: Metadata checked for message #5: Subscriber condition 18 == 0 ]
+[[38;5;220mMEDI[0m][0026] -- Circular buffer: Next message found at slot 6
+[[38;5;220mMEDI[0m][0026] -- Circular buffer: Message #6: [ mykm ]
+[[38;5;220mMEDI[0m][0026] -- Circular buffer: Metadata: [ PX | SSY ]
+[[38;5;220mMEDI[0m][0026] -- Circular buffer: Metadata: [ 3;0 | 10;14;0 ]
+[[38;5;220mMEDI[0m][0026] -- Circular buffer: Metadata checked for message #6: Subscriber condition 18 == 10 ]
+[[38;5;220mMEDI[0m][0026] -- Circular buffer: Metadata checked for message #6: Subscriber condition 18 == 14 ]
+[[38;5;220mMEDI[0m][0026] -- Circular buffer: Metadata checked for message #6: Subscriber condition 18 == 0 ]
+[[38;5;220mMEDI[0m][0026] -- Circular buffer: Next message found at slot 7
+[[38;5;220mMEDI[0m][0026] -- Circular buffer: Message #7: [ ioku ]
+[[38;5;220mMEDI[0m][0026] -- Circular buffer: Metadata: [ PX | SSY ]
+[[38;5;220mMEDI[0m][0026] -- Circular buffer: Metadata: [ 3;0 | 10;14;0 ]
+[[38;5;220mMEDI[0m][0026] -- Circular buffer: Metadata checked for message #7: Subscriber condition 18 == 10 ]
+[[38;5;220mMEDI[0m][0026] -- Circular buffer: Metadata checked for message #7: Subscriber condition 18 == 14 ]
+[[38;5;220mMEDI[0m][0026] -- Circular buffer: Metadata checked for message #7: Subscriber condition 18 == 0 ]
+[[38;5;220mMEDI[0m][0026] -- Circular buffer: Next message found at slot 8
+[[38;5;220mMEDI[0m][0026] -- Circular buffer: Message #8: [ ykkg ]
+[[38;5;220mMEDI[0m][0026] -- Circular buffer: Metadata: [ PX | SSY ]
+[[38;5;220mMEDI[0m][0026] -- Circular buffer: Metadata: [ 3;0 | 10;14;0 ]
+[[38;5;220mMEDI[0m][0026] -- Circular buffer: Metadata checked for message #8: Subscriber condition 18 == 10 ]
+[[38;5;220mMEDI[0m][0026] -- Circular buffer: Metadata checked for message #8: Subscriber condition 18 == 14 ]
+[[38;5;220mMEDI[0m][0026] -- Circular buffer: Metadata checked for message #8: Subscriber condition 18 == 0 ]
+[[38;5;220mMEDI[0m][INFO] -- Current time (usec): 812011
+[[38;5;220mMEDI[0m][INFO] -- Time difference: 2406
+[[38;5;220mMEDI[0m][0027] -- Active pipes[*][0] R: FD 3 5 
+[[38;5;220mMEDI[0m][0027] -- Active pipes[*][1] W: FD 10 14 18 
+[[38;5;220mMEDI[0m][0027] -- Receiving message from pipe (FD 3)...
+[[38;5;220mMEDI[0m][0027] -- 4 bytes read from pipe (FD 3)
+[[38;5;220mMEDI[0m][0027] -- Received message #31: [cees]
+[[38;5;220mMEDI[0m][0027] -- Sending message [cees] to circular buffer...
+[[38;5;220mMEDI[0m][0027] -- Circular buffer variables: Message offset reset
+[[38;5;220mMEDI[0m][0027] -- Circular buffer variables: Message #8 offset: 0
+[[38;5;220mMEDI[0m][0027] -- Circular buffer is full (Message counter 9 > Message slots 8). Start clearing circular buffer...
+[[38;5;220mMEDI[0m][0027] -- Circular buffer: Buffer contents
+[[38;5;220mMEDI[0m][0027] -- Circular buffer: Message no [ Msg  |  Meta ]
+[[38;5;220mMEDI[0m][0027] -- Circular buffer: Message #1 [ euou | PXSSS ]
+[[38;5;220mMEDI[0m][0027] -- Circular buffer: Message #2 [ qeyk | PXSSS ]
+[[38;5;220mMEDI[0m][0027] -- Circular buffer: Message #3 [ skoc | PXSSS ]
+[[38;5;220mMEDI[0m][0027] -- Circular buffer: Message #4 [ euku | PXSSS ]
+[[38;5;220mMEDI[0m][0027] -- Circular buffer: Message #5 [ OAKQ | XPSSS ]
+[[38;5;220mMEDI[0m][0027] -- Circular buffer: Message #6 [ mykm | PXSSS ]
+[[38;5;220mMEDI[0m][0027] -- Circular buffer: Message #7 [ ioku | PXSSS ]
+[[38;5;220mMEDI[0m][0027] -- Circular buffer: Message #8 [ ykkg | PXSSS ]
+[[38;5;220mMEDI[0m][0027] -- Circular buffer: Buffer contents listed
+[[38;5;220mMEDI[0m][0027] -- Circular buffer: Messages: 8, empty message: 0, slots: 8
+[[38;5;220mMEDI[0m][0027] -- Circular buffer: Clearing the buffer
+[[38;5;220mMEDI[0m][0027] -- Circular buffer: Buffer contents
+[[38;5;220mMEDI[0m][0027] -- Circular buffer: Message no [ Msg  |  Meta ]
+[[38;5;220mMEDI[0m][0027] -- Circular buffer: Message #1 [    EMPTY     ]
+[[38;5;220mMEDI[0m][0027] -- Circular buffer: Message #2 [    EMPTY     ]
+[[38;5;220mMEDI[0m][0027] -- Circular buffer: Message #3 [    EMPTY     ]
+[[38;5;220mMEDI[0m][0027] -- Circular buffer: Message #4 [    EMPTY     ]
+[[38;5;220mMEDI[0m][0027] -- Circular buffer: Message #5 [    EMPTY     ]
+[[38;5;220mMEDI[0m][0027] -- Circular buffer: Message #6 [    EMPTY     ]
+[[38;5;220mMEDI[0m][0027] -- Circular buffer: Message #7 [    EMPTY     ]
+[[38;5;220mMEDI[0m][0027] -- Circular buffer: Message #8 [    EMPTY     ]
+[[38;5;220mMEDI[0m][0027] -- Circular buffer: Buffer contents listed
+[[38;5;220mMEDI[0m][0027] -- Circular buffer: Messages: 0, empty message: 8, slots: 8
+[[38;5;220mMEDI[0m][0027] -- Circular buffer: Update message counter: 0
+[[38;5;220mMEDI[0m][0027] -- Circular buffer: Clearing of the buffer complete
+[[38;5;220mMEDI[0m][0027] -- Circular buffer: Pipe FD received: 3
+[[38;5;220mMEDI[0m][0027] -- Circular buffer: Determine free message slot in the circular buffer
+[[38;5;220mMEDI[0m][0027] -- Circular buffer: Found free message #1 slot in the circular buffer
+[[38;5;220mMEDI[0m][0027] -- Circular buffer: Writing message [cees] to slot #1 to circular buffer
+[[38;5;220mMEDI[0m][0027] -- Circular buffer: Message #1 [cees] from pipe (FD 3) written in 4 bytes to circular buffer
+[[38;5;220mMEDI[0m][0027] -- Circular buffer: Message #1 [ cees | PXSSS ]
+[[38;5;220mMEDI[0m][0027] -- Circular buffer: 1 messages in the circular buffer
+[[38;5;220mMEDI[0m][0027] -- Message #31 [cees] saved successfully in circular buffer...
+[[38;5;220mMEDI[0m][0027] -- Receiving message from pipe (FD 5)...
+[[38;5;220mMEDI[0m][0027] -- 4 bytes read from pipe (FD 5)
+[[38;5;220mMEDI[0m][0027] -- Received message #32: [HTZK]
+[[38;5;220mMEDI[0m][0027] -- Sending message [HTZK] to circular buffer...
+[[38;5;220mMEDI[0m][0027] -- Circular buffer variables: Message #2 offset: 11
+[[38;5;220mMEDI[0m][0027] -- Circular buffer: Pipe FD received: 5
+[[38;5;220mMEDI[0m][0027] -- Circular buffer: Determine free message slot in the circular buffer
+[[38;5;220mMEDI[0m][0027] -- Circular buffer: Found free message #2 slot in the circular buffer
+[[38;5;220mMEDI[0m][0027] -- Circular buffer: Writing message [HTZK] to slot #2 to circular buffer
+[[38;5;220mMEDI[0m][0027] -- Circular buffer: Message #2 [HTZK] from pipe (FD 5) written in 4 bytes to circular buffer
+[[38;5;220mMEDI[0m][0027] -- Circular buffer: Message #2 [ HTZK | XPSSS ]
+[[38;5;220mMEDI[0m][0027] -- Circular buffer: 2 messages in the circular buffer
+[[38;5;220mMEDI[0m][0027] -- Message #32 [HTZK] saved successfully in circular buffer...
+[[38;5;220mMEDI[0m][0027] -- Circular buffer: Buffer contents
+[[38;5;220mMEDI[0m][0027] -- Circular buffer: Message no [ Msg  |  Meta ]
+[[38;5;220mMEDI[0m][0027] -- Circular buffer: Message #1 [ cees | PXSSS ]
+[[38;5;220mMEDI[0m][0027] -- Circular buffer: Message #2 [ HTZK | XPSSS ]
+[[38;5;220mMEDI[0m][0027] -- Circular buffer: Message #3 [    EMPTY     ]
+[[38;5;220mMEDI[0m][0027] -- Circular buffer: Message #4 [    EMPTY     ]
+[[38;5;220mMEDI[0m][0027] -- Circular buffer: Message #5 [    EMPTY     ]
+[[38;5;220mMEDI[0m][0027] -- Circular buffer: Message #6 [    EMPTY     ]
+[[38;5;220mMEDI[0m][0027] -- Circular buffer: Message #7 [    EMPTY     ]
+[[38;5;220mMEDI[0m][0027] -- Circular buffer: Message #8 [    EMPTY     ]
+[[38;5;220mMEDI[0m][0027] -- Circular buffer: Buffer contents listed
+[[38;5;220mMEDI[0m][0027] -- Circular buffer: Messages: 2, empty message: 6, slots: 8
+[[38;5;220mMEDI[0m][0027] -- Circular buffer: Determining next ready message and metadata
+[[38;5;220mMEDI[0m][0027] -- Circular buffer: Next message found at slot 1
+[[38;5;220mMEDI[0m][0027] -- Circular buffer: Message #1: [ cees ]
+[[38;5;220mMEDI[0m][0027] -- Circular buffer: Metadata: [ XP | SSS ]
+[[38;5;220mMEDI[0m][0027] -- Circular buffer: Metadata: [ 0;5 | 10;14;18 ]
+[[38;5;220mMEDI[0m][0027] -- Circular buffer: Metadata checked for message #1: Subscriber condition 18 == 10 ]
+[[38;5;220mMEDI[0m][0027] -- Circular buffer: Metadata checked for message #1: Subscriber condition 18 == 14 ]
+[[38;5;220mMEDI[0m][0027] -- Circular buffer: Metadata checked for message #1: Subscriber condition 18 == 18 ]
+[[38;5;220mMEDI[0m][0027] -- Circular buffer: Message #1 matches the subscriber pipe (FD 18)
+[[38;5;220mMEDI[0m][0027] -- Circular buffer: Message #1 [cees] loaded
+[[38;5;220mMEDI[0m][INFO] -- Current time (usec): 414505
+[[38;5;220mMEDI[0m][INFO] -- Time difference: 395100
+[[38;5;220mMEDI[0m][0028] -- Active pipes[*][0] R: FD 3 
+[[38;5;220mMEDI[0m][0028] -- Active pipes[*][1] W: FD 10 14 18 
+[[38;5;220mMEDI[0m][0028] -- Receiving message from pipe (FD 3)...
+[[38;5;220mMEDI[0m][0028] -- 4 bytes read from pipe (FD 3)
+[[38;5;220mMEDI[0m][0028] -- Received message #33: [wyms]
+[[38;5;220mMEDI[0m][0028] -- Sending message [wyms] to circular buffer...
+[[38;5;220mMEDI[0m][0028] -- Circular buffer variables: Message #1 offset: 0
+[[38;5;220mMEDI[0m][0028] -- Circular buffer: Pipe FD received: 3
+[[38;5;220mMEDI[0m][0028] -- Circular buffer: Determine free message slot in the circular buffer
+[[38;5;220mMEDI[0m][0028] -- Circular buffer: Found free message #3 slot in the circular buffer
+[[38;5;220mMEDI[0m][0028] -- Circular buffer: Writing message [wyms] to slot #3 to circular buffer
+[[38;5;220mMEDI[0m][0028] -- Circular buffer: Message #3 [wyms] from pipe (FD 3) written in 4 bytes to circular buffer
+[[38;5;220mMEDI[0m][0028] -- Circular buffer: Message #3 [    EMPTY     ]
+[[38;5;220mMEDI[0m][0028] -- Circular buffer: 1 messages in the circular buffer
+[[38;5;220mMEDI[0m][0028] -- Message #33 [wyms] saved successfully in circular buffer...
+[[38;5;220mMEDI[0m][0028] -- Circular buffer: Buffer contents
+[[38;5;220mMEDI[0m][0028] -- Circular buffer: Message no [ Msg  |  Meta ]
+[[38;5;220mMEDI[0m][0028] -- Circular buffer: Message #1 [ wyms | PXSSS ]
+[[38;5;220mMEDI[0m][0028] -- Circular buffer: Message #2 [ HTZK | XPSSS ]
+[[38;5;220mMEDI[0m][0028] -- Circular buffer: Message #3 [    EMPTY     ]
+[[38;5;220mMEDI[0m][0028] -- Circular buffer: Message #4 [    EMPTY     ]
+[[38;5;220mMEDI[0m][0028] -- Circular buffer: Message #5 [    EMPTY     ]
+[[38;5;220mMEDI[0m][0028] -- Circular buffer: Message #6 [    EMPTY     ]
+[[38;5;220mMEDI[0m][0028] -- Circular buffer: Message #7 [    EMPTY     ]
+[[38;5;220mMEDI[0m][0028] -- Circular buffer: Message #8 [    EMPTY     ]
+[[38;5;220mMEDI[0m][0028] -- Circular buffer: Buffer contents listed
+[[38;5;220mMEDI[0m][0028] -- Circular buffer: Messages: 2, empty message: 6, slots: 8
+[[38;5;220mMEDI[0m][0028] -- Circular buffer: Update message counter: 2
+[[38;5;220mMEDI[0m][0028] -- Circular buffer: Determining next ready message and metadata
+[[38;5;220mMEDI[0m][0028] -- Circular buffer: Next message found at slot 1
+[[38;5;220mMEDI[0m][0028] -- Circular buffer: Message #1: [ wyms ]
+[[38;5;220mMEDI[0m][0028] -- Circular buffer: Metadata: [ PX | SSS ]
+[[38;5;220mMEDI[0m][0028] -- Circular buffer: Metadata: [ 3;0 | 10;14;18 ]
+[[38;5;220mMEDI[0m][0028] -- Circular buffer: Metadata checked for message #1: Subscriber condition 18 == 10 ]
+[[38;5;220mMEDI[0m][0028] -- Circular buffer: Metadata checked for message #1: Subscriber condition 18 == 14 ]
+[[38;5;220mMEDI[0m][0028] -- Circular buffer: Metadata checked for message #1: Subscriber condition 18 == 18 ]
+[[38;5;220mMEDI[0m][0028] -- Circular buffer: Message #1 matches the subscriber pipe (FD 18)
+[[38;5;220mMEDI[0m][0028] -- Circular buffer: Message #1 [wyms] loaded
+[[38;5;220mMEDI[0m][INFO] -- Current time (usec): 312118
+[[38;5;220mMEDI[0m][INFO] -- Time difference: 497487
+[[38;5;220mMEDI[0m][0029] -- Active pipes[*][0] R: FD 15 
+[[38;5;220mMEDI[0m][0029] -- Active pipes[*][1] W: FD 10 14 18 
+[[38;5;220mMEDI[0m][0029] -- Receiving message from pipe (FD 15)...
+[[38;5;220mMEDI[0m][0029] -- 4 bytes read from pipe (FD 15)
+[[38;5;220mMEDI[0m][0029] -- Received message #34: [REQ1]
+[[38;5;220mMEDI[0m][0029] -- Request received [REQ1] from subscriber 3 at pipe (FD 15)
+[[38;5;220mMEDI[0m][0029] -- Processing message request from pipe (FD 15)
+[[38;5;220mMEDI[0m][0029] -- Circular buffer: Determining next ready message and metadata
+[[38;5;220mMEDI[0m][0029] -- Circular buffer: Next message found at slot 1
+[[38;5;220mMEDI[0m][0029] -- Circular buffer: Message #1: [ wyms ]
+[[38;5;220mMEDI[0m][0029] -- Circular buffer: Metadata: [ PX | SSS ]
+[[38;5;220mMEDI[0m][0029] -- Circular buffer: Metadata: [ 3;0 | 10;14;18 ]
+[[38;5;220mMEDI[0m][0029] -- Circular buffer: Metadata checked for message #1: Subscriber condition 18 == 10 ]
+[[38;5;220mMEDI[0m][0029] -- Circular buffer: Metadata checked for message #1: Subscriber condition 18 == 14 ]
+[[38;5;220mMEDI[0m][0029] -- Circular buffer: Metadata checked for message #1: Subscriber condition 18 == 18 ]
+[[38;5;220mMEDI[0m][0029] -- Circular buffer: Message #1 matches the subscriber pipe (FD 18)
+[[38;5;220mMEDI[0m][0029] -- Circular buffer: Message #1 [wyms] loaded
+[[38;5;220mMEDI[0m][0029] -- Circular buffer: Buffer contents
+[[38;5;220mMEDI[0m][0029] -- Circular buffer: Message no [ Msg  |  Meta ]
+[[38;5;220mMEDI[0m][0029] -- Circular buffer: Message #1 [ wyms | PXSSS ]
+[[38;5;220mMEDI[0m][0029] -- Circular buffer: Message #2 [ HTZK | XPSSS ]
+[[38;5;220mMEDI[0m][0029] -- Circular buffer: Message #3 [    EMPTY     ]
+[[38;5;220mMEDI[0m][0029] -- Circular buffer: Message #4 [    EMPTY     ]
+[[38;5;220mMEDI[0m][0029] -- Circular buffer: Message #5 [    EMPTY     ]
+[[38;5;220mMEDI[0m][0029] -- Circular buffer: Message #6 [    EMPTY     ]
+[[38;5;220mMEDI[0m][0029] -- Circular buffer: Message #7 [    EMPTY     ]
+[[38;5;220mMEDI[0m][0029] -- Circular buffer: Message #8 [    EMPTY     ]
+[[38;5;220mMEDI[0m][0029] -- Circular buffer: Buffer contents listed
+[[38;5;220mMEDI[0m][0029] -- Circular buffer: Messages: 2, empty message: 6, slots: 8
+[[38;5;220mMEDI[0m][0029] -- Circular buffer: Update message counter: 2
+[[38;5;220mMEDI[0m][0029] -- Processing message 2 towards pipe (FD 18)
+[[38;5;220mMEDI[0m][0029] -- Sending message [wyms] to pipe (FD 18)...
+[[38;5;220mMEDI[0m][0029] -- 4 bytes written to pipe (FD 18)
+[[38;5;220mMEDI[0m][0029] -- Requests remaining 0
+[[38;5;220mMEDI[0m][0029] -- Circular buffer: Updating metadata for message 18
+[[38;5;220mMEDI[0m][0029] -- Circular buffer: Original metadata read: [ PX | SSS ]
+[[38;5;220mMEDI[0m][0029] -- Circular buffer: Modified metadata: [ PX | SSY ]
+[[38;5;220mMEDI[0m][0029] -- Circular buffer: Based on metadata message #2 to be deleted
+[[38;5;220mMEDI[0m][0029] -- Circular buffer: Deleting message #3 from the circular buffer
+[[38;5;220mMEDI[0m][0029] -- Circular buffer: Message #3 in the circular buffer already empty
+[[38;5;220mMEDI[0m][0029] -- Circular buffer: 2 messages left in the circular buffer
+[[38;5;220mMEDI[0m][0029] -- Circular buffer: Message #19 [    EMPTY     ]
+[[38;5;220mMEDI[0m][0029] -- Message [] processed
+[[38;5;220mMEDI[0m][0029] -- Circular buffer: Buffer contents
+[[38;5;220mMEDI[0m][0029] -- Circular buffer: Message no [ Msg  |  Meta ]
+[[38;5;220mMEDI[0m][0029] -- Circular buffer: Message #1 [ wyms | PXSSS ]
+[[38;5;220mMEDI[0m][0029] -- Circular buffer: Message #2 [ HTZK | XPSSS ]
+[[38;5;220mMEDI[0m][0029] -- Circular buffer: Message #3 [    EMPTY     ]
+[[38;5;220mMEDI[0m][0029] -- Circular buffer: Message #4 [    EMPTY     ]
+[[38;5;220mMEDI[0m][0029] -- Circular buffer: Message #5 [    EMPTY     ]
+[[38;5;220mMEDI[0m][0029] -- Circular buffer: Message #6 [    EMPTY     ]
+[[38;5;220mMEDI[0m][0029] -- Circular buffer: Message #7 [    EMPTY     ]
+[[38;5;220mMEDI[0m][0029] -- Circular buffer: Message #8 [    EMPTY     ]
+[[38;5;220mMEDI[0m][0029] -- Circular buffer: Buffer contents listed
+[[38;5;220mMEDI[0m][0029] -- Circular buffer: Messages: 2, empty message: 6, slots: 8
+[[38;5;220mMEDI[0m][0029] -- Circular buffer: Buffer contents
+[[38;5;220mMEDI[0m][0029] -- Circular buffer: Message no [ Msg  |  Meta ]
+[[38;5;220mMEDI[0m][0029] -- Circular buffer: Message #1 [ wyms | PXSSS ]
+[[38;5;220mMEDI[0m][0029] -- Circular buffer: Message #2 [ HTZK | XPSSS ]
+[[38;5;220mMEDI[0m][0029] -- Circular buffer: Message #3 [    EMPTY     ]
+[[38;5;220mMEDI[0m][0029] -- Circular buffer: Message #4 [    EMPTY     ]
+[[38;5;220mMEDI[0m][0029] -- Circular buffer: Message #5 [    EMPTY     ]
+[[38;5;220mMEDI[0m][0029] -- Circular buffer: Message #6 [    EMPTY     ]
+[[38;5;220mMEDI[0m][0029] -- Circular buffer: Message #7 [    EMPTY     ]
+[[38;5;220mMEDI[0m][0029] -- Circular buffer: Message #8 [    EMPTY     ]
+[[38;5;220mMEDI[0m][0029] -- Circular buffer: Buffer contents listed
+[[38;5;220mMEDI[0m][0029] -- Circular buffer: Messages: 2, empty message: 6, slots: 8
+[[38;5;220mMEDI[0m][0029] -- Circular buffer: Determining next ready message and metadata
+[[38;5;220mMEDI[0m][0029] -- Circular buffer: Next message found at slot 1
+[[38;5;220mMEDI[0m][0029] -- Circular buffer: Message #1: [ wyms ]
+[[38;5;220mMEDI[0m][0029] -- Circular buffer: Metadata: [ PX | SSY ]
+[[38;5;220mMEDI[0m][0029] -- Circular buffer: Metadata: [ 3;0 | 10;14;0 ]
+[[38;5;220mMEDI[0m][0029] -- Circular buffer: Metadata checked for message #1: Subscriber condition 18 == 10 ]
+[[38;5;220mMEDI[0m][0029] -- Circular buffer: Metadata checked for message #1: Subscriber condition 18 == 14 ]
+[[38;5;220mMEDI[0m][0029] -- Circular buffer: Metadata checked for message #1: Subscriber condition 18 == 0 ]
+[[38;5;220mMEDI[0m][0029] -- Circular buffer: Next message found at slot 2
+[[38;5;220mMEDI[0m][0029] -- Circular buffer: Message #2: [ HTZK ]
+[[38;5;220mMEDI[0m][0029] -- Circular buffer: Metadata: [ PX | SSY ]
+[[38;5;220mMEDI[0m][0029] -- Circular buffer: Metadata: [ 3;0 | 10;14;0 ]
+[[38;5;220mMEDI[0m][0029] -- Circular buffer: Metadata checked for message #2: Subscriber condition 18 == 10 ]
+[[38;5;220mMEDI[0m][0029] -- Circular buffer: Metadata checked for message #2: Subscriber condition 18 == 14 ]
+[[38;5;220mMEDI[0m][0029] -- Circular buffer: Metadata checked for message #2: Subscriber condition 18 == 0 ]
+[[38;5;220mMEDI[0m][INFO] -- Current time (usec): 614924
+[[38;5;220mMEDI[0m][INFO] -- Time difference: 194681
+[[38;5;220mMEDI[0m][0030] -- Active pipes[*][0] R: FD 5 
+[[38;5;220mMEDI[0m][0030] -- Active pipes[*][1] W: FD 10 14 18 
+[[38;5;220mMEDI[0m][0030] -- Receiving message from pipe (FD 5)...
+[[38;5;220mMEDI[0m][0030] -- 4 bytes read from pipe (FD 5)
+[[38;5;220mMEDI[0m][0030] -- Received message #35: [EILN]
+[[38;5;220mMEDI[0m][0030] -- Sending message [EILN] to circular buffer...
+[[38;5;220mMEDI[0m][0030] -- Circular buffer variables: Message #3 offset: 22
+[[38;5;220mMEDI[0m][0030] -- Circular buffer: Pipe FD received: 5
+[[38;5;220mMEDI[0m][0030] -- Circular buffer: Determine free message slot in the circular buffer
+[[38;5;220mMEDI[0m][0030] -- Circular buffer: Found free message #3 slot in the circular buffer
+[[38;5;220mMEDI[0m][0030] -- Circular buffer: Writing message [EILN] to slot #3 to circular buffer
+[[38;5;220mMEDI[0m][0030] -- Circular buffer: Message #3 [EILN] from pipe (FD 5) written in 4 bytes to circular buffer
+[[38;5;220mMEDI[0m][0030] -- Circular buffer: Message #3 [ EILN | XPSSS ]
+[[38;5;220mMEDI[0m][0030] -- Circular buffer: 3 messages in the circular buffer
+[[38;5;220mMEDI[0m][0030] -- Message #35 [EILN] saved successfully in circular buffer...
+[[38;5;220mMEDI[0m][0030] -- Circular buffer: Buffer contents
+[[38;5;220mMEDI[0m][0030] -- Circular buffer: Message no [ Msg  |  Meta ]
+[[38;5;220mMEDI[0m][0030] -- Circular buffer: Message #1 [ wyms | PXSSS ]
+[[38;5;220mMEDI[0m][0030] -- Circular buffer: Message #2 [ HTZK | XPSSS ]
+[[38;5;220mMEDI[0m][0030] -- Circular buffer: Message #3 [ EILN | XPSSS ]
+[[38;5;220mMEDI[0m][0030] -- Circular buffer: Message #4 [    EMPTY     ]
+[[38;5;220mMEDI[0m][0030] -- Circular buffer: Message #5 [    EMPTY     ]
+[[38;5;220mMEDI[0m][0030] -- Circular buffer: Message #6 [    EMPTY     ]
+[[38;5;220mMEDI[0m][0030] -- Circular buffer: Message #7 [    EMPTY     ]
+[[38;5;220mMEDI[0m][0030] -- Circular buffer: Message #8 [    EMPTY     ]
+[[38;5;220mMEDI[0m][0030] -- Circular buffer: Buffer contents listed
+[[38;5;220mMEDI[0m][0030] -- Circular buffer: Messages: 3, empty message: 5, slots: 8
+[[38;5;220mMEDI[0m][0030] -- Circular buffer: Determining next ready message and metadata
+[[38;5;220mMEDI[0m][0030] -- Circular buffer: Next message found at slot 1
+[[38;5;220mMEDI[0m][0030] -- Circular buffer: Message #1: [ wyms ]
+[[38;5;220mMEDI[0m][0030] -- Circular buffer: Metadata: [ XP | SSS ]
+[[38;5;220mMEDI[0m][0030] -- Circular buffer: Metadata: [ 0;5 | 10;14;18 ]
+[[38;5;220mMEDI[0m][0030] -- Circular buffer: Metadata checked for message #1: Subscriber condition 18 == 10 ]
+[[38;5;220mMEDI[0m][0030] -- Circular buffer: Metadata checked for message #1: Subscriber condition 18 == 14 ]
+[[38;5;220mMEDI[0m][0030] -- Circular buffer: Metadata checked for message #1: Subscriber condition 18 == 18 ]
+[[38;5;220mMEDI[0m][0030] -- Circular buffer: Message #1 matches the subscriber pipe (FD 18)
+[[38;5;220mMEDI[0m][0030] -- Circular buffer: Message #1 [wyms] loaded
+[[38;5;220mMEDI[0m][INFO] -- Current time (usec): 311440
+[[38;5;220mMEDI[0m][INFO] -- Time difference: 498165
+[[38;5;220mMEDI[0m][0031] -- Active pipes[*][0] R: FD 3 15 
+[[38;5;220mMEDI[0m][0031] -- Active pipes[*][1] W: FD 10 14 18 
+[[38;5;220mMEDI[0m][0031] -- Receiving message from pipe (FD 3)...
+[[38;5;220mMEDI[0m][0031] -- 4 bytes read from pipe (FD 3)
+[[38;5;220mMEDI[0m][0031] -- Received message #36: [wyoo]
+[[38;5;220mMEDI[0m][0031] -- Sending message [wyoo] to circular buffer...
+[[38;5;220mMEDI[0m][0031] -- Circular buffer variables: Message #1 offset: 0
+[[38;5;220mMEDI[0m][0031] -- Circular buffer: Pipe FD received: 3
+[[38;5;220mMEDI[0m][0031] -- Circular buffer: Determine free message slot in the circular buffer
+[[38;5;220mMEDI[0m][0031] -- Circular buffer: Found free message #4 slot in the circular buffer
+[[38;5;220mMEDI[0m][0031] -- Circular buffer: Writing message [wyoo] to slot #4 to circular buffer
+[[38;5;220mMEDI[0m][0031] -- Circular buffer: Message #4 [wyoo] from pipe (FD 3) written in 4 bytes to circular buffer
+[[38;5;220mMEDI[0m][0031] -- Circular buffer: Message #4 [    EMPTY     ]
+[[38;5;220mMEDI[0m][0031] -- Circular buffer: 1 messages in the circular buffer
+[[38;5;220mMEDI[0m][0031] -- Message #36 [wyoo] saved successfully in circular buffer...
+[[38;5;220mMEDI[0m][0031] -- Receiving message from pipe (FD 15)...
+[[38;5;220mMEDI[0m][0031] -- 4 bytes read from pipe (FD 15)
+[[38;5;220mMEDI[0m][0031] -- Received message #37: [REQ1]
+[[38;5;220mMEDI[0m][0031] -- Request received [REQ1] from subscriber 3 at pipe (FD 15)
+[[38;5;220mMEDI[0m][0031] -- Processing message request from pipe (FD 15)
+[[38;5;220mMEDI[0m][0031] -- Circular buffer: Determining next ready message and metadata
+[[38;5;220mMEDI[0m][0031] -- Circular buffer: Next message found at slot 1
+[[38;5;220mMEDI[0m][0031] -- Circular buffer: Message #1: [ wyoo ]
+[[38;5;220mMEDI[0m][0031] -- Circular buffer: Metadata: [ PX | SSS ]
+[[38;5;220mMEDI[0m][0031] -- Circular buffer: Metadata: [ 3;0 | 10;14;18 ]
+[[38;5;220mMEDI[0m][0031] -- Circular buffer: Metadata checked for message #1: Subscriber condition 18 == 10 ]
+[[38;5;220mMEDI[0m][0031] -- Circular buffer: Metadata checked for message #1: Subscriber condition 18 == 14 ]
+[[38;5;220mMEDI[0m][0031] -- Circular buffer: Metadata checked for message #1: Subscriber condition 18 == 18 ]
+[[38;5;220mMEDI[0m][0031] -- Circular buffer: Message #1 matches the subscriber pipe (FD 18)
+[[38;5;220mMEDI[0m][0031] -- Circular buffer: Message #1 [wyoo] loaded
+[[38;5;220mMEDI[0m][0031] -- Circular buffer: Buffer contents
+[[38;5;220mMEDI[0m][0031] -- Circular buffer: Message no [ Msg  |  Meta ]
+[[38;5;220mMEDI[0m][0031] -- Circular buffer: Message #1 [ wyoo | PXSSS ]
+[[38;5;220mMEDI[0m][0031] -- Circular buffer: Message #2 [ HTZK | XPSSS ]
+[[38;5;220mMEDI[0m][0031] -- Circular buffer: Message #3 [ EILN | XPSSS ]
+[[38;5;220mMEDI[0m][0031] -- Circular buffer: Message #4 [    EMPTY     ]
+[[38;5;220mMEDI[0m][0031] -- Circular buffer: Message #5 [    EMPTY     ]
+[[38;5;220mMEDI[0m][0031] -- Circular buffer: Message #6 [    EMPTY     ]
+[[38;5;220mMEDI[0m][0031] -- Circular buffer: Message #7 [    EMPTY     ]
+[[38;5;220mMEDI[0m][0031] -- Circular buffer: Message #8 [    EMPTY     ]
+[[38;5;220mMEDI[0m][0031] -- Circular buffer: Buffer contents listed
+[[38;5;220mMEDI[0m][0031] -- Circular buffer: Messages: 3, empty message: 5, slots: 8
+[[38;5;220mMEDI[0m][0031] -- Circular buffer: Update message counter: 3
+[[38;5;220mMEDI[0m][0031] -- Processing message 3 towards pipe (FD 18)
+[[38;5;220mMEDI[0m][0031] -- Sending message [wyoo] to pipe (FD 18)...
+[[38;5;220mMEDI[0m][0031] -- 4 bytes written to pipe (FD 18)
+[[38;5;220mMEDI[0m][0031] -- Requests remaining 0
+[[38;5;220mMEDI[0m][0031] -- Circular buffer: Updating metadata for message 18
+[[38;5;220mMEDI[0m][0031] -- Circular buffer: Original metadata read: [ PX | SSS ]
+[[38;5;220mMEDI[0m][0031] -- Circular buffer: Modified metadata: [ PX | SSY ]
+[[38;5;220mMEDI[0m][0031] -- Circular buffer: Based on metadata message #3 to be deleted
+[[38;5;220mMEDI[0m][0031] -- Circular buffer: Deleting message #4 from the circular buffer
+[[38;5;220mMEDI[0m][0031] -- Circular buffer: Message #4 in the circular buffer already empty
+[[38;5;220mMEDI[0m][0031] -- Circular buffer: 3 messages left in the circular buffer
+[[38;5;220mMEDI[0m][0031] -- Circular buffer: Message #19 [    EMPTY     ]
+[[38;5;220mMEDI[0m][0031] -- Message [] processed
+[[38;5;220mMEDI[0m][0031] -- Circular buffer: Buffer contents
+[[38;5;220mMEDI[0m][0031] -- Circular buffer: Message no [ Msg  |  Meta ]
+[[38;5;220mMEDI[0m][0031] -- Circular buffer: Message #1 [ wyoo | PXSSS ]
+[[38;5;220mMEDI[0m][0031] -- Circular buffer: Message #2 [ HTZK | XPSSS ]
+[[38;5;220mMEDI[0m][0031] -- Circular buffer: Message #3 [ EILN | XPSSS ]
+[[38;5;220mMEDI[0m][0031] -- Circular buffer: Message #4 [    EMPTY     ]
+[[38;5;220mMEDI[0m][0031] -- Circular buffer: Message #5 [    EMPTY     ]
+[[38;5;220mMEDI[0m][0031] -- Circular buffer: Message #6 [    EMPTY     ]
+[[38;5;220mMEDI[0m][0031] -- Circular buffer: Message #7 [    EMPTY     ]
+[[38;5;220mMEDI[0m][0031] -- Circular buffer: Message #8 [    EMPTY     ]
+[[38;5;220mMEDI[0m][0031] -- Circular buffer: Buffer contents listed
+[[38;5;220mMEDI[0m][0031] -- Circular buffer: Messages: 3, empty message: 5, slots: 8
+[[38;5;220mMEDI[0m][0031] -- Circular buffer: Buffer contents
+[[38;5;220mMEDI[0m][0031] -- Circular buffer: Message no [ Msg  |  Meta ]
+[[38;5;220mMEDI[0m][0031] -- Circular buffer: Message #1 [ wyoo | PXSSS ]
+[[38;5;220mMEDI[0m][0031] -- Circular buffer: Message #2 [ HTZK | XPSSS ]
+[[38;5;220mMEDI[0m][0031] -- Circular buffer: Message #3 [ EILN | XPSSS ]
+[[38;5;220mMEDI[0m][0031] -- Circular buffer: Message #4 [    EMPTY     ]
+[[38;5;220mMEDI[0m][0031] -- Circular buffer: Message #5 [    EMPTY     ]
+[[38;5;220mMEDI[0m][0031] -- Circular buffer: Message #6 [    EMPTY     ]
+[[38;5;220mMEDI[0m][0031] -- Circular buffer: Message #7 [    EMPTY     ]
+[[38;5;220mMEDI[0m][0031] -- Circular buffer: Message #8 [    EMPTY     ]
+[[38;5;220mMEDI[0m][0031] -- Circular buffer: Buffer contents listed
+[[38;5;220mMEDI[0m][0031] -- Circular buffer: Messages: 3, empty message: 5, slots: 8
+[[38;5;220mMEDI[0m][0031] -- Circular buffer: Determining next ready message and metadata
+[[38;5;220mMEDI[0m][0031] -- Circular buffer: Next message found at slot 1
+[[38;5;220mMEDI[0m][0031] -- Circular buffer: Message #1: [ wyoo ]
+[[38;5;220mMEDI[0m][0031] -- Circular buffer: Metadata: [ PX | SSY ]
+[[38;5;220mMEDI[0m][0031] -- Circular buffer: Metadata: [ 3;0 | 10;14;0 ]
+[[38;5;220mMEDI[0m][0031] -- Circular buffer: Metadata checked for message #1: Subscriber condition 18 == 10 ]
+[[38;5;220mMEDI[0m][0031] -- Circular buffer: Metadata checked for message #1: Subscriber condition 18 == 14 ]
+[[38;5;220mMEDI[0m][0031] -- Circular buffer: Metadata checked for message #1: Subscriber condition 18 == 0 ]
+[[38;5;220mMEDI[0m][0031] -- Circular buffer: Next message found at slot 2
+[[38;5;220mMEDI[0m][0031] -- Circular buffer: Message #2: [ HTZK ]
+[[38;5;220mMEDI[0m][0031] -- Circular buffer: Metadata: [ PX | SSY ]
+[[38;5;220mMEDI[0m][0031] -- Circular buffer: Metadata: [ 3;0 | 10;14;0 ]
+[[38;5;220mMEDI[0m][0031] -- Circular buffer: Metadata checked for message #2: Subscriber condition 18 == 10 ]
+[[38;5;220mMEDI[0m][0031] -- Circular buffer: Metadata checked for message #2: Subscriber condition 18 == 14 ]
+[[38;5;220mMEDI[0m][0031] -- Circular buffer: Metadata checked for message #2: Subscriber condition 18 == 0 ]
+[[38;5;220mMEDI[0m][0031] -- Circular buffer: Next message found at slot 3
+[[38;5;220mMEDI[0m][0031] -- Circular buffer: Message #3: [ EILN ]
+[[38;5;220mMEDI[0m][0031] -- Circular buffer: Metadata: [ PX | SSY ]
+[[38;5;220mMEDI[0m][0031] -- Circular buffer: Metadata: [ 3;0 | 10;14;0 ]
+[[38;5;220mMEDI[0m][0031] -- Circular buffer: Metadata checked for message #3: Subscriber condition 18 == 10 ]
+[[38;5;220mMEDI[0m][0031] -- Circular buffer: Metadata checked for message #3: Subscriber condition 18 == 14 ]
+[[38;5;220mMEDI[0m][0031] -- Circular buffer: Metadata checked for message #3: Subscriber condition 18 == 0 ]
+[[38;5;220mMEDI[0m][INFO] -- Current time (usec): 815300
+[[38;5;220mMEDI[0m][INFO] -- Time difference: 5695
+[[38;5;220mMEDI[0m][0032] -- Active pipes[*][0] R: FD 3 
+[[38;5;220mMEDI[0m][0032] -- Active pipes[*][1] W: FD 10 14 18 
+[[38;5;220mMEDI[0m][0032] -- Receiving message from pipe (FD 3)...
+[[38;5;220mMEDI[0m][0032] -- 4 bytes read from pipe (FD 3)
+[[38;5;220mMEDI[0m][0032] -- Received message #38: [ayyw]
+[[38;5;220mMEDI[0m][0032] -- Sending message [ayyw] to circular buffer...
+[[38;5;220mMEDI[0m][0032] -- Circular buffer variables: Message #4 offset: 33
+[[38;5;220mMEDI[0m][0032] -- Circular buffer: Pipe FD received: 3
+[[38;5;220mMEDI[0m][0032] -- Circular buffer: Determine free message slot in the circular buffer
+[[38;5;220mMEDI[0m][0032] -- Circular buffer: Found free message #4 slot in the circular buffer
+[[38;5;220mMEDI[0m][0032] -- Circular buffer: Writing message [ayyw] to slot #4 to circular buffer
+[[38;5;220mMEDI[0m][0032] -- Circular buffer: Message #4 [ayyw] from pipe (FD 3) written in 4 bytes to circular buffer
+[[38;5;220mMEDI[0m][0032] -- Circular buffer: Message #4 [ ayyw | PXSSS ]
+[[38;5;220mMEDI[0m][0032] -- Circular buffer: 4 messages in the circular buffer
+[[38;5;220mMEDI[0m][0032] -- Message #38 [ayyw] saved successfully in circular buffer...
+[[38;5;220mMEDI[0m][0032] -- Circular buffer: Buffer contents
+[[38;5;220mMEDI[0m][0032] -- Circular buffer: Message no [ Msg  |  Meta ]
+[[38;5;220mMEDI[0m][0032] -- Circular buffer: Message #1 [ wyoo | PXSSS ]
+[[38;5;220mMEDI[0m][0032] -- Circular buffer: Message #2 [ HTZK | XPSSS ]
+[[38;5;220mMEDI[0m][0032] -- Circular buffer: Message #3 [ EILN | XPSSS ]
+[[38;5;220mMEDI[0m][0032] -- Circular buffer: Message #4 [ ayyw | PXSSS ]
+[[38;5;220mMEDI[0m][0032] -- Circular buffer: Message #5 [    EMPTY     ]
+[[38;5;220mMEDI[0m][0032] -- Circular buffer: Message #6 [    EMPTY     ]
+[[38;5;220mMEDI[0m][0032] -- C[SHELL] Sending signal
+ircular buffer: Message #7 [    EMPTY     ]
+[[38;5;220mMEDI[0m][0032] -- Circular buffer: Message #8 [    EMPTY     ]
+[[38;5;220mMEDI[0m][0032] -- Circular buffer: Buffer contents listed
+[[38;5;220mMEDI[0m][0032] -- Circular buffer: Messages: 4, empty message: 4, slots: 8
+[[38;5;220mMEDI[0m][0032] -- Circular buffer: Determining next ready message and metadata
+[[38;5;220mMEDI[0m][0032] -- Circular buffer: Next message found at slot 1
+[[38;5;220mMEDI[0m][0032] -- Circular buffer: Message #1: [ wyoo ]
+[[38;5;220mMEDI[0m][0032] -- Circular buffer: Metadata: [ PX | SSS ]
+[[38;5;220mMEDI[0m][0032] -- Circular buffer: Metadata: [ 3;0 | 10;14;18 ]
+[[38;5;220mMEDI[0m][0032] -- Circular buffer: Metadata checked for message #1: Subscriber condition 18 == 10 ]
+[[38;5;220mMEDI[0m][0032] -- Circular buffer: Metadata checked for message #1: Subscriber condition 18 == 14 ]
+[[38;5;220mMEDI[0m][0032] -- Circular buffer: Metadata checked for message #1: Subscriber condition 18 == 18 ]
+[[38;5;220mMEDI[0m][0032] -- Circular buffer: Message #1 matches the subscriber pipe (FD 18)
+[[38;5;220mMEDI[0m][0032] -- Circular buffer: Message #1 [wyoo] loaded
+[[38;5;220mMEDI[0m][INFO] -- Current time (usec): 312307
+[[38;5;220mMEDI[0m][INFO] -- Time difference: 497298
+[[38;5;220mMEDI[0m][0033] -- Active pipes[*][0] R: FD 5 
+[[38;5;220mMEDI[0m][0033] -- Active pipes[*][1] W: FD 10 14 18 
+[[38;5;220mMEDI[0m][0033] -- Receiving message from pipe (FD 5)...
+[[38;5;220mMEDI[0m][0033] -- 4 bytes read from pipe (FD 5)
+[[38;5;220mMEDI[0m][0033] -- Received message #39: [BKDE]
+[[38;5;220mMEDI[0m][0033] -- Sending message [BKDE] to circular buffer...
+[[38;5;220mMEDI[0m][0033] -- Circular buffer variables: Message #1 offset: 0
+[[38;5;220mMEDI[0m][0033] -- Circular buffer: Pipe FD received: 5
+[[38;5;220mMEDI[0m][0033] -- Circular buffer: Determine free message slot in the circular buffer
+[[38;5;220mMEDI[0m][0033] -- Circular buffer: Found free message #5 slot in the circular buffer
+[[38;5;220mMEDI[0m][0033] -- Circular buffer: Writing message [BKDE] to slot #5 to circular buffer
+[[38;5;220mMEDI[0m][0033] -- Circular buffer: Message #5 [BKDE] from pipe (FD 5) written in 4 bytes to circular buffer
+[[38;5;220mMEDI[0m][0033] -- Circular buffer: Message #5 [    EMPTY     ]
+[[38;5;220mMEDI[0m][0033] -- Circular buffer: 1 messages in the circular buffer
+[[38;5;220mMEDI[0m][0033] -- Message #39 [BKDE] saved successfully in circular buffer...
+[[38;5;220mMEDI[0m][0033] -- Circular buffer: Buffer contents
+[[38;5;220mMEDI[0m][0033] -- Circular buffer: Message no [ Msg  |  Meta ]
+[[38;5;220mMEDI[0m][0033] -- Circular buffer: Message #1 [ BKDE | XPSSS ]
+[[38;5;220mMEDI[0m][0033] -- Circular buffer: Message #2 [ HTZK | XPSSS ]
+[[38;5;220mMEDI[0m][0033] -- Circular buffer: Message #3 [ EILN | XPSSS ]
+[[38;5;220mMEDI[0m][0033] -- Circular buffer: Message #4 [ ayyw | PXSSS ]
+[[38;5;220mMEDI[0m][0033] -- Circular buffer: Message #5 [    EMPTY     ]
+[[38;5;220mMEDI[0m][0033] -- Circular buffer: Message #6 [    EMPTY     ]
+[[38;5;220mMEDI[0m][0033] -- Circular buffer: Message #7 [    EMPTY     ]
+[[38;5;220mMEDI[0m][0033] -- Circular buffer: Message #8 [    EMPTY     ]
+[[38;5;220mMEDI[0m][0033] -- Circular buffer: Buffer contents listed
+[[38;5;220mMEDI[0m][0033] -- Circular buffer: Messages: 4, empty message: 4, slots: 8
+[[38;5;220mMEDI[0m][0033] -- Circular buffer: Update message counter: 4
+[[38;5;220mMEDI[0m][0033] -- Circular buffer: Determining next ready message and metadata
+[[38;5;220mMEDI[0m][0033] -- Circular buffer: Next message found at slot 1
+[[38;5;220mMEDI[0m][0033] -- Circular buffer: Message #1: [ BKDE ]
+[[38;5;220mMEDI[0m][0033] -- Circular buffer: Metadata: [ XP | SSS ]
+[[38;5;220mMEDI[0m][0033] -- Circular buffer: Metadata: [ 0;5 | 10;14;18 ]
+[[38;5;220mMEDI[0m][0033] -- Circular buffer: Metadata checked for message #1: Subscriber condition 18 == 10 ]
+[[38;5;220mMEDI[0m][0033] -- Circular buffer: Metadata checked for message #1: Subscriber condition 18 == 14 ]
+[[38;5;220[[38;5;84mPUB2[0m][0001] -- Publisher-2 initialization
+[[38;5;84mPUB2[0m][INFO] -- PID: 1071
+[[38;5;84mPUB2[0m][INFO] -- Time period: 2000
+[[38;5;84mPUB2[0m][INFO] -- Message length: 4
+[[38;5;84mPUB2[0m][INFO] -- Pipe 1W: 6
+[[38;5;84mPUB2[0m][INFO] -- Awaiting semaphore release
+[[38;5;84mPUB2[0m][INFO] -- Semaphore released
+[[38;5;84mPUB2[0m][0001] -- Publishing message: [HSPX]
+[[38;5;84mPUB2[0m][0001] -- Writing 4 bytes to pipe (FD 6)
+[[38;5;84mPUB2[0m][0001] -- 4 bytes written to pipe (FD 6)
+[[38;5;84mPUB2[0m][0002] -- Publishing message: [HNAI]
+[[38;5;84mPUB2[0m][0002] -- Writing 4 bytes to pipe (FD 6)
+[[38;5;84mPUB2[0m][0002] -- 4 bytes written to pipe (FD 6)
+[[38;5;84mPUB2[0m][0003] -- Publishing message: [XZGP]
+[[38;5;84mPUB2[0m][0003] -- Writing 4 bytes to pipe (FD 6)
+[[38;5;84mPUB2[0m][0003] -- 4 bytes written to pipe (FD 6)
+[[38;5;84mPUB2[0m][0004] -- Publishing message: [ALTU]
+[[38;5;84mPUB2[0m][0004] -- Writing 4 bytes to pipe (FD 6)
+[[38;5;84mPUB2[0m][0004] -- 4 bytes written to pipe (FD 6)
+[[38;5;84mPUB2[0m][0005] -- Publishing message: [OAKQ]
+[[38;5;84mPUB2[0m][0005] -- Writing 4 bytes to pipe (FD 6)
+[[38;5;84mPUB2[0m][0005] -- 4 bytes written to pipe (FD 6)
+[[38;5;84mPUB2[0m][0006] -- Publishing message: [HOVD]
+[[38;5;84mPUB2[0m][0006] -- Writing 4 bytes to pipe (FD 6)
+[[38;5;84mPUB2[0m][0006] -- 4 bytes written to pipe (FD 6)
+[[38;5;84mPUB2[0m][0007] -- Publishing message: [AMWN]
+[[38;5;84mPUB2[0m][0007] -- Writing 4 bytes to pipe (FD 6)
+[[38;5;84mPUB2[0m][0007] -- 4 bytes written to pipe (FD 6)
+[[38;5;84mPUB2[0m][0008] -- Publishing message: [HTZK]
+[[38;5;84mPUB2[0m][0008] -- Writing 4 bytes to pipe (FD 6)
+[[38;5;84mPUB2[0m][0008] -- 4 bytes written to pipe (FD 6)
+[[38;5;84mPUB2[0m][0009] -- Publishing message: [EILN]
+[[38;5;84mPUB2[0m][0009] -- Writing 4 bytes to pipe (FD 6)
+[[38;5;84mPUB2[0m][0009] -- 4 bytes written to pipe (FD 6)
+[[38;5;84mPUB2[0m][0010] -- Publishing message: [BKDE]
+[[38;5;84mPUB2[0m][0010] -- Writing 4 bytes to pipe (FD 6)
+[[38;5;84mPUB2[0m][0010] -- 4 bytes written to pipe (FD 6)
+[[38;5;84mPUB2[0m][0010][SIGNAL HANDLER] Process 1071 received signal: 10
+[[38;5;84mPUB2[0m][0011] PID 1071: Exiting Publisher-2
+[[38;5;87mPUB1[0m][0001] -- Publisher-1 initialization
+[[38;5;87mPUB1[0m][INFO] -- PID: 1070
+[[38;5;87mPUB1[0m][INFO] -- Time period: 1000
+[[38;5;87mPUB1[0m][INFO] -- Message length: 4
+[[38;5;87mPUB1[0m][INFO] -- Pipe 1W: 4
+[[38;5;87mPUB1[0m][INFO] -- Awaiting semaphore release
+[[38;5;87mPUB1[0m][INFO] -- Semaphore released
+[[38;5;87mPUB1[0m][0001] -- Publishing message: [uewi]
+[[38;5;87mPUB1[0m][0001] -- Writing 4 bytes to pipe (FD 4)
+[[38;5;87mPUB1[0m][0001] -- 4 bytes written to pipe (FD 4)
+[[38;5;87mPUB1[0m][0002] -- Publishing message: [uoks]
+[[38;5;87mPUB1[0m][0002] -- Writing 4 bytes to pipe (FD 4)
+[[38;5;87mPUB1[0m][0002] -- 4 bytes written to pipe (FD 4)
+[[38;5;87mPUB1[0m][0003] -- Publishing message: [yqoe]
+[[38;5;87mPUB1[0m][0003] -- Writing 4 bytes to pipe (FD 4)
+[[38;5;87mPUB1[0m][0003] -- 4 bytes written to pipe (FD 4)
+[[38;5;87mPUB1[0m][0004] -- Publishing message: [aceo]
+[[38;5;87mPUB1[0m][0004] -- Writing 4 bytes to pipe (FD 4)
+[[38;5;87mPUB1[0m][0004] -- 4 bytes written to pipe (FD 4)
+[[38;5;87mPUB1[0m][0005] -- Publishing message: [skui]
+[[38;5;87mPUB1[0m][0005] -- Writing 4 bytes to pipe (FD 4)
+[[38;5;87mPUB1[0m][0005] -- 4 bytes written to pipe (FD 4)
+[[38;5;87mPUB1[0m][0006] -- Publishing message: [ousq]
+[[38;5;87mPUB1[0m][0006] -- Writing 4 bytes to pipe (FD 4)
+[[38;5;87mPUB1[0m][0006] -- 4 bytes written to pipe (FD 4)
+[[38;5;87mPUB1[0m][0007] -- Publishing message: [qeyk]
+[[38;5;87mPUB1[0m][0007] -- Writing 4 bytes to pipe (FD 4)
+[[38;5;87mPUB1[0m][0007] -- 4 bytes written to pipe (FD 4)
+[[38;5;87mPUB1[0m][0008] -- Publishing message: [skoc]
+[[38;5;87mPUB1[0m][0008] -- Writing 4 bytes to pipe (FD 4)
+[[38;5;87mPUB1[0m][0008] -- 4 bytes written to pipe (FD 4)
+[[38;5;87mPUB1[0m][0009] -- Publishing message: [ksgs]
+[[38;5;87mPUB1[0m][0009] -- Writing 4 bytes to pipe (FD 4)
+[[38;5;87mPUB1[0m][0009] -- 4 bytes written to pipe (FD 4)
+[[38;5;87mPUB1[0m][0010] -- Publishing message: [euku]
+[[38;5;87mPUB1[0m][0010] -- Writing 4 bytes to pipe (FD 4)
+[[38;5;87mPUB1[0m][0010] -- 4 bytes written to pipe (FD 4)
+[[38;5;87mPUB1[0m][0011] -- Publishing message: [mykm]
+[[38;5;87mPUB1[0m][0011] -- Writing 4 bytes to pipe (FD 4)
+[[38;5;87mPUB1[0m][0011] -- 4 bytes written to pipe (FD 4)
+[[38;5;87mPUB1[0m][0012] -- Publishing message: [aegi]
+[[38;5;87mPUB1[0m][0012] -- Writing 4 bytes to pipe (FD 4)
+[[38;5;87mPUB1[0m][0012] -- 4 bytes written to pipe (FD 4)
+[[38;5;87mPUB1[0m][0013] -- Publishing message: [ioku]
+[[38;5;87mPUB1[0m][0013] -- Writing 4 bytes to pipe (FD 4)
+[[38;5;87mPUB1[0m][0013] -- 4 bytes written to pipe (FD 4)
+[[38;5;87mPUB1[0m][0014] -- Publishing message: [euou]
+[[38;5;87mPUB1[0m][0014] -- Writing 4 bytes to pipe (FD 4)
+[[38;5;87mPUB1[0m][0014] -- 4 bytes written to pipe (FD 4)
+[[38;5;87mPUB1[0m][0015] -- Publishing message: [ykkg]
+[[38;5;87mPUB1[0m][0015] -- Writing 4 bytes to pipe (FD 4)
+[[38;5;87mPUB1[0m][0015] -- 4 bytes written to pipe (FD 4)
+[[38;5;87mPUB1[0m][0016] -- Publishing message: [cees]
+[[38;5;87mPUB1[0m][0016] -- Writing 4 bytes to pipe (FD 4)
+[[38;5;87mPUB1[0m][0016] -- 4 bytes written to pipe (FD 4)
+[[38;5;87mPUB1[0m][0017] -- Publishing message: [wyms]
+[[38;5;87mPUB1[0m][0017] -- Writing 4 bytes to pipe (FD 4)
+[[38;5;87mPUB1[0m][0017] -- 4 bytes written to pipe (FD 4)
+[[38;5;87mPUB1[0m][0018] -- Publishing message: [wyoo]
+[[38;5;87mPUB1[0m][0018] -- Writing 4 bytes to pipe (FD 4)
+[[38;5;87mPUB1[0m][0018] -- 4 bytes written to pipe (FD 4)
+[[38;5;87mPUB1[0m][0019] -- Publishing message: [ayyw]
+[[38;5;87mPUB1[0m][0019] -- Writing 4 bytes to pipe (FD 4)
+[[38;5;87mPUB1[0m][0019] -- 4 bytes written to pipe (FD 4)
+[[38;5;87mPUB1[0m][0020] -- Publishing message: [uisg]
+[[38;5;87mPUB1[0m][0020] -- Writing 4 bytes to pipe (FD 4)
+[[38;5;87mPUB1[0m][0020] -- 4 bytes written to pipe (FD 4)
+[[38;5;87mPUB1[0m][0020][SIGNAL HANDLER] Process 1070 received signal: 10
+[[38;5;87mPUB1[0m][0021] PID 1070: Exiting Publisher-1
+mMEDI[0m][0033] -- Circular buffer: Metadata checked for message #1: Subscriber condition 18 == 18 ]
+[[38;5;220mMEDI[0m][0033] -- Circular buffer: Message #1 matches the subscriber pipe (FD 18)
+[[38;5;220mMEDI[0m][0033] -- Circular buffer: Message #1 [BKDE] loaded
+[[38;5;220mMEDI[0m][INFO] -- Current time (usec): 311519
+[[38;5;220mMEDI[0m][INFO] -- Time difference: 498086
+[[38;5;220mMEDI[0m][0033][SIGNAL HANDLER] Process 1069 received signal: 10
+[[38;5;220mMEDI[0m][0034] PID 1069: Exiting Mediator
+[SHELL] Signal send

@@ -1,5 +1,5 @@
-# UNIGE -- University of Genova
-# ECN -- École centrale de Nantes
+# UNIGE -- University of Genova, Italy
+# ECN -- École centrale de Nantes, France
 # EMARO+
 # Ernest Skrzypczyk
 

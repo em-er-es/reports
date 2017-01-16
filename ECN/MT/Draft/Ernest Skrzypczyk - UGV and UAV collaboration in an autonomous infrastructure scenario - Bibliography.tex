@@ -31,6 +31,7 @@
 \usepackage{algorithmic}
 \usepackage{amsmath,amsfonts,amsthm,amssymb}
 \usepackage{array}
+%\usepackage{arydshln}
 %\usepackage[T1]{fontenc}
 %\usepackage[MeX]{polski}
 \usepackage{polski}
@@ -68,15 +69,17 @@
 \usepackage[numbers]{natbib}
 \usepackage{pdflscape}
 \usepackage{pdfpages}
+\usepackage{rotating}
 \usepackage{setspace}
 %\usepackage{showframe}
 \usepackage{subcaption}
 %\usepackage{subfigure}
+%\usepackage{colortbl} %CLASH with xcolor: \cellcolor{color}
 \usepackage{tabularx}
 \usepackage{titlesec}
 \usepackage{varioref}
 \usepackage{wrapfig}
-%\usepackage[table]{xcolor}
+\usepackage[table]{xcolor}
 \usepackage{xfrac}
 \usepackage{xstring}
 \usepackage{tikz}
@@ -114,6 +117,8 @@
 \newcommand \dunderline[1]{\underline{\underline{\ #1\ }}}
 \newcommand \sunderline[1]{\underline{\ #1\ }}
 % % Mathematical symbols and structures
+\newcommand{\mat}[1]{\mathbb{\mathbf{#1}}}
+%\renewcommand{\mat}[1]{\mathbb{\mathbf{#1}}}
 \renewcommand{\vec}[1]{\overrightarrow{\mathbf{#1}}}
 %\renewcommand{\vece}[1]{\overrightarrow{\mathbf{#1}}}
 \newcommand{\vecg}[1]{\underline{\mathbf{#1}}}
@@ -306,7 +311,11 @@
 \setlength\parindent{24pt}
 
 % % % Colors
-\definecolor{DarkGreen}{rgb}{0.0,0.4,0.0}
+\definecolor{Lightgray}{rgb}{0.7, 0.7, 0.7}
+\definecolor{Gray}{rgb}{0.5, 0.5, 0.5}
+\definecolor{Darkgray}{rgb}{0.2, 0.2, 0.2}
+\definecolor{Red}{rgb}{1.0, 0.0, 0.0}
+\definecolor{DarkGreen}{rgb}{0.0, 0.4, 0.0}
 \IfFileExists{Graphics/color-palette.tex}{\input{Graphics/color-palette.tex}}
 
 % % % Debugging
@@ -479,14 +488,14 @@
 \input{Contents/1020-context-of-the-work.tex}
 
 
-\section{Motivation}\label{s:1030-motivation}
-\indent\indent
-\input{Contents/1030-motivation.tex}
-
-
-\section{Problem formulation}\label{s:1040-problem-formulation}
-\indent\indent
-\input{Contents/1040-problem-formulation.tex}
+%\section{Motivation}\label{s:1030-motivation}
+%\indent\indent
+%\input{Contents/1030-motivation.tex}
+%
+%
+%\section{Problem formulation}\label{s:1040-problem-formulation}
+%\indent\indent
+%\input{Contents/1040-problem-formulation.tex}
 
 
 \section{Contribution and innovation}\label{1050-contribution-and-innovation}
@@ -707,10 +716,11 @@ Previous work of Nived and Nicole as basis
 \indent\indent
 \input{Contents/9010-experimental-setup.tex}
 
-%\newpage %Workplan
-\section{Workplan}\label{s:9090-workplan}
+\newpage %Work plan
+\section{Work plan}\label{s:9090-work-plan}
 \indent\indent
-\input{Contents/9090-workplan.tex}
+\autoref{t:work-plan} shows the proposed work plan based on milestone tasks.
+\input{Contents/9090-work-plan.tex}
 \end{Problem}
 
 

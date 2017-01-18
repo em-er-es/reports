@@ -77,6 +77,7 @@
 %\usepackage{subfigure}
 %\usepackage{colortbl} %CLASH with xcolor: \cellcolor{color}
 \usepackage{tabularx}
+\usepackage{textpos}
 \usepackage{titlesec}
 \usepackage{varioref}
 \usepackage{wrapfig}
@@ -88,10 +89,17 @@
 
 % % % Packages configuration
 % % Tabular
-\newcolumntype{Y}{>{\centering\arraybackslash}X}
-%\newcolumntype{C}{>{\centering\arraybackslash}m{0.1\textwidth}}
 %\newcolumntype{C}{>{\centering\arraybackslash}m{\dimexpr.25\linewidth-2\tabcolsep}}
 \newcolumntype{C}{>{\centering\arraybackslash}m{\dimexpr.245\linewidth-2\tabcolsep}}
+%\newcolumntype{C}{>{\centering\arraybackslash}m{0.1\textwidth}}
+\newcolumntype{P}{>{\centering\arraybackslash\hsize=.25\hsize}X}
+\newcolumntype{Q}{>{\centering\arraybackslash\hsize=.125\hsize}X}
+\newcolumntype{M}{>{\centering\arraybackslash}m{\dimexpr.0865\linewidth-2\tabcolsep}}
+\newcolumntype{N}{>{\centering\arraybackslash}m{\dimexpr.25\linewidth-2\tabcolsep}}
+%\newcolumntype{O}{>{\centering\arraybackslash\hsize=.5\hsize}X}
+\newcolumntype{O}{>{\centering\arraybackslash\hsize=.5\hsize}X}
+\newcolumntype{Y}{>{\centering\arraybackslash}X}
+\newcolumntype{Z}[0]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}X}
 %\counterwithin{figure}{section}
 
 

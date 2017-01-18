@@ -43,6 +43,7 @@
 \usepackage{calc}
 \usepackage{caption}
 \usepackage{chngcntr}
+\usepackage{csquotes}
 \usepackage{extramarks}
 \usepackage{enumitem}
 \usepackage{fancyhdr}
@@ -119,11 +120,13 @@
 % % Mathematical symbols and structures
 \newcommand{\mat}[1]{\mathbb{\mathbf{#1}}}
 %\renewcommand{\mat}[1]{\mathbb{\mathbf{#1}}}
+%\newcommand{\spc}[1]{\mathbb{\mathbf{#1}}}
+\newcommand{\spc}[1]{\mathbb{#1}}
+\newcommand{\ssl}[1]{\phantom{}^{#1}}
 \renewcommand{\vec}[1]{\overrightarrow{\mathbf{#1}}}
 %\renewcommand{\vece}[1]{\overrightarrow{\mathbf{#1}}}
 \newcommand{\vecg}[1]{\underline{\mathbf{#1}}}
 %\renewcommand{\vec}[1]{\mathbf{\overline{#1}}}
-\newcommand{\ssl}[1]{\phantom{}^{#1}}
 % % Other
 \StrLeft{\figurename}{1}[\afig]
 
@@ -274,11 +277,11 @@
 %\newcommand{\Title}{Research Methodology}
 %\newcommand{\SubTitle}{Bibliography - UGV and UAV collaboration in an autonomous infrastructure scenario}
 \newcommand{\Title}{UGV and UAV collaboration in an autonomous infrastructure scenario}
-\newcommand{\STitle}{UGV \& UAV collaboration within autonomous infrastructure}
+\newcommand{\STitle}{UGV \& UAV collaboration}
 \newcommand{\SubTitle}{Bibliography}
 \newcommand{\Date}{24.01.17}
 \newcommand{\Time}{Wed 23:59}
-\newcommand{\Recipient}{Prof. I. Taralova, Prof. O. Kermorgant}
+\newcommand{\Recipient}{Prof. I. Taralova, Prof. O. Kermorgant, Prof. D. Marquez-Gamez}
 \newcommand{\Author}{Ernest Skrzypczyk, BSc}
 
 % % PDF general
@@ -500,12 +503,12 @@
 \input{90-proposed-work}
 \end{Problem}
 
-
-\clearpage
-\begin{Problem}[Conclusions]
-\section{Conclusions}\label{s:999-conclusions}
-\input{Contents/999-conclusions.tex}
-\end{Problem}
+%IS conclusions section needed?
+%\clearpage
+%\begin{Problem}[Conclusions]
+%\section{Conclusions}\label{s:999-conclusions}
+%\input{Contents/999-conclusions.tex}
+%\end{Problem}
 
 
 \clearpage
